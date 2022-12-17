@@ -8,7 +8,7 @@ const initialState: CounterStateType = {
 	value: 0,
 };
 
-export const counterSlice = createSlice({
+export const counterSlice: any = createSlice({
 	name: "counter",
 	initialState,
 	reducers: {

@@ -23,7 +23,7 @@ function MainRouter(props: IProps) {
 												const { path, component, exact } = route;
 												return <Route key={path} path={path} component={component} exact={exact} />;
 											})}
-											<Redirect to={"/home"} />
+											<Redirect to={"/columns"} />
 										</Switch>
 									</React.Suspense>
 								</App>

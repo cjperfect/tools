@@ -7,12 +7,18 @@ export type RouteType = {
 	auth: boolean; // 是否需要认证
 };
 
-const Home = lazy(() => import(/* webpackChunkName: "Home" */ "../page/home"));
+const Columns = lazy(() => import(/* webpackChunkName: "Home" */ "../page/columns"));
 
 export const routeConfig = [
 	{
-		path: "/home",
-		component: Home,
+		path: "/columns",
+		component: Columns,
+		exact: true,
+		auth: false,
+	},
+	{
+		path: "/echarts",
+		component: Columns,
 		exact: true,
 		auth: false,
 	},
