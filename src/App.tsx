@@ -1,44 +1,51 @@
 import React from "react";
 import "./style/index.less";
+import { useHistory } from "react-router-dom";
 import { Layout, Menu } from "antd";
 const { Header, Content, Footer } = Layout;
 
 interface IProps {
-	children?: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 type LinkType = {
-	label: string;
-	path: string;
+  key: string;
+  label: string;
 };
 
 const linkConfig: LinkType[] = [
-	{
-		label: "生成表格columns",
-		path: "/columns",
-	},
-	{
-		label: "生成echarts",
-		path: "/echarts",
-	},
+  {
+    key: "/columns",
+    label: "生成表格columns"
+  },
+  {
+    key: "/echarts",
+    label: "生成echarts"
+  }
 ];
 
 const App: React.FC<IProps> = (props: IProps) => {
-	const { children } = props;
+  const { children } = props;
+  const history = useHistory();
 
-	return (
-		<div className="generate-columns">
-			<Header>
-				<Menu theme="light" mode="horizontal" defaultSelectedKeys={["1"]}>
-					{linkConfig.map(({ label, path }) => {
-						return <Menu.Item key={path}></Menu.Item>;
-					})}
-				</Menu>
-			</Header>
-			<Content>{children}</Content>
-			<Footer>Generate Columns ©2022 Created by Chen Jiang</Footer>
-		</div>
-	);
+  return (
+    <div className="main-page">
+      <Header>
+        <Menu
+          theme="dark"
+          mode="horizontal"
+          defaultSelectedKeys={["/columns"]}
+          items={linkConfig}
+          onClick={({ key }) => {
+            if (history.location.pathname === key) return;
+            history.push(key);
+          }}
+        />
+      </Header>
+      <Content>{children}</Content>
+      <Footer>Generate Columns ©2022 Created by Chen Jiang</Footer>
+    </div>
+  );
 };
 
 export default App;

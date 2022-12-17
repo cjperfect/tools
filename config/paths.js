@@ -70,6 +70,8 @@ module.exports = {
   appTsBuildInfoFile: resolveApp('node_modules/.cache/tsconfig.tsbuildinfo'),
   swSrc: resolveModule(resolveApp, 'src/service-worker'),
   publicUrlOrPath,
+  components: resolveApp('src/components'),
+  commonConfig: resolveApp('src/config')
 };
 
 
