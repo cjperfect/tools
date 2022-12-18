@@ -54,6 +54,9 @@ const useTypeScript = fs.existsSync(paths.appTsConfig);
 // Check if Tailwind config exists
 const useTailwind = fs.existsSync(path.join(paths.appPath, "tailwind.config.js"));
 
+
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
+
 // Get the path to the uncompiled service worker (if it exists).
 const swSrc = paths.swSrc;
 
@@ -726,6 +729,7 @@ module.exports = function (webpackEnv) {
 						},
 					},
 				}),
+				new MonacoWebpackPlugin()
 		].filter(Boolean),
 		// Turn off performance processing because we utilize
 		// our own hints via the FileSizeReporter

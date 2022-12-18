@@ -1,19 +1,21 @@
-import React, { useState } from "react";
-import { Collapse, Form, Input, Button, Modal, InputNumber, Switch, Radio, Select, Tooltip } from "antd";
+import React, { forwardRef, useImperativeHandle, useState } from "react";
+import { Collapse, Form, Input, Button, Modal, InputNumber, Switch, Radio, Select, Tooltip, message } from "antd";
 import { QuestionCircleOutlined } from "@ant-design/icons";
 import { DEFAULT_ADD_FIELD, requiredRules } from "config/constant";
 import "./index.less";
 
 const { Panel } = Collapse;
 
-interface IProps {}
+interface IProps {
+  ref: any;
+  onSubmit: (values: ColumnInterface) => void;
+}
 
-const rules = [{ required: true, message: "必填字段" }];
+const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
+  const { onSubmit } = props;
 
-const FormInput: React.FC<IProps> = (props: IProps) => {
   const [form] = Form.useForm();
   const [activeKey, setActiveKey] = useState([]);
-  const [configList, setConfigList] = useState([{}]);
 
   const handleReset = () => {
     Modal.confirm({
@@ -26,19 +28,32 @@ const FormInput: React.FC<IProps> = (props: IProps) => {
     });
   };
 
-  const onFinish = (values: any) => {
-    console.log(values);
+  const onFinish = (values: ColumnInterface) => {
+    if (!values.columns || !values.columns.length) {
+      return message.error("至少需要一个字段");
+    }
+
+    onSubmit?.(values);
   };
 
+  // 供父组件调用
+  useImperativeHandle(ref, () => ({
+    setFormValues: (values: ColumnInterface) => {
+      form.setFieldsValue(values);
+    }
+  }));
+
   return (
-    <Form
+    <Form<ColumnInterface>
       form={form}
       layout="horizontal"
       className="form-input-component"
       scrollToFirstError
       onFinish={onFinish}
-      onReset={() => {
-        form.resetFields(["fieldList"]);
+      initialValues={{
+        variable: "fundCodeList",
+        num: 10,
+        columns: [DEFAULT_ADD_FIELD]
       }}
     >
       <Form.Item name="variable" label="变量名">
@@ -71,7 +86,6 @@ const FormInput: React.FC<IProps> = (props: IProps) => {
                 新增
               </Button>
               <Collapse
-                defaultActiveKey={["0"]}
                 activeKey={activeKey}
                 onChange={key => {
                   setActiveKey(key as []);
@@ -84,20 +98,22 @@ const FormInput: React.FC<IProps> = (props: IProps) => {
                       header={
                         <>
                           <Form.Item label="字段名" rules={requiredRules} name={[field.name, "dataIndex"]}>
-                            <Input placeholder="fundCode" />
-                          </Form.Item>
-                          <Form.Item label="字段中文" rules={requiredRules} name={[field.name, "title"]}>
-                            <Input placeholder="产品名称" />
-                          </Form.Item>
-                          <div className="button-group">
-                            <Button
-                              type="link"
+                            <Input
+                              placeholder="fundCode"
                               onClick={e => {
                                 e.stopPropagation();
                               }}
-                            >
-                              保存
-                            </Button>
+                            />
+                          </Form.Item>
+                          <Form.Item label="字段中文" rules={requiredRules} name={[field.name, "title"]}>
+                            <Input
+                              placeholder="产品名称"
+                              onClick={e => {
+                                e.stopPropagation();
+                              }}
+                            />
+                          </Form.Item>
+                          <div className="button-group">
                             <Button
                               type="link"
                               danger
@@ -138,56 +154,40 @@ const FormInput: React.FC<IProps> = (props: IProps) => {
                       <Form.Item label="列的类名" name={[field.name, "className"]}>
                         <Input placeholder="className" maxLength={100} style={{ width: 150 }} />
                       </Form.Item>
-                      <Form.Item
-                        label={
-                          <>
-                            随机值类型
-                            <Tooltip title="测试数据的类型，例如：段落、名字、数字、带有千分位的数字">
-                              <QuestionCircleOutlined />
-                            </Tooltip>
-                          </>
-                        }
-                        name={[field.name, "randomType"]}
-                      >
-                        {/* 段落、名字、数字、带有千分位的数字 */}
+                      <Form.Item label={"随机值类型"} name={[field.name, "randomType"]}>
                         <Select
                           style={{ width: 150 }}
                           options={[
                             {
-                              value: "段落",
-                              label: "段落"
-                            },
-                            {
-                              value: "名字",
-                              label: "名字"
-                            },
-                            {
-                              value: "整数",
+                              value: "integer",
                               label: "整数"
                             },
                             {
-                              value: "带有两位小数",
-                              label: "带有两位小数"
+                              value: "cname",
+                              label: "名字"
                             },
                             {
-                              value: "百分数",
-                              label: "百分数"
+                              value: "datetime",
+                              label: "日期时间"
+                            },
+                            {
+                              value: "date",
+                              label: "日期"
+                            },
+                            {
+                              value: "cparagraph",
+                              label: "长文本"
+                            },
+                            {
+                              value: "sex",
+                              label: "性别"
+                            },
+                            {
+                              value: "address",
+                              label: "地址"
                             }
                           ]}
                         />
-                      </Form.Item>
-                      <Form.Item
-                        label={
-                          <>
-                            默认值
-                            <Tooltip title="后端数据返回为null时候展示的内容">
-                              <QuestionCircleOutlined />
-                            </Tooltip>
-                          </>
-                        }
-                        name={[field.name, "defaultValue"]}
-                      >
-                        <Input placeholder="默认值" maxLength={100} style={{ width: 150 }} />
                       </Form.Item>
                     </Panel>
                   );
@@ -205,6 +205,6 @@ const FormInput: React.FC<IProps> = (props: IProps) => {
       </Form.Item>
     </Form>
   );
-};
+});
 
 export default FormInput;

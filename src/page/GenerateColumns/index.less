@@ -4,6 +4,7 @@
   column-gap: 20px;
   padding: 20px;
   height: 100%;
+  grid-template-areas: "condition code" "condition preview";
 
   > div {
     border: 1px solid #f1f2f6;
@@ -14,27 +15,28 @@
       padding: 20px;
       font-size: 18px;
       border-bottom: 1px solid #f1f2f6;
+      background: #f1f2f6;
+    }
+    > div {
+      padding: 0 20px;
     }
   }
 
-  .container {
-    padding: 20px;
-    overflow-y: auto;
-    max-height: calc(100% - 150px);
+  .ant-tabs-tabpane {
+    .ant-btn {
+      display: inherit;
+      margin-left: auto;
+      margin-bottom: 10px;
+    }
   }
+
   .condition {
-    .ant-form {
-      // display: grid;
-      // grid-template-columns: repeat(3, 1fr);
-      // align-items: center;
+    grid-area: condition;
 
-      // .ant-form-item-row {
-      //   display: flex;
+    .container {
+      height: calc(100% - 100px);
 
-      //   .ant-form-item-label {
-      //     width: 120px;
-      //   }
-      // }
+      overflow-y: overlay;
     }
 
     .footer {
@@ -43,5 +45,9 @@
         margin-right: 20px;
       }
     }
+  }
+
+  .preview {
+    grid-area: preview;
   }
 }

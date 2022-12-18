@@ -15,6 +15,6 @@ export const DEFAULT_ADD_FIELD: Field = {
   align: "left",
   ellipsis: true,
   className: undefined,
-  randomType: "名字",
+  randomType: "cname",
   defaultValue: "- -"
 };

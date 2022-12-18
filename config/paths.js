@@ -1,4 +1,4 @@
-'use strict';
+
 
 const path = require('path');
 const fs = require('fs');
@@ -71,7 +71,8 @@ module.exports = {
   swSrc: resolveModule(resolveApp, 'src/service-worker'),
   publicUrlOrPath,
   components: resolveApp('src/components'),
-  commonConfig: resolveApp('src/config')
+  commonConfig: resolveApp('src/config'),
+  utils: resolveApp('src/utils')
 };
 
 
