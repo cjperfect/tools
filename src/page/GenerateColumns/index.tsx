@@ -1,11 +1,13 @@
 import React, { useState, useRef } from "react";
-import { Empty, Tabs, Table, Button, message } from "antd";
+import { Empty, Tabs, Table, Button, message, Space } from "antd";
 import "./index.less";
 import FormInput from "./components/formInput";
 import CodeEditor from "components/CodeEditor";
 import copy from "copy-to-clipboard";
 import { CopyOutlined } from "@ant-design/icons";
 import { generateColumns } from "utils";
+import ImportConfigModal from "./components/ImportConfigModal";
+import ConfigDrawer from "./components/configDrawer";
 
 interface IProps {
   title: string;
@@ -20,10 +22,31 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
     columns: []
   });
 
+  const [visible, setVisible] = useState(false);
+  const [configVisible, setConfigVisible] = useState(false);
+
+  const onCancel = () => {
+    setVisible(false);
+  };
+
+  /* 导入配置 */
+  const importSubmit = (values: any) => {
+    formInputRef.current.setColumnsValue(
+      "columns",
+      values.map((v: any) => ({ ...v, randomType: "csentence" }))
+    );
+    setVisible(false);
+  };
+
+  /* 创建columns，根据表单数据 */
   const createColumns = (values: ColumnInterface) => {
-    // console.log(values);
     const result = generateColumns(values);
     setResult(result);
+  };
+
+  /* 抽屉关闭事件 */
+  const drawerClose = () => {
+    setConfigVisible(false);
   };
 
   return (
@@ -33,6 +56,23 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
           {/* 左边条件区域 */}
           <h2 className="title">输入配置</h2>
           <div className="container">
+            <Space style={{ marginBottom: 10 }}>
+              <Button
+                onClick={() => {
+                  setVisible(true);
+                }}
+              >
+                导入配置
+              </Button>
+
+              <Button
+                onClick={() => {
+                  setConfigVisible(true);
+                }}
+              >
+                查看已导入的配置
+              </Button>
+            </Space>
             <FormInput ref={formInputRef} onSubmit={createColumns} />
           </div>
         </div>
@@ -57,7 +97,13 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
                     >
                       复制
                     </Button>
-                    <CodeEditor value={result.columnsText} language="javascript" />
+                    <CodeEditor
+                      value={result.columnsText}
+                      language="javascript"
+                      onChange={e => {
+                        console.log(e);
+                      }}
+                    />
                   </>
                 )
               },
@@ -85,9 +131,21 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
         </div>
         <div className="preview">
           <h2 className="title">效果展示</h2>
-          <Table columns={result.columns} dataSource={result.data} />
+          <Table columns={result.columns} dataSource={result.data} rowKey="id" />
         </div>
       </div>
+
+      {/* 导入配置 */}
+      <ImportConfigModal visible={visible} onCancel={onCancel} onSubmit={importSubmit} />
+
+      {/* 查看已导入的配置 */}
+      <ConfigDrawer
+        visible={configVisible}
+        onClose={drawerClose}
+        setContent={columns => {
+          formInputRef.current.setColumnsValue("columns", columns);
+        }}
+      />
     </>
   );
 };

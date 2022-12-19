@@ -8,18 +8,11 @@ export type RouteType = {
 };
 
 const GenerateColumns = lazy(() => import(/* webpackChunkName: "Home" */ "../page/GenerateColumns"));
-const Echarts = lazy(() => import(/* webpackChunkName: "Echarts" */ "../page/echarts"));
 
 export const routeConfig = [
   {
     path: "/generate-columns",
     component: GenerateColumns,
-    exact: true,
-    auth: false
-  },
-  {
-    path: "/echarts",
-    component: Echarts,
     exact: true,
     auth: false
   }

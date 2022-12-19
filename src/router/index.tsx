@@ -1,5 +1,6 @@
 import React from "react";
 import { RouteType, routeConfig } from "./config";
+import BaseLoading from "components/BaesLoading";
 import { HashRouter, Route, Redirect, Switch } from "react-router-dom";
 import App from "../App";
 
@@ -17,7 +18,7 @@ function MainRouter(props: IProps) {
             component={() => {
               return (
                 <App>
-                  <React.Suspense fallback={"加载中。。。"}>
+                  <React.Suspense fallback={<BaseLoading />}>
                     <Switch>
                       {routeConfig.map((route: RouteType) => {
                         const { path, component, exact } = route;

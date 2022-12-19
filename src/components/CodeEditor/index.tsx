@@ -9,13 +9,14 @@ interface IProps {
 }
 
 const CodeEditor: React.FC<IProps> = (props: IProps) => {
-  const { value, height = 480, language = "sql", onChange } = props;
+  const { value, height = 460, language = "javascript", onChange } = props;
 
   const options = {
     selectOnLineNumbers: true,
     fontSize: 14,
     formatOnPaste: true,
     automaticLayout: true,
+    formatOnType: true,
     minimap: {
       enabled: false
     }

@@ -1,5 +1,22 @@
 export const requiredRules = [{ required: true, message: "请输入" }];
 
+export const CONFIG_EXAMPLE = [
+  {
+    dataIndex: "name",
+    title: "姓名",
+    ellipsis: true,
+    width: 150,
+    align: "left"
+  },
+  {
+    dataIndex: "age",
+    title: "年龄",
+    ellipsis: true,
+    width: 150,
+    align: "left"
+  }
+];
+
 export type Field = {
   [extra: string]: any;
 };

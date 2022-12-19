@@ -1,11 +1,6 @@
 import Mock from "mockjs";
 
-const randomTypeMap: any = {
-  date: "date",
-  name: "cname",
-  dateTime: "datetime",
-  paragraph: "paragraph"
-};
+export const myJSONStringify = (obj: object[]) => {};
 
 export const generateColumns = (values: ColumnInterface) => {
   const { variable, num, columns = [] } = values;
@@ -17,7 +12,10 @@ export const generateColumns = (values: ColumnInterface) => {
       title,
       ellipsis,
       width,
-      align
+      align,
+      render(value: any) {
+        return value || "- -";
+      }
     };
     if (className) obj.className = className;
     if (fixed) obj.fixed = fixed;
@@ -26,6 +24,7 @@ export const generateColumns = (values: ColumnInterface) => {
   });
 
   const random = Mock.Random;
+
   const data = [];
   for (let i = 1; i <= num; i++) {
     const temp: any = { id: i };
@@ -34,11 +33,38 @@ export const generateColumns = (values: ColumnInterface) => {
       if (randomType === "sex") {
         // 性别
         temp[dataIndex] = random.pick(["男", "女"]);
+      } else {
+        temp[dataIndex] = random[randomType]();
       }
-      temp[dataIndex] = random[randomType]();
     });
     data.push(temp);
   }
+
+  // let str = `[`;
+  // newColumns.forEach((item, index) => {
+  //   str += "\n\t{";
+  //   for (let key in item) {
+  //     if (typeof item[key] === "function") {
+  //       str += `\n\t\t${item[key]},`;
+  //     } else {
+  //       str += `\n\t\t${key}: "${item[key]}",`;
+  //     }
+  //   }
+
+  //   str += "\n\t},\n";
+  // });
+  // str += "]";
+
+  // let str = JSON.stringify(
+  //   newColumns,
+  //   (key, value) => {
+  //     if (typeof value === "function") {
+  //       return `${value}`;
+  //     }
+  //     return value;
+  //   },
+  //   2
+  // );
 
   return {
     data,

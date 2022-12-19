@@ -1,8 +1,8 @@
 import React, { forwardRef, useImperativeHandle, useState } from "react";
-import { Collapse, Form, Input, Button, Modal, InputNumber, Switch, Radio, Select, Tooltip, message } from "antd";
-import { QuestionCircleOutlined } from "@ant-design/icons";
+import { Collapse, Form, Input, Button, Modal, InputNumber, Switch, Radio, Select, message, Space } from "antd";
 import { DEFAULT_ADD_FIELD, requiredRules } from "config/constant";
 import "./index.less";
+import { DownOutlined, UpOutlined } from "@ant-design/icons";
 
 const { Panel } = Collapse;
 
@@ -10,6 +10,48 @@ interface IProps {
   ref: any;
   onSubmit: (values: ColumnInterface) => void;
 }
+
+const randomTypeArr = [
+  {
+    key: "integer",
+    value: "integer",
+    label: "整数"
+  },
+  {
+    key: "cname",
+    value: "cname",
+    label: "名字"
+  },
+  {
+    key: "datetime",
+    value: "datetime",
+    label: "日期时间"
+  },
+  {
+    key: "date",
+    value: "date",
+    label: "日期"
+  },
+  {
+    key: "csentence",
+    value: "csentence",
+    label: "一段话"
+  },
+  {
+    key: "cparagraph",
+    value: "cparagraph",
+    label: "长文本"
+  },
+  {
+    key: "sex",
+    value: "sex",
+    label: "性别"
+  },
+  {
+    value: "province",
+    label: "城市"
+  }
+];
 
 const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
   const { onSubmit } = props;
@@ -23,7 +65,7 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
       okText: "确认",
       cancelText: "取消",
       onOk() {
-        console.log("123213");
+        form.resetFields();
       }
     });
   };
@@ -38,8 +80,9 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
 
   // 供父组件调用
   useImperativeHandle(ref, () => ({
-    setFormValues: (values: ColumnInterface) => {
-      form.setFieldsValue(values);
+    setColumnsValue: (field: string, values: ColumnInterface) => {
+      console.log(values);
+      form.setFieldValue(field, values);
     }
   }));
 
@@ -73,7 +116,7 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
       </Form.Item>
 
       <Form.List name="columns">
-        {(fields, { add, remove }) => {
+        {(fields, { add, remove, move }) => {
           return (
             <>
               <Button
@@ -91,7 +134,7 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
                   setActiveKey(key as []);
                 }}
               >
-                {fields.map(field => {
+                {fields.map((field, index) => {
                   return (
                     <Panel
                       key={field.key}
@@ -113,35 +156,65 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
                               }}
                             />
                           </Form.Item>
-                          <div className="button-group">
-                            <Button
-                              type="link"
-                              danger
-                              onClick={e => {
-                                e.stopPropagation();
-                                Modal.confirm({
-                                  content: "确定要删除吗？",
-                                  okText: "确认",
-                                  cancelText: "取消",
-                                  onOk() {
-                                    remove(field.name);
-                                  }
-                                });
-                              }}
-                            >
-                              删除
-                            </Button>
-                          </div>
                         </>
                       }
+                      extra={
+                        <Space>
+                          {index > 0 && (
+                            <Button
+                              type="text"
+                              onClick={e => {
+                                e.stopPropagation();
+                                move(index, index - 1);
+                              }}
+                            >
+                              <UpOutlined />
+                            </Button>
+                          )}
+
+                          {index < fields.length - 1 && (
+                            <Button
+                              type="text"
+                              onClick={e => {
+                                move(index, index + 1);
+                                e.stopPropagation();
+                              }}
+                            >
+                              <DownOutlined />
+                            </Button>
+                          )}
+
+                          <Button
+                            type="link"
+                            danger
+                            onClick={e => {
+                              e.stopPropagation();
+                              Modal.confirm({
+                                content: "确定要删除吗？",
+                                okText: "确认",
+                                cancelText: "取消",
+                                onOk() {
+                                  remove(field.name);
+                                }
+                              });
+                            }}
+                          >
+                            删除
+                          </Button>
+                        </Space>
+                      }
                     >
+                      <Form.Item label="单元格是否合并" name={[field.name, "combine"]} valuePropName="checked">
+                        <Switch checkedChildren="是" unCheckedChildren="否" />
+                      </Form.Item>
                       <Form.Item label="宽度" rules={requiredRules} name={[field.name, "width"]}>
                         <InputNumber placeholder="请输入" min={50} max={1000} />
                       </Form.Item>
                       <Form.Item label="是否固定" name={[field.name, "fixed"]} valuePropName="checked">
                         <Switch checkedChildren="是" unCheckedChildren="否" />
                       </Form.Item>
-                      <Form.Item label="对齐方式" name={[field.name, "align"]}>
+
+                      <Form.Item label="对齐方式" name={[field.name, "align"]} rules={requiredRules}>
                         <Radio.Group>
                           <Radio.Button value="left">left</Radio.Button>
                           <Radio.Button value="center">center</Radio.Button>
@@ -155,39 +228,7 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
                         <Input placeholder="className" maxLength={100} style={{ width: 150 }} />
                       </Form.Item>
                       <Form.Item label={"随机值类型"} name={[field.name, "randomType"]}>
-                        <Select
-                          style={{ width: 150 }}
-                          options={[
-                            {
-                              value: "integer",
-                              label: "整数"
-                            },
-                            {
-                              value: "cname",
-                              label: "名字"
-                            },
-                            {
-                              value: "datetime",
-                              label: "日期时间"
-                            },
-                            {
-                              value: "date",
-                              label: "日期"
-                            },
-                            {
-                              value: "cparagraph",
-                              label: "长文本"
-                            },
-                            {
-                              value: "sex",
-                              label: "性别"
-                            },
-                            {
-                              value: "address",
-                              label: "地址"
-                            }
-                          ]}
-                        />
+                        <Select style={{ width: 150 }} options={randomTypeArr} />
                       </Form.Item>
                     </Panel>
                   );

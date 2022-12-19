@@ -17,10 +17,6 @@ const linkConfig: LinkType[] = [
   {
     key: "/columns",
     label: "生成表格columns"
-  },
-  {
-    key: "/echarts",
-    label: "生成echarts"
   }
 ];
 

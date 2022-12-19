@@ -1,8 +1,8 @@
 .generate-columns {
   display: grid;
   grid-template-columns: repeat(2, calc(50% - 10px));
-  column-gap: 20px;
-  padding: 20px;
+  grid-template-rows: calc(60% - 20px) 40%;
+  gap: 20px;
   height: 100%;
   grid-template-areas: "condition code" "condition preview";
 
@@ -37,6 +37,10 @@
       height: calc(100% - 100px);
 
       overflow-y: overlay;
+
+      .config-btn-group {
+        margin-bottom: 20px;
+      }
     }
 
     .footer {
@@ -49,5 +53,10 @@
 
   .preview {
     grid-area: preview;
+
+    .ant-table-wrapper {
+      height: calc(100% - 100px);
+      overflow-y: auto;
+    }
   }
 }
