@@ -33,7 +33,7 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
   const importSubmit = (values: any) => {
     formInputRef.current.setColumnsValue(
       "columns",
-      values.map((v: any) => ({ ...v, randomType: "csentence" }))
+      values.map((v: any) => ({ ...v, randomType: "csentence", defaultValue: "- -" }))
     );
     setVisible(false);
   };
@@ -97,13 +97,7 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
                     >
                       复制
                     </Button>
-                    <CodeEditor
-                      value={result.columnsText}
-                      language="javascript"
-                      onChange={e => {
-                        console.log(e);
-                      }}
-                    />
+                    <CodeEditor value={result.columnsText} language="javascript" />
                   </>
                 )
               },
@@ -142,8 +136,11 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
       <ConfigDrawer
         visible={configVisible}
         onClose={drawerClose}
-        setContent={columns => {
-          formInputRef.current.setColumnsValue("columns", columns);
+        setContent={columnsText => {
+          formInputRef.current.setColumnsValue(
+            "columns",
+            eval(columnsText).map((v: any) => ({ ...v, randomType: "csentence", defaultValue: "- -" }))
+          );
         }}
       />
     </>

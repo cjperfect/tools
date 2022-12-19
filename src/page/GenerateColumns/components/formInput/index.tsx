@@ -1,8 +1,21 @@
 import React, { forwardRef, useImperativeHandle, useState } from "react";
-import { Collapse, Form, Input, Button, Modal, InputNumber, Switch, Radio, Select, message, Space } from "antd";
-import { DEFAULT_ADD_FIELD, requiredRules } from "config/constant";
+import {
+  Collapse,
+  Form,
+  Input,
+  Button,
+  Modal,
+  InputNumber,
+  Switch,
+  Radio,
+  Select,
+  message,
+  Space,
+  Tooltip
+} from "antd";
+import { DEFAULT_ADD_FIELD, REQUIRED_RULES, RANDOM_TYPE_ARR } from "config/constant";
 import "./index.less";
-import { DownOutlined, UpOutlined } from "@ant-design/icons";
+import { DownOutlined, QuestionCircleOutlined, UpOutlined } from "@ant-design/icons";
 
 const { Panel } = Collapse;
 
@@ -10,48 +23,6 @@ interface IProps {
   ref: any;
   onSubmit: (values: ColumnInterface) => void;
 }
-
-const randomTypeArr = [
-  {
-    key: "integer",
-    value: "integer",
-    label: "整数"
-  },
-  {
-    key: "cname",
-    value: "cname",
-    label: "名字"
-  },
-  {
-    key: "datetime",
-    value: "datetime",
-    label: "日期时间"
-  },
-  {
-    key: "date",
-    value: "date",
-    label: "日期"
-  },
-  {
-    key: "csentence",
-    value: "csentence",
-    label: "一段话"
-  },
-  {
-    key: "cparagraph",
-    value: "cparagraph",
-    label: "长文本"
-  },
-  {
-    key: "sex",
-    value: "sex",
-    label: "性别"
-  },
-  {
-    value: "province",
-    label: "城市"
-  }
-];
 
 const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
   const { onSubmit } = props;
@@ -74,14 +45,12 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
     if (!values.columns || !values.columns.length) {
       return message.error("至少需要一个字段");
     }
-
     onSubmit?.(values);
   };
 
   // 供父组件调用
   useImperativeHandle(ref, () => ({
     setColumnsValue: (field: string, values: ColumnInterface) => {
-      console.log(values);
       form.setFieldValue(field, values);
     }
   }));
@@ -140,7 +109,7 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
                       key={field.key}
                       header={
                         <>
-                          <Form.Item label="字段名" rules={requiredRules} name={[field.name, "dataIndex"]}>
+                          <Form.Item label="字段名" rules={REQUIRED_RULES} name={[field.name, "dataIndex"]}>
                             <Input
                               placeholder="fundCode"
                               onClick={e => {
@@ -148,7 +117,7 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
                               }}
                             />
                           </Form.Item>
-                          <Form.Item label="字段中文" rules={requiredRules} name={[field.name, "title"]}>
+                          <Form.Item label="字段中文" rules={REQUIRED_RULES} name={[field.name, "title"]}>
                             <Input
                               placeholder="产品名称"
                               onClick={e => {
@@ -207,14 +176,13 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
                       <Form.Item label="单元格是否合并" name={[field.name, "combine"]} valuePropName="checked">
                         <Switch checkedChildren="是" unCheckedChildren="否" />
                       </Form.Item>
-                      <Form.Item label="宽度" rules={requiredRules} name={[field.name, "width"]}>
+                      <Form.Item label="宽度" rules={REQUIRED_RULES} name={[field.name, "width"]}>
                         <InputNumber placeholder="请输入" min={50} max={1000} />
                       </Form.Item>
                       <Form.Item label="是否固定" name={[field.name, "fixed"]} valuePropName="checked">
                         <Switch checkedChildren="是" unCheckedChildren="否" />
                       </Form.Item>
-
-                      <Form.Item label="对齐方式" name={[field.name, "align"]} rules={requiredRules}>
+                      <Form.Item label="对齐方式" name={[field.name, "align"]} rules={REQUIRED_RULES}>
                         <Radio.Group>
                           <Radio.Button value="left">left</Radio.Button>
                           <Radio.Button value="center">center</Radio.Button>
@@ -228,7 +196,21 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
                         <Input placeholder="className" maxLength={100} style={{ width: 150 }} />
                       </Form.Item>
                       <Form.Item label={"随机值类型"} name={[field.name, "randomType"]}>
-                        <Select style={{ width: 150 }} options={randomTypeArr} />
+                        <Select style={{ width: 150 }} options={RANDOM_TYPE_ARR} />
+                      </Form.Item>
+                      <Form.Item
+                        label={
+                          <>
+                            <Tooltip title="后端返回数据为null时候显示的内容">
+                              <span>
+                                默认值 <QuestionCircleOutlined />
+                              </span>
+                            </Tooltip>
+                          </>
+                        }
+                        name={[field.name, "defaultValue"]}
+                      >
+                        <Input placeholder="defaultValue" maxLength={100} style={{ width: 150 }} />
                       </Form.Item>
                     </Panel>
                   );

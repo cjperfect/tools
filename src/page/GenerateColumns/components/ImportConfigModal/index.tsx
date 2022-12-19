@@ -1,8 +1,8 @@
 /* 导入配置，模态框 */
 import React, { useState } from "react";
 import { Input, Button, Modal, Form, Space, message } from "antd";
-import { CONFIG_EXAMPLE, requiredRules } from "config/constant";
-import ConfigDrawer from "../configDrawer";
+import { CONFIG_EXAMPLE, REQUIRED_RULES } from "config/constant";
+import { myJSONStringify } from "utils";
 const { TextArea } = Input;
 
 interface IProps {
@@ -28,9 +28,8 @@ const ImportConfigModal: React.FC<IProps> = props => {
 
   const onFinish = (values: any) => {
     try {
-      const config = JSON.parse(values.content);
       saveConfig(values.content);
-      onSubmit?.(config);
+      onSubmit?.(eval(values.content));
     } catch (e) {
       return message.error("配置格式有误，请检查");
     }
@@ -47,7 +46,7 @@ const ImportConfigModal: React.FC<IProps> = props => {
               <Space size="middle">
                 <Button
                   onClick={() => {
-                    form.setFieldValue("content", JSON.stringify(CONFIG_EXAMPLE, null, 2));
+                    form.setFieldValue("content", myJSONStringify(CONFIG_EXAMPLE));
                   }}
                 >
                   导入示例
@@ -55,7 +54,7 @@ const ImportConfigModal: React.FC<IProps> = props => {
               </Space>
             </>
           }
-          rules={requiredRules}
+          rules={REQUIRED_RULES}
         >
           <TextArea placeholder="请输入配置" autoSize={{ minRows: 15, maxRows: 15 }} />
         </Form.Item>

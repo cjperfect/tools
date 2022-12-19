@@ -1,4 +1,4 @@
-export const requiredRules = [{ required: true, message: "请输入" }];
+export const REQUIRED_RULES = [{ required: true, message: "请输入" }];
 
 export const CONFIG_EXAMPLE = [
   {
@@ -35,3 +35,46 @@ export const DEFAULT_ADD_FIELD: Field = {
   randomType: "cname",
   defaultValue: "- -"
 };
+
+/* 随机类型 */
+export const RANDOM_TYPE_ARR = [
+  {
+    key: "integer",
+    value: "integer",
+    label: "整数"
+  },
+  {
+    key: "cname",
+    value: "cname",
+    label: "名字"
+  },
+  {
+    key: "datetime",
+    value: "datetime",
+    label: "日期时间"
+  },
+  {
+    key: "date",
+    value: "date",
+    label: "日期"
+  },
+  {
+    key: "csentence",
+    value: "csentence",
+    label: "一段话"
+  },
+  {
+    key: "cparagraph",
+    value: "cparagraph",
+    label: "长文本"
+  },
+  {
+    key: "sex",
+    value: "sex",
+    label: "性别"
+  },
+  {
+    value: "province",
+    label: "城市"
+  }
+];
