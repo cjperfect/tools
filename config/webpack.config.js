@@ -5,12 +5,10 @@ const resolve = require("resolve");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CaseSensitivePathsPlugin = require("case-sensitive-paths-webpack-plugin");
 const InlineChunkHtmlPlugin = require("react-dev-utils/InlineChunkHtmlPlugin");
-const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
 const InterpolateHtmlPlugin = require("react-dev-utils/InterpolateHtmlPlugin");
-const WorkboxWebpackPlugin = require("workbox-webpack-plugin");
 const ModuleScopePlugin = require("react-dev-utils/ModuleScopePlugin");
 const getCSSModuleLocalIdent = require("react-dev-utils/getCSSModuleLocalIdent");
 const ESLintPlugin = require("eslint-webpack-plugin");
@@ -57,15 +55,10 @@ const useTailwind = fs.existsSync(path.join(paths.appPath, "tailwind.config.js")
 
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
-// Get the path to the uncompiled service worker (if it exists).
-const swSrc = paths.swSrc;
 
 // style files regexes
 const cssRegex = /\.css$/;
 const cssModuleRegex = /\.module\.css$/;
-const sassRegex = /\.(scss|sass)$/;
-const sassModuleRegex = /\.module\.(scss|sass)$/;
-
 const lessRegex = /\.less$/;
 const lessModuleRegex = /\.module\.less$/;
 
@@ -234,46 +227,6 @@ module.exports = function (webpackEnv) {
 		optimization: {
 			minimize: isEnvProduction,
 			minimizer: [
-				// This is only used in production mode
-				new TerserPlugin({
-					terserOptions: {
-						parse: {
-							// We want terser to parse ecma 8 code. However, we don't want it
-							// to apply any minification steps that turns valid ecma 5 code
-							// into invalid ecma 5 code. This is why the 'compress' and 'output'
-							// sections only apply transformations that are ecma 5 safe
-							// https://github.com/facebook/create-react-app/pull/4234
-							ecma: 8,
-						},
-						compress: {
-							ecma: 5,
-							warnings: false,
-							// Disabled because of an issue with Uglify breaking seemingly valid code:
-							// https://github.com/facebook/create-react-app/issues/2376
-							// Pending further investigation:
-							// https://github.com/mishoo/UglifyJS2/issues/2011
-							comparisons: false,
-							// Disabled because of an issue with Terser breaking valid code:
-							// https://github.com/facebook/create-react-app/issues/5250
-							// Pending further investigation:
-							// https://github.com/terser-js/terser/issues/120
-							inline: 2,
-						},
-						mangle: {
-							safari10: true,
-						},
-						// Added for profiling in devtools
-						keep_classnames: isEnvProductionProfile,
-						keep_fnames: isEnvProductionProfile,
-						output: {
-							ecma: 5,
-							comments: false,
-							// Turned on because emoji and regex is not minified properly using default
-							// https://github.com/facebook/create-react-app/issues/2488
-							ascii_only: true,
-						},
-					},
-				}),
 				// This is only used in production mode
 				new CssMinimizerPlugin(),
 			],
@@ -474,45 +427,6 @@ module.exports = function (webpackEnv) {
 								},
 							}),
 						},
-						// Opt-in support for SASS (using .scss or .sass extensions).
-						// By default we support SASS Modules with the
-						// extensions .module.scss or .module.sass
-						{
-							test: sassRegex,
-							exclude: sassModuleRegex,
-							use: getStyleLoaders(
-								{
-									importLoaders: 3,
-									sourceMap: isEnvProduction ? shouldUseSourceMap : isEnvDevelopment,
-									modules: {
-										mode: "icss",
-									},
-								},
-								"sass-loader"
-							),
-							// Don't consider CSS imports dead code even if the
-							// containing package claims to have no side effects.
-							// Remove this when webpack adds a warning or an error for this.
-							// See https://github.com/webpack/webpack/issues/6571
-							sideEffects: true,
-						},
-						// Adds support for CSS Modules, but using SASS
-						// using the extension .module.scss or .module.sass
-						{
-							test: sassModuleRegex,
-							use: getStyleLoaders(
-								{
-									importLoaders: 3,
-									sourceMap: isEnvProduction ? shouldUseSourceMap : isEnvDevelopment,
-									modules: {
-										mode: "local",
-										getLocalIdent: getCSSModuleLocalIdent,
-									},
-								},
-								"sass-loader"
-							),
-						},
-
 						{
 							test: lessRegex,
 							exclude: lessModuleRegex,
@@ -651,19 +565,7 @@ module.exports = function (webpackEnv) {
 				resourceRegExp: /^\.\/locale$/,
 				contextRegExp: /moment$/,
 			}),
-			// Generate a service worker script that will precache, and keep up to date,
-			// the HTML & assets that are part of the webpack build.
-			isEnvProduction &&
-				fs.existsSync(swSrc) &&
-				new WorkboxWebpackPlugin.InjectManifest({
-					swSrc,
-					dontCacheBustURLsMatching: /\.[0-9a-f]{8}\./,
-					exclude: [/\.map$/, /asset-manifest\.json$/, /LICENSE/],
-					// Bump up the default maximum size (2mb) that's precached,
-					// to make lazy-loading failure scenarios less likely.
-					// See https://github.com/cra-template/pwa/issues/13#issuecomment-722667270
-					maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
-				}),
+	
 			// TypeScript type checking
 			useTypeScript &&
 				new ForkTsCheckerWebpackPlugin({

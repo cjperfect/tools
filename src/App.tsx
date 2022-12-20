@@ -34,7 +34,7 @@ const App: React.FC<IProps> = (props: IProps) => {
         <Menu
           theme="dark"
           mode="horizontal"
-          defaultSelectedKeys={["/code-snippet"]}
+          defaultSelectedKeys={["/generate-columns"]}
           items={linkConfig}
           onClick={({ key }) => {
             if (history.location.pathname === key) return;
