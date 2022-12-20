@@ -15,15 +15,12 @@ const getConfigList = () => JSON.parse(localStorage.myConfig || "[]");
 const ConfigDrawer: React.FC<IProps> = props => {
   const { visible, onClose, setContent } = props;
   const [form] = Form.useForm();
+  const [_, dispatch] = useState(0);
   const configListRef = useRef(getConfigList());
 
   useEffect(() => {
     configListRef.current = getConfigList();
   }, [visible]);
-
-  const onFinish = (values: any) => {
-    console.log(values);
-  };
 
   const configList = JSON.parse(localStorage.myConfig || "[]");
 
@@ -32,7 +29,6 @@ const ConfigDrawer: React.FC<IProps> = props => {
       {configList?.length ? (
         <Form
           form={form}
-          onFinish={onFinish}
           layout="vertical"
           initialValues={{
             configList
@@ -43,6 +39,7 @@ const ConfigDrawer: React.FC<IProps> = props => {
               return fields.map((field, index) => {
                 return (
                   <Form.Item
+                    key={field.key}
                     name={[field.name, "config"]}
                     rules={REQUIRED_RULES}
                     label={
@@ -61,6 +58,7 @@ const ConfigDrawer: React.FC<IProps> = props => {
                                   data.splice(field.key, 1);
                                   localStorage.myConfig = JSON.stringify(data);
                                   remove(field.name);
+                                  dispatch(Math.random());
                                 }
                               });
                             }}

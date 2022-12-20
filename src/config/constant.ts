@@ -32,8 +32,7 @@ export const DEFAULT_ADD_FIELD: Field = {
   align: "left",
   ellipsis: true,
   className: undefined,
-  randomType: "cname",
-  defaultValue: "- -"
+  randomType: "cname"
 };
 
 /* 随机类型 */

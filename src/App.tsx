@@ -15,8 +15,12 @@ type LinkType = {
 
 const linkConfig: LinkType[] = [
   {
-    key: "/columns",
+    key: "/generate-columns",
     label: "生成表格columns"
+  },
+  {
+    key: "/code-snippet",
+    label: "代码片段"
   }
 ];
 
@@ -30,7 +34,7 @@ const App: React.FC<IProps> = (props: IProps) => {
         <Menu
           theme="dark"
           mode="horizontal"
-          defaultSelectedKeys={["/columns"]}
+          defaultSelectedKeys={["/code-snippet"]}
           items={linkConfig}
           onClick={({ key }) => {
             if (history.location.pathname === key) return;

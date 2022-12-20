@@ -1,23 +1,5 @@
 import Mock from "mockjs";
 
-export const myJSONStringify = (newColumns: any) => {
-  let str = `[`;
-  newColumns.forEach((item: any) => {
-    str += "\n\t{";
-    for (let key in item) {
-      if (typeof item[key] === "function") {
-        str += `\n\t\t${item[key]},`;
-      } else {
-        str += `\n\t\t${key}: "${item[key]}",`;
-      }
-    }
-    str += "\n\t},\n";
-  });
-  str += "]";
-
-  return str;
-};
-
 export const generateColumns = (values: ColumnInterface) => {
   const { variable, num, columns = [] } = values;
 
@@ -32,10 +14,7 @@ export const generateColumns = (values: ColumnInterface) => {
       title,
       ellipsis,
       width,
-      align,
-      render(value: any, record: any, index: number) {
-        return value || "- -";
-      }
+      align
     });
   });
 
@@ -60,6 +39,6 @@ export const generateColumns = (values: ColumnInterface) => {
     data,
     columns,
     dataText: `const ${variable} = ${JSON.stringify(data, null, 2)}`,
-    columnsText: `const ${variable} = ${myJSONStringify(newColumns)}`
+    columnsText: `const ${variable} = ${JSON.stringify(newColumns, null, 2)}`
   };
 };

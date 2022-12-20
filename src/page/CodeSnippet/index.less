@@ -1,0 +1,32 @@
+.code-snippet {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, calc(50% - 10px));
+  grid-template-rows: 100%;
+  column-gap: 20px;
+
+  .title {
+    padding: 20px;
+    font-size: 18px;
+    border-bottom: 1px solid #f1f2f6;
+    background: #f1f2f6;
+  }
+
+  > div {
+    border: 1px solid #f1f2f6;
+
+    > div {
+      padding: 20px;
+    }
+    .react-monaco-editor-container {
+      height: calc(100% - 100px) !important;
+    }
+  }
+
+  .snippet-type {
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

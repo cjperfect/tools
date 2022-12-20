@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { Input, Button, Modal, Form, Space, message } from "antd";
 import { CONFIG_EXAMPLE, REQUIRED_RULES } from "config/constant";
-import { myJSONStringify } from "utils";
 const { TextArea } = Input;
 
 interface IProps {
@@ -28,8 +27,9 @@ const ImportConfigModal: React.FC<IProps> = props => {
 
   const onFinish = (values: any) => {
     try {
-      saveConfig(values.content);
-      onSubmit?.(eval(values.content));
+      const columns = eval(values.content).map((v: any) => ({ ...v, align: v.align || "left" }));
+      saveConfig(JSON.stringify(columns, null, 2));
+      onSubmit?.(columns);
     } catch (e) {
       return message.error("配置格式有误，请检查");
     }
@@ -46,7 +46,7 @@ const ImportConfigModal: React.FC<IProps> = props => {
               <Space size="middle">
                 <Button
                   onClick={() => {
-                    form.setFieldValue("content", myJSONStringify(CONFIG_EXAMPLE));
+                    form.setFieldValue("content", JSON.stringify(CONFIG_EXAMPLE, null, 2));
                   }}
                 >
                   导入示例

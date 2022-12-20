@@ -48,6 +48,10 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
     onSubmit?.(values);
   };
 
+  const onFinishFailed = () => {
+    return message.warn("有必填项没填");
+  };
+
   // 供父组件调用
   useImperativeHandle(ref, () => ({
     setColumnsValue: (field: string, values: ColumnInterface) => {
@@ -62,6 +66,7 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
       className="form-input-component"
       scrollToFirstError
       onFinish={onFinish}
+      onFinishFailed={onFinishFailed}
       initialValues={{
         variable: "fundCodeList",
         num: 10,
@@ -173,9 +178,6 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
                         </Space>
                       }
                     >
-                      <Form.Item label="单元格是否合并" name={[field.name, "combine"]} valuePropName="checked">
-                        <Switch checkedChildren="是" unCheckedChildren="否" />
-                      </Form.Item>
                       <Form.Item label="宽度" rules={REQUIRED_RULES} name={[field.name, "width"]}>
                         <InputNumber placeholder="请输入" min={50} max={1000} />
                       </Form.Item>
@@ -197,20 +199,6 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
                       </Form.Item>
                       <Form.Item label={"随机值类型"} name={[field.name, "randomType"]}>
                         <Select style={{ width: 150 }} options={RANDOM_TYPE_ARR} />
-                      </Form.Item>
-                      <Form.Item
-                        label={
-                          <>
-                            <Tooltip title="后端返回数据为null时候显示的内容">
-                              <span>
-                                默认值 <QuestionCircleOutlined />
-                              </span>
-                            </Tooltip>
-                          </>
-                        }
-                        name={[field.name, "defaultValue"]}
-                      >
-                        <Input placeholder="defaultValue" maxLength={100} style={{ width: 150 }} />
                       </Form.Item>
                     </Panel>
                   );
