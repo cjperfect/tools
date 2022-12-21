@@ -1,7 +1,7 @@
 import React from "react";
 import { RouteType, routeConfig } from "./config";
 import BaseLoading from "components/BaesLoading";
-import { Route, Redirect, Switch, BrowserRouter } from "react-router-dom";
+import { Route, Redirect, Switch, HashRouter } from "react-router-dom";
 import App from "../App";
 
 interface IProps {
@@ -11,7 +11,7 @@ interface IProps {
 function MainRouter(props: IProps) {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Switch>
           <Route
             path={"/"}
@@ -32,7 +32,7 @@ function MainRouter(props: IProps) {
             }}
           />
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
