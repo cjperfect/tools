@@ -1,7 +1,7 @@
 /* 生成代码片段 */
 import React, { useState } from "react";
 import CodeEditor from "components/CodeEditor";
-import { Button, message, Space } from "antd";
+import { Button, message } from "antd";
 import { codeSnippetMap } from "config/codeSnippet";
 import "./index.less";
 import { CopyOutlined, FormOutlined } from "@ant-design/icons";
@@ -9,8 +9,9 @@ import copy from "copy-to-clipboard";
 
 interface IProps {}
 const snippetArr = [
-  { type: "commonTable", label: "CommonTable代码片段", btnText: "生成代码" },
-  { type: "addMenu", label: "addMenu代码片段", btnText: "生成代码" }
+  { type: "commonTable", btnText: "CommonTable代码片段" },
+  { type: "searchForm", btnText: "searchForm代码片段" },
+  { type: "addMenu", btnText: "addMenu代码片段" }
 ];
 
 const CodeSnippet: React.FC<IProps> = props => {
@@ -20,19 +21,16 @@ const CodeSnippet: React.FC<IProps> = props => {
       <div className="snippet-type">
         <h1 className="title">代码片段类型</h1>
         <div className="container">
-          {snippetArr.map(({ type, label, btnText }) => {
+          {snippetArr.map(({ type, btnText }) => {
             return (
-              <Space size={"large"}>
-                <span>{label}：</span>
-                <Button
-                  icon={<FormOutlined />}
-                  onClick={e => {
-                    setCode(codeSnippetMap[type] || "chenjiang");
-                  }}
-                >
-                  {btnText}
-                </Button>
-              </Space>
+              <Button
+                icon={<FormOutlined />}
+                onClick={e => {
+                  setCode(codeSnippetMap[type] || "chenjiang");
+                }}
+              >
+                {btnText}
+              </Button>
             );
           })}
         </div>

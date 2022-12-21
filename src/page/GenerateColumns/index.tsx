@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Empty, Tabs, Table, Button, message, Space } from "antd";
+import { Tabs, Table, Button, message, Space } from "antd";
 import "./index.less";
 import FormInput from "./components/formInput";
 import CodeEditor from "components/CodeEditor";
@@ -139,6 +139,7 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
         setContent={columnsText => {
           formInputRef.current.setColumnsValue(
             "columns",
+            // eslint-disable-next-line
             eval(columnsText).map((v: any) => ({ ...v, randomType: "csentence", defaultValue: "- -" }))
           );
         }}

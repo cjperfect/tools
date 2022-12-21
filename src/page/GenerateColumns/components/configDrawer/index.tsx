@@ -1,6 +1,6 @@
 /* 查看已导入配置的抽屉 */
 import React, { useEffect, useRef, useState } from "react";
-import { Input, Button, Drawer, Form, Space, message, Modal, Empty } from "antd";
+import { Input, Button, Drawer, Form, Space, Modal, Empty } from "antd";
 import { REQUIRED_RULES } from "config/constant";
 const { TextArea } = Input;
 
@@ -15,7 +15,7 @@ const getConfigList = () => JSON.parse(localStorage.myConfig || "[]");
 const ConfigDrawer: React.FC<IProps> = props => {
   const { visible, onClose, setContent } = props;
   const [form] = Form.useForm();
-  const [_, dispatch] = useState(0);
+  const dispatch = useState(0)[1];
   const configListRef = useRef(getConfigList());
 
   useEffect(() => {

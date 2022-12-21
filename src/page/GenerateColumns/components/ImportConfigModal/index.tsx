@@ -1,5 +1,5 @@
 /* 导入配置，模态框 */
-import React, { useState } from "react";
+import React from "react";
 import { Input, Button, Modal, Form, Space, message } from "antd";
 import { CONFIG_EXAMPLE, REQUIRED_RULES } from "config/constant";
 const { TextArea } = Input;
@@ -27,6 +27,7 @@ const ImportConfigModal: React.FC<IProps> = props => {
 
   const onFinish = (values: any) => {
     try {
+      // eslint-disable-next-line
       const columns = eval(values.content).map((v: any) => ({ ...v, align: v.align || "left" }));
       saveConfig(JSON.stringify(columns, null, 2));
       onSubmit?.(columns);

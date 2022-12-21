@@ -1,21 +1,8 @@
 import React, { forwardRef, useImperativeHandle, useState } from "react";
-import {
-  Collapse,
-  Form,
-  Input,
-  Button,
-  Modal,
-  InputNumber,
-  Switch,
-  Radio,
-  Select,
-  message,
-  Space,
-  Tooltip
-} from "antd";
+import { Collapse, Form, Input, Button, Modal, InputNumber, Switch, Radio, Select, message, Space } from "antd";
 import { DEFAULT_ADD_FIELD, REQUIRED_RULES, RANDOM_TYPE_ARR } from "config/constant";
 import "./index.less";
-import { DownOutlined, QuestionCircleOutlined, UpOutlined } from "@ant-design/icons";
+import { DownOutlined, UpOutlined } from "@ant-design/icons";
 
 const { Panel } = Collapse;
 
@@ -73,7 +60,7 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
         columns: [DEFAULT_ADD_FIELD]
       }}
     >
-      <Form.Item name="variable" label="变量名">
+      <Form.Item name="variable" label="变量名" rules={REQUIRED_RULES}>
         <Input placeholder="生成的配置用什么变量存放" maxLength={100} />
       </Form.Item>
       <Form.Item
@@ -163,14 +150,7 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
                             danger
                             onClick={e => {
                               e.stopPropagation();
-                              Modal.confirm({
-                                content: "确定要删除吗？",
-                                okText: "确认",
-                                cancelText: "取消",
-                                onOk() {
-                                  remove(field.name);
-                                }
-                              });
+                              remove(field.name);
                             }}
                           >
                             删除

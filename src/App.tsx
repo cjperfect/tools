@@ -43,7 +43,7 @@ const App: React.FC<IProps> = (props: IProps) => {
         />
       </Header>
       <Content>{children}</Content>
-      <Footer>Generate Columns ©2022 Created by Chen Jiang</Footer>
+      <Footer style={{ textAlign: "center" }}>Generate Columns ©2022 Created by Chen Jiang</Footer>
     </div>
   );
 };

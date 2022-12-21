@@ -102,5 +102,65 @@ export function addMenu(
       state: routeParams
     });
   }
-}`
+}`,
+
+  searchForm: `
+import { SearchForm } from "yss-biz";
+
+function TestExample(props) {
+  // 处理查询
+  const handleSearch = (values) => {
+    // asyncHttpGetFundHugeRedeem(values);
+  };
+
+  // 查询框
+  const formItems = [
+    {
+      name: "fundCodes",
+      label: "产品名称",
+      type: "Select",
+      options: allPrdCodes || [],
+      props: {
+        placeholder: "多选，默认查询所有",
+        mode: "multiple"
+      }
+    }
+  ];
+  return (
+    <SearchForm
+      labelSize="6em"
+      itemSize="230px"
+      lineOf={4}
+      formItem={formItems}
+      handleSearch={handleSearch}
+    />
+  );
+}
+
+
+// asnyc文件---分页查询
+  async httpGetFundHugeRedeem(state, params, { getState }) {
+    const pagination = state.get("pagination").toJS();
+    const searchParams = state.get("searchParams").toJS();
+    const newParams = {
+      ...searchParams,
+      pageNum: pagination.current,
+      pageSize: pagination.pageSize,
+      ...params
+    };
+    const res = await getFundHugeRedeem(newParams);
+    const { code, data } = res;
+    if (code === "200" && data) {
+      pagination.total = parseInt(data.total);
+      pagination.current = newParams.pageNum;
+      pagination.pageSize = newParams.pageSize;
+
+      return getState().merge({
+        pagination,
+        searchParams: newParams,
+        dataSource: data.list || []
+      });
+    }
+  }
+`
 };

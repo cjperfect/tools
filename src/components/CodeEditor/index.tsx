@@ -11,7 +11,6 @@ interface IProps {
 const CodeEditor: React.FC<IProps> = (props: IProps) => {
   const { value, height = 460, language = "javascript", onChange } = props;
   const editorRef = useRef<{ [extra: string]: any }>();
-  console.log(value);
 
   const options = {
     selectOnLineNumbers: true,
