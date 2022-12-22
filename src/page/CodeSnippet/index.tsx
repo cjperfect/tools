@@ -8,11 +8,7 @@ import { CopyOutlined, FormOutlined } from "@ant-design/icons";
 import copy from "copy-to-clipboard";
 
 interface IProps {}
-const snippetArr = [
-  { type: "commonTable", btnText: "CommonTable代码片段" },
-  { type: "searchForm", btnText: "searchForm代码片段" },
-  { type: "addMenu", btnText: "addMenu代码片段" }
-];
+const snippetArr = [{ type: "randomNum", btnText: "生成一个范围内的随机数" }];
 
 const CodeSnippet: React.FC<IProps> = props => {
   const [code, setCode] = useState("chenjiang");
