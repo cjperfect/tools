@@ -1,10 +1,8 @@
 .generate-columns {
   display: grid;
   grid-template-columns: repeat(2, calc(50% - 10px));
-  grid-template-rows: calc(60% - 20px) 40%;
-  gap: 20px;
+  column-gap: 20px;
   height: 100%;
-  grid-template-areas: "condition code" "condition preview";
 
   > div {
     border: 1px solid #f1f2f6;
@@ -19,6 +17,9 @@
     }
     > div {
       padding: 0 20px;
+
+      .react-monaco-editor-container {
+      }
     }
   }
 
@@ -31,8 +32,6 @@
   }
 
   .condition {
-    grid-area: condition;
-
     .container {
       height: calc(100% - 100px);
 
@@ -51,12 +50,33 @@
     }
   }
 
-  .preview {
-    grid-area: preview;
+  .code {
+    min-height: 500px;
+    .ant-tabs {
+      height: calc(100% - 100px);
 
+      .ant-tabs-content,
+      .ant-tabs-tabpane {
+        height: 100%;
+
+        .react-monaco-editor-container {
+          height: calc(100% - 40px) !important;
+        }
+      }
+    }
+  }
+
+  .preview {
     .ant-table-wrapper {
       height: calc(100% - 100px);
       overflow-y: auto;
     }
+  }
+}
+
+@media all and (max-width: 1650px) {
+  .generate-columns {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
   }
 }

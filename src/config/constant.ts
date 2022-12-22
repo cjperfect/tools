@@ -9,8 +9,8 @@ export const CONFIG_EXAMPLE = [
     align: "left"
   },
   {
-    dataIndex: "age",
-    title: "年龄",
+    dataIndex: "date",
+    title: "日期",
     ellipsis: true,
     width: 150,
     align: "left"

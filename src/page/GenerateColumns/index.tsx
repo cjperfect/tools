@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Tabs, Table, Button, message, Space } from "antd";
+import { Tabs, Button, message, Space } from "antd";
 import "./index.less";
 import FormInput from "./components/formInput";
 import CodeEditor from "components/CodeEditor";
@@ -122,10 +122,6 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
               }
             ]}
           ></Tabs>
-        </div>
-        <div className="preview">
-          <h2 className="title">效果展示</h2>
-          <Table columns={result.columns} dataSource={result.data} rowKey="id" />
         </div>
       </div>
 

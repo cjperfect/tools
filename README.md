@@ -1,15 +1,19 @@
+项目基于 React + ant design4.x + typescript + redux-toolkit 实现的。
+
 ## 部署流程
+
 更新完代码，执行命令
+
 ```shell
 yarn build
 
 git add .
 git commit -m 'update'
-git pull origin master 
+git pull origin master
 git push origin master
 ```
-稍等几分钟就部署到github服务器上，可以使用cxkyyds.xyz域名访问了
 
+稍等几分钟就部署到 github 服务器上，可以使用 cxkyyds.xyz 域名访问了
 
 #### 项目配置流程
 
@@ -18,5 +22,3 @@ git push origin master
 #### 如何还需要配置 prettier, eslint, styleline
 
 [配置教程](https://blog.csdn.net/qq_39583550/article/details/125458727)
-
-
