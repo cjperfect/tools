@@ -1,3 +1,5 @@
+/* 存放一些常量 */
+
 export const REQUIRED_RULES = [{ required: true, message: "请输入" }];
 
 export const CONFIG_EXAMPLE = [
@@ -32,15 +34,25 @@ export const DEFAULT_ADD_FIELD: Field = {
   align: "left",
   ellipsis: true,
   className: undefined,
-  randomType: "cname"
+  randomType: "ctitle"
 };
 
 /* 随机类型 */
 export const RANDOM_TYPE_ARR = [
   {
-    key: "integer",
-    value: "integer",
+    key: "ctitle",
+    value: "ctitle",
+    label: "标题"
+  },
+  {
+    key: "natural",
+    value: "natural",
     label: "整数"
+  },
+  {
+    key: "float",
+    value: "float",
+    label: "浮点数（两位小数）"
   },
   {
     key: "cname",
@@ -48,19 +60,19 @@ export const RANDOM_TYPE_ARR = [
     label: "名字"
   },
   {
-    key: "datetime",
-    value: "datetime",
-    label: "日期时间"
-  },
-  {
     key: "date",
     value: "date",
     label: "日期"
   },
   {
-    key: "csentence",
-    value: "csentence",
-    label: "一段话"
+    key: "time",
+    value: "time",
+    label: "时间"
+  },
+  {
+    key: "datetime",
+    value: "datetime",
+    label: "日期时间"
   },
   {
     key: "cparagraph",

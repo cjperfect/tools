@@ -33,7 +33,7 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
   const importSubmit = (values: any) => {
     formInputRef.current.setColumnsValue(
       "columns",
-      values.map((v: any) => ({ ...v, randomType: "csentence", defaultValue: "- -" }))
+      values.map((v: any) => ({ ...v, randomType: "ctitle" }))
     );
     setVisible(false);
   };
@@ -136,7 +136,7 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
           formInputRef.current.setColumnsValue(
             "columns",
             // eslint-disable-next-line
-            eval(columnsText).map((v: any) => ({ ...v, randomType: "csentence", defaultValue: "- -" }))
+            eval(columnsText).map((v: any) => ({ ...v, randomType: "ctitle" }))
           );
         }}
       />

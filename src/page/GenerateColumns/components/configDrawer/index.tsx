@@ -1,5 +1,5 @@
 /* 查看已导入配置的抽屉 */
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Input, Button, Drawer, Form, Space, Modal, Empty } from "antd";
 import { REQUIRED_RULES } from "config/constant";
 const { TextArea } = Input;
@@ -13,12 +13,11 @@ interface IProps {
 const ConfigDrawer: React.FC<IProps> = props => {
   const { visible, onClose, setContent } = props;
   const [form] = Form.useForm();
-  const [configListState, setConfigListState] = useState<any>([]);
+  const [, dispatch] = useState(0);
   const configList = JSON.parse(localStorage.myConfig || "[]");
 
   useEffect(() => {
     if (visible) {
-      setConfigListState(configList);
       form.setFieldsValue({
         configList
       });
@@ -37,7 +36,7 @@ const ConfigDrawer: React.FC<IProps> = props => {
           }}
         >
           <Form.List name={"configList"}>
-            {(fields, { add, remove, move }) => {
+            {(fields, { remove }) => {
               return fields.map((field, index) => {
                 return (
                   <Form.Item
@@ -56,10 +55,10 @@ const ConfigDrawer: React.FC<IProps> = props => {
                                 okText: "确认",
                                 cancelText: "取消",
                                 onOk() {
-                                  const data = [...configListState];
-                                  data.splice(field.key, 1);
-                                  localStorage.myConfig = JSON.stringify(data);
-                                  setConfigListState(data);
+                                  const current = form.getFieldValue("configList");
+                                  current.splice(field.name, 1);
+                                  localStorage.myConfig = JSON.stringify(current);
+                                  dispatch(Math.random());
                                   remove(field.name);
                                 }
                               });
@@ -69,7 +68,7 @@ const ConfigDrawer: React.FC<IProps> = props => {
                           </Button>
                           <Button
                             onClick={() => {
-                              setContent(configListState[field.name].config);
+                              setContent(configList[field.name].config);
                               onClose();
                             }}
                           >

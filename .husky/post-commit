@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "拉取代码中..." & git pull origin master & echo "代码构建中..." & yarn build

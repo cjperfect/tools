@@ -55,7 +55,7 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
       onFinish={onFinish}
       onFinishFailed={onFinishFailed}
       initialValues={{
-        variable: "fundCodeList",
+        variable: "columns",
         num: 10,
         columns: [DEFAULT_ADD_FIELD]
       }}

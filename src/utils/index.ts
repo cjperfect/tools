@@ -3,7 +3,7 @@ import Mock from "mockjs";
 export const generateColumns = (values: ColumnInterface) => {
   const { variable, num, columns = [] } = values;
 
-  const newColumns = columns.map((curr: Column, index) => {
+  const newColumns = columns.map((curr: Column) => {
     const { align, className, dataIndex, ellipsis, fixed, title, width } = curr;
     const obj: any = {};
     if (className) obj.className = className;
@@ -22,12 +22,15 @@ export const generateColumns = (values: ColumnInterface) => {
 
   const data = [];
   for (let i = 1; i <= num; i++) {
-    const temp: any = { id: i };
+    const temp: any = { id: random.id() };
     columns.forEach((column: any) => {
       const { randomType, dataIndex } = column;
       if (randomType === "sex") {
         // 性别
         temp[dataIndex] = random.pick(["男", "女"]);
+      } else if (randomType === "float") {
+        // 两位小数的浮点数
+        temp[dataIndex] = random[randomType](0, 100, 2, 2);
       } else {
         temp[dataIndex] = random[randomType]();
       }
@@ -38,7 +41,7 @@ export const generateColumns = (values: ColumnInterface) => {
   return {
     data,
     columns,
-    dataText: `const ${variable} = ${JSON.stringify(data, null, 2)}`,
+    dataText: `const dataSource = ${JSON.stringify(data, null, 2)}`,
     columnsText: `const ${variable} = ${JSON.stringify(newColumns, null, 2)}`
   };
 };
