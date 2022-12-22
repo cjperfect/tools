@@ -1,8 +1,9 @@
 import React, { forwardRef, useImperativeHandle, useState } from "react";
 import { Collapse, Form, Input, Button, Modal, InputNumber, Switch, Radio, Select, message, Space } from "antd";
 import { DEFAULT_ADD_FIELD, REQUIRED_RULES, RANDOM_TYPE_ARR } from "config/constant";
-import "./index.less";
 import { DownOutlined, UpOutlined } from "@ant-design/icons";
+import { saveConfigToStorage } from "utils";
+import "./index.less";
 
 const { Panel } = Collapse;
 
@@ -28,10 +29,12 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
     });
   };
 
+  /* 一键生成 */
   const onFinish = (values: ColumnInterface) => {
     if (!values.columns || !values.columns.length) {
       return message.error("至少需要一个字段");
     }
+    saveConfigToStorage(JSON.stringify(values.columns, null, 2));
     onSubmit?.(values);
   };
 

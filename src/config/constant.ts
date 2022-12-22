@@ -2,20 +2,22 @@
 
 export const REQUIRED_RULES = [{ required: true, message: "请输入" }];
 
-export const CONFIG_EXAMPLE = [
+export const CONFIG_EXAMPLE: Column[] = [
   {
     dataIndex: "name",
     title: "姓名",
     ellipsis: true,
     width: 150,
-    align: "left"
+    align: "left",
+    randomType: "cname"
   },
   {
     dataIndex: "date",
     title: "日期",
     ellipsis: true,
     width: 150,
-    align: "left"
+    align: "left",
+    randomType: "date"
   }
 ];
 

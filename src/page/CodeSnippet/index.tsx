@@ -3,18 +3,19 @@ import React, { useState } from "react";
 import CodeEditor from "components/CodeEditor";
 import { Button, message } from "antd";
 import { codeSnippetMap } from "config/codeSnippet";
-import "./index.less";
 import { CopyOutlined, FormOutlined } from "@ant-design/icons";
 import copy from "copy-to-clipboard";
+import "./index.less";
 
 interface IProps {}
-const snippetArr = [
+
+const snippetArr: SnippetType[] = [
   { type: "randomNum", btnText: "生成一个范围内的随机数" },
   { type: "idReg", btnText: "身份证号验证" }
 ];
 
 const CodeSnippet: React.FC<IProps> = props => {
-  const [code, setCode] = useState("chenjiang");
+  const [code, setCode] = useState("");
   return (
     <div className="code-snippet">
       <div className="snippet-type">
@@ -25,7 +26,7 @@ const CodeSnippet: React.FC<IProps> = props => {
               <Button
                 icon={<FormOutlined />}
                 onClick={e => {
-                  setCode(codeSnippetMap[type] || "chenjiang");
+                  setCode(codeSnippetMap[type] || `console.log("chenjiang")`);
                 }}
               >
                 {btnText}
@@ -36,17 +37,18 @@ const CodeSnippet: React.FC<IProps> = props => {
       </div>
       <div className="code-result">
         <h1 className="title">生成结果</h1>
-        <Button
-          icon={<CopyOutlined />}
-          style={{ marginLeft: "auto", display: "block", marginRight: 20 }}
-          onClick={() => {
-            if (!code) return message.info("没有啥要复制的");
-            copy(code);
-            message.success("已复制到剪切板");
-          }}
-        >
-          复制
-        </Button>
+        <p className="btn-group">
+          <Button
+            icon={<CopyOutlined />}
+            onClick={() => {
+              if (!code) return message.info("没有啥要复制的");
+              copy(code);
+              message.success("已复制到剪切板");
+            }}
+          >
+            复制
+          </Button>
+        </p>
         <CodeEditor value={code} language="javascript" />
       </div>
     </div>

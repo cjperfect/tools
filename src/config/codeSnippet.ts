@@ -32,7 +32,7 @@ const getRandom = (min, max) => Math.floor(Math.random() * (max - min + 1)) + mi
 * 身份证号码规范：身份证号码为15位或者18位，15位时全为数字，18位前17位为数字，最后一位是校验位，可能为数字或字符X
 */
 function checkCardNo(val) {
-  var reg = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+  var reg = /(^\\d{15}$)|(^\\d{18}$)|(^\\d{17}(\\d|X|x)$)/;
   return reg.test(val)
 }
 `

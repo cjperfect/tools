@@ -2,6 +2,7 @@
 import React from "react";
 import { Input, Button, Modal, Form, Space, message } from "antd";
 import { CONFIG_EXAMPLE, REQUIRED_RULES } from "config/constant";
+import { saveConfigToStorage } from "utils";
 const { TextArea } = Input;
 
 interface IProps {
@@ -11,16 +12,6 @@ interface IProps {
   footer?: any;
 }
 
-const saveConfig = (val: any) => {
-  let data = [];
-  if (!localStorage.myConfig) {
-    data = [{ config: val }];
-  } else {
-    data = [...JSON.parse(localStorage.myConfig), { config: val }];
-  }
-  localStorage.myConfig = JSON.stringify(data);
-};
-
 const ImportConfigModal: React.FC<IProps> = props => {
   const { visible, onSubmit, onCancel, footer } = props;
   const [form] = Form.useForm();
@@ -29,7 +20,7 @@ const ImportConfigModal: React.FC<IProps> = props => {
     try {
       // eslint-disable-next-line
       const columns = eval(values.content).map((v: any) => ({ ...v, align: v.align || "left" }));
-      saveConfig(JSON.stringify(columns, null, 2));
+      saveConfigToStorage(JSON.stringify(columns, null, 2));
       onSubmit?.(columns);
     } catch (e) {
       return message.error("配置格式有误，请检查");

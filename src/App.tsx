@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style/index.less";
 import { useHistory } from "react-router-dom";
 import { Layout, Menu } from "antd";
@@ -27,6 +27,7 @@ const linkConfig: LinkType[] = [
 const App: React.FC<IProps> = (props: IProps) => {
   const { children } = props;
   const history = useHistory();
+  const [selectedKey, setSelectedKey] = useState(history.location?.pathname || "/generate-columns");
 
   return (
     <div className="main-page">
@@ -34,10 +35,11 @@ const App: React.FC<IProps> = (props: IProps) => {
         <Menu
           theme="dark"
           mode="horizontal"
-          defaultSelectedKeys={["/generate-columns"]}
+          selectedKeys={[selectedKey]}
           items={linkConfig}
           onClick={({ key }) => {
             if (history.location.pathname === key) return;
+            setSelectedKey(key);
             history.push(key);
           }}
         />

@@ -45,3 +45,15 @@ export const generateColumns = (values: ColumnInterface) => {
     columnsText: `const ${variable} = ${JSON.stringify(newColumns, null, 2)}`
   };
 };
+
+// 保存配置到localstorage
+export const saveConfigToStorage = (val: any) => {
+  let data = [];
+  const obj = { id: Mock.Random.id(), config: val };
+  if (!localStorage.myConfig) {
+    data = [obj];
+  } else {
+    data = [...JSON.parse(localStorage.myConfig), obj];
+  }
+  localStorage.myConfig = JSON.stringify(data);
+};
