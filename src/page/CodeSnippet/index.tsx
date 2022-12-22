@@ -24,6 +24,7 @@ const CodeSnippet: React.FC<IProps> = props => {
           {snippetArr.map(({ type, btnText }) => {
             return (
               <Button
+                key={type}
                 icon={<FormOutlined />}
                 onClick={e => {
                   setCode(codeSnippetMap[type] || `console.log("chenjiang")`);
