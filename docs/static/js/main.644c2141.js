@@ -23784,7 +23784,7 @@ function _unsupportedIterableToArray(o, minLen) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "static/js/" + ({"5268":"Home","6072":"CodeSnippet"}[chunkId] || chunkId) + "." + {"61":"2bdbe39f","111":"5f8691de","117":"c30850d8","397":"f978d2d1","433":"8914a00b","458":"65150358","460":"b933b234","465":"59954bbd","617":"8bb38370","837":"3ac5cfc1","866":"363cfefe","905":"6500272f","993":"f2b4e73b","1099":"1706618b","1239":"695e5ab6","1256":"453bf6e6","1391":"ea9bc5d0","1448":"e4466df5","1737":"c113e8ae","1994":"7150777a","2078":"79626cc5","2166":"e6d395de","2266":"c6831eda","2319":"5d0879ab","2439":"d667f38a","2491":"961df894","2498":"3cfb844d","2513":"235c57be","2542":"c83e2dd2","2548":"43d28ebd","2617":"9e843b36","3011":"13f68bfd","3380":"7e583936","3418":"49086352","3422":"c1061fb2","3473":"f07e1945","3579":"bfe5fa41","3698":"11d35f49","3912":"026e2e57","3969":"f47b427c","4050":"8a4eb20e","4219":"0a1c4f1d","4429":"64c90f65","4901":"37752b46","5048":"dafac5bc","5268":"c956e459","5726":"10b6147b","5828":"9d04dec0","5829":"7bd1a2a9","5887":"1b4096d3","5939":"03842156","6072":"382592a1","6112":"0e9f74ea","6238":"79a42398","6377":"c49ec5de","6476":"af6c8df0","6479":"2ec154ed","6619":"5022ed4a","6864":"cb75c3d9","6876":"7ef55132","6952":"4d28693d","6957":"fafd3c25","6984":"2baa40d1","7048":"a4e16904","7214":"f12a5436","7276":"e05d8df4","7290":"b1db8725","7386":"0e003381","7580":"de6e6f43","7669":"673024fb","7716":"df471af0","7898":"d2fc62f3","7918":"1d0ec1d1","8095":"a958913e","8104":"ff0d7fbc","8407":"b9e3f734","8624":"f5c3cdfe","8678":"b741edbc","8773":"677f5fc8","8917":"b3fbefff","9029":"942bd934","9064":"a127616f","9173":"cfb29e1e","9399":"a54b57d7","9725":"0936a258","9860":"b1e297b2"}[chunkId] + ".chunk.js";
+/******/ 			return "static/js/" + ({"5268":"Home","6072":"CodeSnippet"}[chunkId] || chunkId) + "." + {"61":"2bdbe39f","111":"5f8691de","117":"c30850d8","397":"f978d2d1","433":"8914a00b","458":"65150358","460":"b933b234","465":"59954bbd","617":"8bb38370","837":"3ac5cfc1","866":"363cfefe","905":"6500272f","993":"f2b4e73b","1099":"1706618b","1239":"695e5ab6","1256":"453bf6e6","1391":"ea9bc5d0","1448":"e4466df5","1737":"c113e8ae","1994":"7150777a","2078":"79626cc5","2166":"e6d395de","2266":"c6831eda","2319":"5d0879ab","2439":"d667f38a","2491":"961df894","2498":"3cfb844d","2513":"235c57be","2542":"c83e2dd2","2548":"43d28ebd","2617":"9e843b36","3011":"13f68bfd","3380":"7e583936","3418":"49086352","3422":"c1061fb2","3473":"f07e1945","3579":"bfe5fa41","3698":"11d35f49","3912":"026e2e57","3969":"f47b427c","4050":"8a4eb20e","4219":"0a1c4f1d","4429":"64c90f65","4901":"37752b46","5048":"dafac5bc","5268":"67ba8090","5726":"10b6147b","5828":"9d04dec0","5829":"7bd1a2a9","5887":"1b4096d3","5939":"03842156","6072":"fd4fdbb6","6112":"0e9f74ea","6238":"79a42398","6377":"c49ec5de","6476":"af6c8df0","6479":"2ec154ed","6619":"5022ed4a","6864":"cb75c3d9","6876":"7ef55132","6952":"4d28693d","6957":"fafd3c25","6984":"2baa40d1","7048":"a4e16904","7214":"f12a5436","7276":"e05d8df4","7290":"b1db8725","7386":"0e003381","7580":"de6e6f43","7669":"673024fb","7716":"df471af0","7898":"d2fc62f3","7918":"1d0ec1d1","8095":"a958913e","8104":"ff0d7fbc","8407":"b9e3f734","8624":"f5c3cdfe","8678":"b741edbc","8773":"677f5fc8","8917":"b3fbefff","9029":"942bd934","9064":"a127616f","9173":"cfb29e1e","9399":"a54b57d7","9725":"0936a258","9860":"b1e297b2"}[chunkId] + ".chunk.js";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -23793,7 +23793,7 @@ function _unsupportedIterableToArray(o, minLen) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.miniCssF = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "static/css/" + ({"5268":"Home","6072":"CodeSnippet"}[chunkId] || chunkId) + "." + {"5268":"3120e9bb","6072":"0d065a57","9399":"d37ba463"}[chunkId] + ".chunk.css";
+/******/ 			return "static/css/" + ({"5268":"Home","6072":"CodeSnippet"}[chunkId] || chunkId) + "." + {"5268":"3120e9bb","6072":"c6eb5f47","9399":"d37ba463"}[chunkId] + ".chunk.css";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -24063,6 +24063,8 @@ var __webpack_exports__ = {};
 var react = __webpack_require__(47313);
 // EXTERNAL MODULE: ./node_modules/react-dom/client.js
 var client = __webpack_require__(21739);
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js + 1 modules
+var slicedToArray = __webpack_require__(29439);
 ;// CONCATENATED MODULE: ./src/style/index.less
 // extracted by mini-css-extract-plugin
 
@@ -25687,8 +25689,6 @@ if (false) { var secondaryBuildName, initialBuildName, buildNames, key, global$1
 var toConsumableArray = __webpack_require__(93433);
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
 var defineProperty = __webpack_require__(4942);
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js + 1 modules
-var slicedToArray = __webpack_require__(29439);
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
 var classnames = __webpack_require__(46123);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
@@ -26603,7 +26603,7 @@ Menu.ItemGroup = es/* ItemGroup */.BW;
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(46417);
 ;// CONCATENATED MODULE: ./src/App.tsx
-var App_Header=es_layout.Header,App_Content=es_layout.Content,App_Footer=es_layout.Footer;var linkConfig=[{key:"/generate-columns",label:"生成表格columns"},{key:"/code-snippet",label:"代码片段"}];var App=function App(props){var children=props.children;var history=useHistory();return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"main-page",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(App_Header,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(menu,{theme:"dark",mode:"horizontal",defaultSelectedKeys:["/generate-columns"],items:linkConfig,onClick:function onClick(_ref){var key=_ref.key;if(history.location.pathname===key)return;history.push(key);}})}),/*#__PURE__*/(0,jsx_runtime.jsx)(App_Content,{children:children}),/*#__PURE__*/(0,jsx_runtime.jsx)(App_Footer,{style:{textAlign:"center"},children:"Generate Columns \xA92022 Created by Chen Jiang"})]});};/* harmony default export */ var src_App = (App);
+var App_Header=es_layout.Header,App_Content=es_layout.Content,App_Footer=es_layout.Footer;var linkConfig=[{key:"/generate-columns",label:"生成表格columns"},{key:"/code-snippet",label:"代码片段"}];var App=function App(props){var _history$location;var children=props.children;var history=useHistory();var _useState=(0,react.useState)(((_history$location=history.location)===null||_history$location===void 0?void 0:_history$location.pathname)||"/generate-columns"),_useState2=(0,slicedToArray/* default */.Z)(_useState,2),selectedKey=_useState2[0],setSelectedKey=_useState2[1];return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"main-page",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(App_Header,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(menu,{theme:"dark",mode:"horizontal",selectedKeys:[selectedKey],items:linkConfig,onClick:function onClick(_ref){var key=_ref.key;if(history.location.pathname===key)return;setSelectedKey(key);history.push(key);}})}),/*#__PURE__*/(0,jsx_runtime.jsx)(App_Content,{children:children}),/*#__PURE__*/(0,jsx_runtime.jsx)(App_Footer,{style:{textAlign:"center"},children:"Generate Columns \xA92022 Created by Chen Jiang"})]});};/* harmony default export */ var src_App = (App);
 ;// CONCATENATED MODULE: ./src/router/config.ts
 /* 
 Webpack通过增加内联注释来告诉运行时，该有怎样的行为。通过向import中添加注释，我们可以执行诸如命名chunk或选择不同模式之类的操作。
