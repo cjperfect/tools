@@ -1,7 +1,6 @@
 /* 已导入配置的接口 */
 interface ConfigType {
   config: string;
-  id: string;
 }
 
 /* 代码片段里面按钮的接口 */

@@ -61,7 +61,7 @@ export const generateColumns = (values: ColumnInterface) => {
 // 保存配置到localstorage
 export const saveConfigToStorage = (val: any) => {
   let data = [];
-  const obj = { id: Mock.Random.id(), config: val };
+  const obj = { config: val };
   if (!localStorage.myConfig) {
     data = [obj];
   } else {

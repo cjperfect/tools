@@ -49,6 +49,11 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
     setConfigVisible(false);
   };
 
+  /* 查看已导入的配置---提交事件 */
+  const onSubmit = (values: ConfigType[]) => {
+    setConfigVisible(false);
+  };
+
   return (
     <>
       <div className="generate-columns">
@@ -132,6 +137,7 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
       <ConfigDrawer
         visible={configVisible}
         onClose={drawerClose}
+        onSubmit={onSubmit}
         setContent={columnsText => {
           formInputRef.current.setColumnsValue(
             "columns",
