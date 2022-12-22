@@ -9,3 +9,10 @@ interface SnippetType {
   type: string; // 什么代码
   btnText: string; // 按钮文字
 }
+
+/* 下拉框接口 */
+interface OptionsType {
+  key: string;
+  value: string;
+  label: string;
+}

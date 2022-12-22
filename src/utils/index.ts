@@ -20,19 +20,31 @@ export const generateColumns = (values: ColumnInterface) => {
 
   const random = Mock.Random;
 
+  const diyRandomTypeByStorage = operateRandomType.get();
+
   const data = [];
   for (let i = 1; i <= num; i++) {
     const temp: any = { id: random.id() };
     columns.forEach((column: any) => {
       const { randomType, dataIndex } = column;
-      if (randomType === "sex") {
-        // 性别
-        temp[dataIndex] = random.pick(["男", "女"]);
-      } else if (randomType === "float") {
-        // 两位小数的浮点数
-        temp[dataIndex] = random[randomType](0, 100, 2, 2);
+      if (diyRandomTypeByStorage[randomType]) {
+        /* 处理自定义类型 */
+        temp[dataIndex] = random.pick(diyRandomTypeByStorage[randomType]);
       } else {
-        temp[dataIndex] = random[randomType]();
+        /* 处理mockjs自带的类型 */
+
+        if (randomType === "sex") {
+          // 性别
+          temp[dataIndex] = random.pick(["男", "女"]);
+        } else if (randomType === "float") {
+          // 两位小数的浮点数
+          temp[dataIndex] = random[randomType](0, 100, 2, 2);
+        } else if (randomType === "") {
+          // 空字符串
+          temp[dataIndex] = "";
+        } else {
+          temp[dataIndex] = random[randomType]();
+        }
       }
     });
     data.push(temp);
@@ -56,4 +68,27 @@ export const saveConfigToStorage = (val: any) => {
     data = [...JSON.parse(localStorage.myConfig), obj];
   }
   localStorage.myConfig = JSON.stringify(data);
+};
+
+/* 从storage获取用户自定义类型 */
+export const operateRandomType = {
+  get() {
+    return localStorage.diyTypeArr ? JSON.parse(localStorage.diyTypeArr || "{}") : {};
+  },
+  set(val: any) {
+    localStorage.diyTypeArr = val;
+  },
+  /* 改变成下拉框option形式 */
+  changeOption(): OptionsType[] {
+    const data = [];
+    const current = this.get();
+    for (let key in current) {
+      data.push({
+        key,
+        value: key,
+        label: key
+      });
+    }
+    return data;
+  }
 };

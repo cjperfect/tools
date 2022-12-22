@@ -21,7 +21,7 @@ const ConfigDrawer: React.FC<IProps> = props => {
   }, [visible]);
 
   return (
-    <Drawer title="查看已导入的配置" placement={"right"} open={visible} key={"right"} size="large" onClose={onClose}>
+    <Drawer title="新增自定义类型" placement={"right"} open={visible} key={"right"} size="large" onClose={onClose}>
       {configListState?.length ? (
         <div className="config-list">
           {configListState.map(v => {

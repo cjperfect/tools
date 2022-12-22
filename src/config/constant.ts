@@ -40,7 +40,7 @@ export const DEFAULT_ADD_FIELD: Field = {
 };
 
 /* 随机类型 */
-export const RANDOM_TYPE_ARR = [
+export const RANDOM_TYPE_ARR: OptionsType[] = [
   {
     key: "ctitle",
     value: "ctitle",
@@ -87,7 +87,13 @@ export const RANDOM_TYPE_ARR = [
     label: "性别"
   },
   {
+    key: "province",
     value: "province",
     label: "城市"
+  },
+  {
+    key: "",
+    value: "",
+    label: "空数据"
   }
 ];
