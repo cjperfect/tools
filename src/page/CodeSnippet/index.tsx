@@ -11,7 +11,8 @@ interface IProps {}
 
 const snippetArr: SnippetType[] = [
   { type: "randomNum", btnText: "生成一个范围内的随机数" },
-  { type: "idReg", btnText: "身份证号验证" }
+  { type: "idReg", btnText: "身份证号验证" },
+  { type: "1111", btnText: "测试" },
 ];
 
 const CodeSnippet: React.FC<IProps> = props => {

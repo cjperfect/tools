@@ -34,6 +34,5 @@ const getRandom = (min, max) => Math.floor(Math.random() * (max - min + 1)) + mi
 function checkCardNo(val) {
   var reg = /(^\\d{15}$)|(^\\d{18}$)|(^\\d{17}(\\d|X|x)$)/;
   return reg.test(val)
-}
-`
+}`
 };
