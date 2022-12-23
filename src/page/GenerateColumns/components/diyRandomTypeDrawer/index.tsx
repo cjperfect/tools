@@ -1,6 +1,6 @@
 /* 增加自定义类型 */
 import React, { useState, useEffect } from "react";
-import { Drawer, Form, Input, Button, Space, Collapse, message } from "antd";
+import { Drawer, Form, Input, Button, Space, Collapse, message, Modal } from "antd";
 import { REQUIRED_RULES } from "config/constant";
 import { operateRandomType } from "utils";
 import "./index.less";
@@ -19,18 +19,22 @@ const DiyRandomTypeModal: React.FC<IProps> = props => {
   const [randomState, setRadomState] = useState<any>([{}]);
   const [form] = Form.useForm();
 
+  const init = () => {
+    const typeMap = operateRandomType.get();
+    const state = [];
+    for (let k in typeMap) {
+      state.push({
+        randomName: k,
+        randomValue: typeMap[k].join(",")
+      });
+    }
+    setRadomState(state);
+    form.setFieldValue("typeList", state.length ? state : [{}]);
+  };
+
   useEffect(() => {
     if (visible) {
-      const typeMap = operateRandomType.get();
-      const state = [];
-      for (let k in typeMap) {
-        state.push({
-          randomName: k,
-          randomValue: typeMap[k].join(",")
-        });
-      }
-      setRadomState(state);
-      form.setFieldValue("typeList", state.length ? state : [{}]);
+      init();
     }
     // eslint-disable-next-line
   }, [visible]);
@@ -85,16 +89,14 @@ const DiyRandomTypeModal: React.FC<IProps> = props => {
                         key={field.key}
                         forceRender={true}
                         header={
-                          <>
-                            <Form.Item label="随机类型名称" rules={REQUIRED_RULES} name={[field.name, "randomName"]}>
-                              <Input
-                                placeholder="fundCode"
-                                onClick={e => {
-                                  e.stopPropagation();
-                                }}
-                              />
-                            </Form.Item>
-                          </>
+                          <Form.Item label="随机类型名称" rules={REQUIRED_RULES} name={[field.name, "randomName"]}>
+                            <Input
+                              placeholder="fundCode"
+                              onClick={e => {
+                                e.stopPropagation();
+                              }}
+                            />
+                          </Form.Item>
                         }
                         extra={
                           <Button
@@ -130,7 +132,20 @@ const DiyRandomTypeModal: React.FC<IProps> = props => {
             <Button type="primary" htmlType="submit" style={{ width: 120 }}>
               提交
             </Button>
-            <Button htmlType="reset">重置</Button>
+            <Button
+              onClick={() => {
+                Modal.confirm({
+                  content: "确定要重置吗？",
+                  okText: "确认",
+                  cancelText: "取消",
+                  onOk() {
+                    init();
+                  }
+                });
+              }}
+            >
+              重置
+            </Button>
           </Space>
         </Form.Item>
       </Form>

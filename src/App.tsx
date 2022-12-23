@@ -27,7 +27,9 @@ const linkConfig: LinkType[] = [
 const App: React.FC<IProps> = (props: IProps) => {
   const { children } = props;
   const history = useHistory();
-  const [selectedKey, setSelectedKey] = useState(history.location?.pathname || "/generate-columns");
+  const [selectedKey, setSelectedKey] = useState(
+    history.location?.pathname === "/" ? "/generate-columns" : history.location?.pathname
+  );
 
   return (
     <div className="main-page">

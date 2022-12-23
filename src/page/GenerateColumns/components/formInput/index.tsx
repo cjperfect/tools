@@ -1,7 +1,7 @@
 import React, { forwardRef, useEffect, useImperativeHandle, useState } from "react";
 import { Collapse, Form, Input, Button, Modal, InputNumber, Switch, Radio, Select, message, Space } from "antd";
 import { DEFAULT_ADD_FIELD, REQUIRED_RULES, RANDOM_TYPE_ARR } from "config/constant";
-import { DownOutlined, PlusOutlined, UpOutlined } from "@ant-design/icons";
+import { DownOutlined, UpOutlined } from "@ant-design/icons";
 import { operateRandomType, saveConfigToStorage } from "utils";
 import DiyRandomTypeModal from "../diyRandomTypeDrawer";
 import "./index.less";
@@ -19,7 +19,7 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
   const [form] = Form.useForm();
   const [activeKey, setActiveKey] = useState([]);
   const [visible, setVisible] = useState(false);
-  const [options, setOptions] = useState<OptionsType[]>([]);
+  const [options, setOptions] = useState<OptionType[]>([]);
 
   useEffect(() => {
     setOptions([...operateRandomType.changeOption(), ...RANDOM_TYPE_ARR]);
@@ -106,7 +106,7 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
                       setVisible(true);
                     }}
                   >
-                    自定义随机类型
+                    新增随机类型
                   </Button>
                 </Space>
                 <Collapse
@@ -182,7 +182,7 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
                         <Form.Item label="宽度" rules={REQUIRED_RULES} name={[field.name, "width"]}>
                           <InputNumber placeholder="请输入" min={50} max={1000} />
                         </Form.Item>
-                        <Form.Item label="是否固定" name={[field.name, "fixed"]} valuePropName="checked">
+                        <Form.Item label="表格列是否固定" name={[field.name, "fixed"]} valuePropName="checked">
                           <Switch checkedChildren="是" unCheckedChildren="否" />
                         </Form.Item>
                         <Form.Item label="对齐方式" name={[field.name, "align"]} rules={REQUIRED_RULES}>

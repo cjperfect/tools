@@ -40,7 +40,7 @@ export const DEFAULT_ADD_FIELD: Field = {
 };
 
 /* 随机类型 */
-export const RANDOM_TYPE_ARR: OptionsType[] = [
+export const RANDOM_TYPE_ARR: OptionType[] = [
   {
     key: "ctitle",
     value: "ctitle",

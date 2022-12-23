@@ -28,6 +28,8 @@ export const generateColumns = (values: ColumnInterface) => {
     columns.forEach((column: any) => {
       const { randomType, dataIndex } = column;
       if (diyRandomTypeByStorage[randomType]) {
+        /* 目前分为string和date类型 */
+        // console.log(dayjs(diyRandomTypeByStorage[randomType][0]));
         /* 处理自定义类型 */
         temp[dataIndex] = random.pick(diyRandomTypeByStorage[randomType]);
       } else {
@@ -79,7 +81,7 @@ export const operateRandomType = {
     localStorage.diyTypeArr = val;
   },
   /* 改变成下拉框option形式 */
-  changeOption(): OptionsType[] {
+  changeOption(): OptionType[] {
     const data = [];
     const current = this.get();
     for (let key in current) {

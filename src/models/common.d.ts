@@ -10,7 +10,7 @@ interface SnippetType {
 }
 
 /* 下拉框接口 */
-interface OptionsType {
+interface OptionType {
   key: string;
   value: string;
   label: string;
