@@ -1,8 +1,7 @@
 项目基于 React + ant design4.x + typescript + redux-toolkit 实现的。
 
 ## 部署流程
-
-更新完代码，执行命令
+先fork项目, 写代码, 执行命令, 最后发起合并请求
 
 ```shell
 yarn build
