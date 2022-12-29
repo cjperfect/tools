@@ -124,18 +124,24 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
                           <>
                             <Form.Item label="字段名" rules={REQUIRED_RULES} name={[field.name, "dataIndex"]}>
                               <Input
+                                style={{ width: 150 }}
                                 placeholder="fundCode"
                                 onClick={e => {
                                   e.stopPropagation();
                                 }}
                               />
                             </Form.Item>
-                            <Form.Item label="字段中文" rules={REQUIRED_RULES} name={[field.name, "title"]}>
-                              <Input
-                                placeholder="产品名称"
+                            <Form.Item className="random-type" label={"随机值类型"} name={[field.name, "randomType"]}>
+                              <Select
+                                style={{ width: 180 }}
+                                options={options}
                                 onClick={e => {
                                   e.stopPropagation();
                                 }}
+                                showSearch
+                                filterOption={(input, option) =>
+                                  (option?.label ?? "").toLowerCase().includes(input.toLowerCase())
+                                }
                               />
                             </Form.Item>
                           </>
@@ -179,6 +185,15 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
                           </Space>
                         }
                       >
+                        <Form.Item label="字段中文" rules={REQUIRED_RULES} name={[field.name, "title"]}>
+                          <Input
+                            style={{ width: 150 }}
+                            placeholder="产品名称"
+                            onClick={e => {
+                              e.stopPropagation();
+                            }}
+                          />
+                        </Form.Item>
                         <Form.Item label="宽度" rules={REQUIRED_RULES} name={[field.name, "width"]}>
                           <InputNumber placeholder="请输入" min={50} max={1000} />
                         </Form.Item>
@@ -197,16 +212,6 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
                         </Form.Item>
                         <Form.Item label="列的类名" name={[field.name, "className"]}>
                           <Input placeholder="className" maxLength={100} style={{ width: 150 }} />
-                        </Form.Item>
-                        <Form.Item className="random-type" label={"随机值类型"} name={[field.name, "randomType"]}>
-                          <Select
-                            style={{ width: 150 }}
-                            options={options}
-                            showSearch
-                            filterOption={(input, option) =>
-                              (option?.label ?? "").toLowerCase().includes(input.toLowerCase())
-                            }
-                          />
                         </Form.Item>
                       </Panel>
                     );
