@@ -9,9 +9,15 @@ interface SnippetType {
   btnText: string; // 按钮文字
 }
 
-/* 下拉框接口 */
+/* 下拉框里面option */
 interface OptionType {
   key: string;
   value: string;
   label: string;
+}
+
+/* 下拉框所有options */
+interface Options {
+  label: string;
+  options: OptionType[];
 }

@@ -19,10 +19,16 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
   const [form] = Form.useForm();
   const [activeKey, setActiveKey] = useState([]);
   const [visible, setVisible] = useState(false);
-  const [options, setOptions] = useState<OptionType[]>([]);
+  const [options, setOptions] = useState<Options[]>([]);
 
   useEffect(() => {
-    setOptions([...operateRandomType.changeOption(), ...RANDOM_TYPE_ARR]);
+    setOptions([
+      {
+        label: "自定义随机类型",
+        options: operateRandomType.changeOption()
+      },
+      ...RANDOM_TYPE_ARR
+    ]);
   }, [visible]);
 
   const handleReset = () => {
