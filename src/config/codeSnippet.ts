@@ -34,5 +34,28 @@ const getRandom = (min, max) => Math.floor(Math.random() * (max - min + 1)) + mi
 function checkCardNo(val) {
   var reg = /(^\\d{15}$)|(^\\d{18}$)|(^\\d{17}(\\d|X|x)$)/;
   return reg.test(val)
-}`
+}`,
+
+  searchParams: `
+function request(params){
+  const newParams = {
+    ...oldSearchParams,
+    pageNum: pagination.current,
+    pageSize: pagination.pageSize,
+    ...params
+  };
+
+
+  if(code === '200'){
+    pagination.total = parseInt(data.total);
+    pagination.current = newParams.pageNum;
+    pagination.pageSize = newParams.pageSize;
+  
+    return {
+      pagination,
+      oldSearchParams: newParams
+    }
+  }
+}
+`
 };
