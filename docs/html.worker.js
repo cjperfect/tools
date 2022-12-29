@@ -23577,7 +23577,7 @@ var legacy_beautify_css;
     module.exports.Options = Options;
   }];
   var __webpack_module_cache__ = {};
-  function __nested_webpack_require_220601__(moduleId) {
+  function __nested_webpack_require_220945__(moduleId) {
     var cachedModule = __webpack_module_cache__[moduleId];
     if (cachedModule !== void 0) {
       return cachedModule.exports;
@@ -23585,10 +23585,10 @@ var legacy_beautify_css;
     var module = __webpack_module_cache__[moduleId] = {
       exports: {}
     };
-    __webpack_modules__[moduleId](module, module.exports, __nested_webpack_require_220601__);
+    __webpack_modules__[moduleId](module, module.exports, __nested_webpack_require_220945__);
     return module.exports;
   }
-  var __webpack_exports__ = __nested_webpack_require_220601__(15);
+  var __webpack_exports__ = __nested_webpack_require_220945__(15);
   legacy_beautify_css = __webpack_exports__;
 })();
 var css_beautify = legacy_beautify_css;
@@ -25450,7 +25450,7 @@ var legacy_beautify_html;
     module.exports.TOKEN = TOKEN;
   }];
   var __webpack_module_cache__ = {};
-  function __nested_webpack_require_300303__(moduleId) {
+  function __nested_webpack_require_300647__(moduleId) {
     var cachedModule = __webpack_module_cache__[moduleId];
     if (cachedModule !== void 0) {
       return cachedModule.exports;
@@ -25458,10 +25458,10 @@ var legacy_beautify_html;
     var module = __webpack_module_cache__[moduleId] = {
       exports: {}
     };
-    __webpack_modules__[moduleId](module, module.exports, __nested_webpack_require_300303__);
+    __webpack_modules__[moduleId](module, module.exports, __nested_webpack_require_300647__);
     return module.exports;
   }
-  var __webpack_exports__ = __nested_webpack_require_300303__(18);
+  var __webpack_exports__ = __nested_webpack_require_300647__(18);
   legacy_beautify_html = __webpack_exports__;
 })();
 function html_beautify(html_source, options) {
