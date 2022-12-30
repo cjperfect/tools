@@ -4,38 +4,43 @@ import CodeEditor from "components/CodeEditor";
 import { Button, message } from "antd";
 import { codeSnippetMap } from "config/codeSnippet";
 import { CopyOutlined, FormOutlined } from "@ant-design/icons";
+import { snippetConfig } from "./buttonConfig";
 import copy from "copy-to-clipboard";
 import "./index.less";
 
 interface IProps {}
 
-const snippetArr: SnippetType[] = [
-  { type: "randomNum", btnText: "生成一个范围内的随机数" },
-  { type: "idReg", btnText: "身份证号验证" },
-  { type: "searchParams", btnText: "查询缓存查询条件" }
-];
-
 const CodeSnippet: React.FC<IProps> = props => {
   const [code, setCode] = useState("");
+  const [language, setLanguage] = useState("javascript");
+
   return (
     <div className="code-snippet">
       <div className="snippet-type">
         <h1 className="title">代码片段类型</h1>
-        <div className="container">
-          {snippetArr.map(({ type, btnText }) => {
-            return (
-              <Button
-                key={type}
-                icon={<FormOutlined />}
-                onClick={e => {
-                  setCode(codeSnippetMap[type] || `console.log("chenjiang")`);
-                }}
-              >
-                {btnText}
-              </Button>
-            );
-          })}
-        </div>
+        {Object.keys(snippetConfig).map(k => {
+          return (
+            <div className="btn-container" key={k}>
+              <span className="type-title">{k}</span>
+              <div className="btn-arr">
+                {snippetConfig[k].map(({ type, btnText, language }) => {
+                  return (
+                    <Button
+                      key={type}
+                      icon={<FormOutlined />}
+                      onClick={e => {
+                        setCode(codeSnippetMap[type] || `console.log("chenjiang")`);
+                        setLanguage(language || "javascript");
+                      }}
+                    >
+                      {btnText}
+                    </Button>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })}
       </div>
       <div className="code-result">
         <h1 className="title">生成结果</h1>
@@ -51,7 +56,7 @@ const CodeSnippet: React.FC<IProps> = props => {
             复制
           </Button>
         </p>
-        <CodeEditor value={code} language="javascript" />
+        <CodeEditor value={code} language={language} />
       </div>
     </div>
   );

@@ -57,5 +57,91 @@ function request(params){
     }
   }
 }
+`,
+  tsGlobal: `
+// common.d.ts文件
+
+// interface全局访问
+interface OptionType {
+  key: string;
+  value: string;
+  label: string;
+}
+
+// 下面就是声明全局type
+type TestType1 = {good: string}
+declare type TestType2 = {good: string}
+
+
+// 声明全局type第二种方式
+export {}; // 如果不是*.d.ts文件可能还需要导出
+declare global {
+  type TestType = {
+    good: string;
+  };
+
+  namespace GD {
+    type GDTestType = { GDGood: string };
+  }
+}
+`,
+  cssEllipsis: `
+/* 单行 */
+.box{
+  /* 超出的文本隐藏 */
+  overflow: hidden; 
+  /* 溢出用省略号显示 */
+  text-overflow: ellipsis; 
+  /* 溢出不换行 */
+  white-space: nowrap; 
+}
+
+/* 多行 */
+.box1{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* 作为弹性伸缩盒子模型显示。*/
+  display:-webkit-box; 
+  /* 设置伸缩盒子的子元素排列方式--从上到下垂直排列 */
+  -webkit-box-orient:vertical; 
+  /* 显示的行 */
+  -webkit-line-clamp:2; 
+}
+`,
+  diyHook: `
+/* 自定义hooks */
+import { useEffect, useRef } from "react";
+
+/**
+ * 是否是第一次渲染
+ */
+export const useIsFirstRender = () => {
+  const isFirstRenderRef = useRef(true);
+
+  if (isFirstRenderRef.current) {
+    isFirstRenderRef.current = false;
+    return true;
+  }
+
+  return isFirstRenderRef.current;
+};
+
+/**
+ * 更新状态的副作用, 不包含第一次渲染
+ * @param {*} callback 回调函数
+ * @param {*} deps 依赖
+ */
+export const useUpdateEffect = (callback, deps) => {
+  const isFirstRender = useIsFirstRender();
+
+  useEffect(() => {
+    if (!isFirstRender) {
+      // 不是第一次渲染的时候调用此函数
+      return callback();
+    }
+
+    // eslint-disable-next-line
+  }, deps);
+};
 `
 };

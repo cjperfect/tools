@@ -24,13 +24,20 @@
   }
 
   .snippet-type {
-    .container {
-      display: grid;
-      grid-template-columns: repeat(3, 25%);
-      gap: 20px;
-
-      .anticon-chrome {
+    .btn-container {
+      .type-title {
+        display: inline-block;
+        font-size: 18px;
         color: #1890ff;
+        margin-bottom: 10px;
+      }
+
+      .btn-arr {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        max-height: 500px;
+        overflow-y: auto;
       }
     }
   }

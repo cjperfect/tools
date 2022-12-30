@@ -7,6 +7,7 @@ interface ConfigType {
 interface SnippetType {
   type: string; // 什么代码
   btnText: string; // 按钮文字
+  language?: string; // 什么编程语言
 }
 
 /* 下拉框里面option */
