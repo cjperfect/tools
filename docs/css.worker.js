@@ -6425,10 +6425,10 @@ else if (typeof process !== 'undefined') {
       return process.arch;
     },
     get env() {
-      return ({"NODE_ENV":"production","PUBLIC_URL":"","WDS_SOCKET_HOST":undefined,"WDS_SOCKET_PATH":undefined,"WDS_SOCKET_PORT":undefined,"FAST_REFRESH":true});
+      return ({"NODE_ENV":"production","PUBLIC_URL":".","WDS_SOCKET_HOST":undefined,"WDS_SOCKET_PATH":undefined,"WDS_SOCKET_PORT":undefined,"FAST_REFRESH":true});
     },
     cwd: function cwd() {
-      return ({"NODE_ENV":"production","PUBLIC_URL":"","WDS_SOCKET_HOST":undefined,"WDS_SOCKET_PATH":undefined,"WDS_SOCKET_PORT":undefined,"FAST_REFRESH":true})['VSCODE_CWD'] || process.cwd();
+      return ({"NODE_ENV":"production","PUBLIC_URL":".","WDS_SOCKET_HOST":undefined,"WDS_SOCKET_PATH":undefined,"WDS_SOCKET_PORT":undefined,"FAST_REFRESH":true})['VSCODE_CWD'] || process.cwd();
     }
   };
 }
@@ -6648,7 +6648,7 @@ var win32 = {
         // absolute path, get cwd for that drive, or the process cwd if
         // the drive cwd is not available. We're sure the device is not
         // a UNC path at this points, because UNC paths are always absolute.
-        path = ({"NODE_ENV":"production","PUBLIC_URL":"","WDS_SOCKET_HOST":undefined,"WDS_SOCKET_PATH":undefined,"WDS_SOCKET_PORT":undefined,"FAST_REFRESH":true})["=".concat(resolvedDevice)] || cwd();
+        path = ({"NODE_ENV":"production","PUBLIC_URL":".","WDS_SOCKET_HOST":undefined,"WDS_SOCKET_PATH":undefined,"WDS_SOCKET_PORT":undefined,"FAST_REFRESH":true})["=".concat(resolvedDevice)] || cwd();
         // Verify that a cwd was found and that it actually points
         // to our drive. If not, default to the drive's root.
         if (path === undefined || path.slice(0, 2).toLowerCase() !== resolvedDevice.toLowerCase() && path.charCodeAt(2) === CHAR_BACKWARD_SLASH) {
