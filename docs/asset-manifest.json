@@ -1,20 +1,17 @@
 {
   "files": {
-    "main.css": "./static/css/main.70a36309.css",
-    "main.js": "./static/js/main.ec034c8d.js",
-    "Home.css": "./static/css/Home.35f32126.chunk.css",
-    "Home.js": "./static/js/Home.969913ed.chunk.js",
-    "CodeSnippet.css": "./static/css/CodeSnippet.0c1e11d9.chunk.css",
-    "CodeSnippet.js": "./static/js/CodeSnippet.7482ad07.chunk.js",
-    "static/css/399.75931991.chunk.css": "./static/css/399.75931991.chunk.css",
-    "static/js/399.614cb22e.chunk.js": "./static/js/399.614cb22e.chunk.js",
-    "static/js/439.ae0c382d.chunk.js": "./static/js/439.ae0c382d.chunk.js",
-    "editor.worker.js": "./editor.worker.js",
-    "static/media/codicon.ttf": "./static/media/codicon.b797181c93b3755f4fa1.ttf",
+    "main.css": "./static/css/main.b809b516.css",
+    "main.js": "./static/js/main.955ad80d.js",
+    "Home.css": "./static/css/Home.3cad8ae6.chunk.css",
+    "Home.js": "./static/js/Home.21a9df02.chunk.js",
+    "CodeSnippet.css": "./static/css/CodeSnippet.7400ded5.chunk.css",
+    "CodeSnippet.js": "./static/js/CodeSnippet.29d6dd4b.chunk.js",
+    "static/js/361.346ca304.chunk.js": "./static/js/361.346ca304.chunk.js",
+    "static/js/482.a796a6df.chunk.js": "./static/js/482.a796a6df.chunk.js",
     "index.html": "./index.html"
   },
   "entrypoints": [
-    "static/css/main.70a36309.css",
-    "static/js/main.ec034c8d.js"
+    "static/css/main.b809b516.css",
+    "static/js/main.955ad80d.js"
   ]
 }

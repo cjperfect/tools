@@ -53,7 +53,6 @@ const useTypeScript = fs.existsSync(paths.appTsConfig);
 const useTailwind = fs.existsSync(path.join(paths.appPath, "tailwind.config.js"));
 
 
-const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 
@@ -472,7 +471,7 @@ module.exports = function (webpackEnv) {
 			].filter(Boolean),
 		},
 		plugins: [
-			new BundleAnalyzerPlugin(),  // 使用默认配置
+			// new BundleAnalyzerPlugin(),  // 使用默认配置
 			// Generates an `index.html` file with the <script> injected.
 			new HtmlWebpackPlugin(
 				Object.assign(
@@ -633,9 +632,7 @@ module.exports = function (webpackEnv) {
 					},
 				},
 			}),
-			new MonacoWebpackPlugin({
-				languages: []
-			})
+		
 		].filter(Boolean),
 		// Turn off performance processing because we utilize
 		// our own hints via the FileSizeReporter

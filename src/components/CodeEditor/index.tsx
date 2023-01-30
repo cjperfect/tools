@@ -1,50 +1,25 @@
-import React, { useEffect, useRef } from "react";
-import MonacoEditor from "react-monaco-editor";
+import React from "react";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 interface IProps {
   value: string;
   language?: string;
-  height?: number;
-  onChange?: (value: string) => void;
 }
 
 const CodeEditor: React.FC<IProps> = (props: IProps) => {
-  const { value, height = 460, language = "javascript", onChange } = props;
-  const editorRef = useRef<{ [extra: string]: any }>();
-
-  const options = {
-    selectOnLineNumbers: true,
-    fontSize: 14,
-    formatOnPaste: true,
-    automaticLayout: true,
-    formatOnType: true,
-    minimap: {
-      enabled: false
-    }
-  };
-
-  useEffect(() => {
-    if (editorRef.current) {
-      editorRef.current.setValue(value);
-      editorRef.current.getAction("editor.action.formatDocument").run(); //自动格式化代码
-      editorRef.current.setValue(editorRef.current.getValue()); //再次设置
-    }
-  }, [value]);
-
-  const editorDidMountHandle = (editor: any) => {
-    editorRef.current = editor;
-  };
-
+  const { value, language = "javascript" } = props;
   return (
-    <MonacoEditor
-      height={height}
+    <SyntaxHighlighter
+      showLineNumbers={true}
+      startingLineNumber={1}
       language={language}
-      theme="vs-dark"
-      // value={value}
-      options={options}
-      onChange={onChange}
-      editorDidMount={editorDidMountHandle}
-    />
+      style={oneDark}
+      lineNumberStyle={{ color: "#ddd", fontSize: 16 }}
+      wrapLines={true}
+    >
+      {value}
+    </SyntaxHighlighter>
   );
 };
 
