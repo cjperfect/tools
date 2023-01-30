@@ -48,8 +48,7 @@ const App: React.FC<IProps> = (props: IProps) => {
       </Header>
       <Content>{children}</Content>
       <Footer style={{ textAlign: "center" }}>
-        Generate Columns ©2022 Created by Chen Jiang{" "}
-        <a href="https://gitee.com/cjperfect/cjperfect.github.io">源码地址</a>
+        Generate Columns ©2022 Created by Chen Jiang <a href="https://gitee.com/cjperfect/mock.git">源码地址</a>
       </Footer>
     </div>
   );
