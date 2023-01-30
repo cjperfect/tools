@@ -84,54 +84,50 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
         <div className="code">
           {/* 右边预览区域 */}
           <h2 className="title">测试代码</h2>
-          {result.dataText ? (
-            <Tabs
-              defaultActiveKey="1"
-              items={[
-                {
-                  key: "data",
-                  label: "生成测试数据",
-                  children: (
-                    <>
-                      <Button
-                        icon={<CopyOutlined />}
-                        onClick={() => {
-                          if (!result.dataText) return message.info("没有啥要复制的");
-                          copy(result.dataText);
-                          message.success("已复制到剪切板");
-                        }}
-                      >
-                        复制
-                      </Button>
-                      <CodeEditor value={result.dataText} language="javascript" />
-                    </>
-                  )
-                },
-                {
-                  key: "column",
-                  label: "生成配置columns",
-                  children: (
-                    <>
-                      <Button
-                        icon={<CopyOutlined />}
-                        onClick={() => {
-                          if (!result.columnsText) return message.info("没有啥要复制的");
-                          copy(result.columnsText);
-                          message.success("已复制到剪切板");
-                        }}
-                      >
-                        复制
-                      </Button>
+          <Tabs
+            defaultActiveKey="1"
+            items={[
+              {
+                key: "data",
+                label: "生成测试数据",
+                children: (
+                  <>
+                    <Button
+                      icon={<CopyOutlined />}
+                      onClick={() => {
+                        if (!result.dataText) return message.info("没有啥要复制的");
+                        copy(result.dataText);
+                        message.success("已复制到剪切板");
+                      }}
+                    >
+                      复制
+                    </Button>
+                    <CodeEditor value={result.dataText} language="javascript" />
+                  </>
+                )
+              },
+              {
+                key: "column",
+                label: "生成配置columns",
+                children: (
+                  <>
+                    <Button
+                      icon={<CopyOutlined />}
+                      onClick={() => {
+                        if (!result.columnsText) return message.info("没有啥要复制的");
+                        copy(result.columnsText);
+                        message.success("已复制到剪切板");
+                      }}
+                    >
+                      复制
+                    </Button>
 
-                      <CodeEditor value={result.columnsText} language="javascript" />
-                    </>
-                  )
-                }
-              ]}
-            ></Tabs>
-          ) : (
-            <Empty description="暂无数据" />
-          )}
+                    <CodeEditor value={result.columnsText} language="javascript" />
+                  </>
+                )
+              }
+            ]}
+          ></Tabs>
         </div>
       </div>
 
