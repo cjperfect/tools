@@ -88,25 +88,6 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
             defaultActiveKey="1"
             items={[
               {
-                key: "column",
-                label: "生成配置columns",
-                children: (
-                  <>
-                    <Button
-                      icon={<CopyOutlined />}
-                      onClick={() => {
-                        if (!result.columnsText) return message.info("没有啥要复制的");
-                        copy(result.columnsText);
-                        message.success("已复制到剪切板");
-                      }}
-                    >
-                      复制
-                    </Button>
-                    <CodeEditor value={result.columnsText} language="javascript" />
-                  </>
-                )
-              },
-              {
                 key: "data",
                 label: "生成测试数据",
                 children: (
@@ -122,6 +103,25 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
                       复制
                     </Button>
                     <CodeEditor value={result.dataText} language="javascript" />
+                  </>
+                )
+              },
+              {
+                key: "column",
+                label: "生成配置columns",
+                children: (
+                  <>
+                    <Button
+                      icon={<CopyOutlined />}
+                      onClick={() => {
+                        if (!result.columnsText) return message.info("没有啥要复制的");
+                        copy(result.columnsText);
+                        message.success("已复制到剪切板");
+                      }}
+                    >
+                      复制
+                    </Button>
+                    <CodeEditor value={result.columnsText} language="javascript" />
                   </>
                 )
               }
