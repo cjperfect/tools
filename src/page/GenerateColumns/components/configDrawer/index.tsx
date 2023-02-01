@@ -30,7 +30,7 @@ const ConfigDrawer: React.FC<IProps> = props => {
   }, [visible]);
 
   const onFinish = (values: any) => {
-    localStorage.myConfig = values.configList ? JSON.stringify(values.configList) : "[]";
+    localStorage.myConfig = values.configList ? JSON.stringify(values.configList) : "[]"; // 保存历史配置
     onSubmit?.(values);
   };
 
@@ -39,7 +39,7 @@ const ConfigDrawer: React.FC<IProps> = props => {
   };
 
   return (
-    <Drawer title="新增自定义类型" placement={"right"} open={visible} key={"right"} size="large" onClose={onClose}>
+    <Drawer title="历史导入的配置" placement={"right"} open={visible} key={"right"} size="large" onClose={onClose}>
       {configListState.length ? (
         <Form form={form} onFinish={onFinish} layout="vertical" onFinishFailed={onFinishFailed}>
           <Form.List name={"configList"}>
@@ -58,7 +58,7 @@ const ConfigDrawer: React.FC<IProps> = props => {
                       </Button>
                       <Button
                         onClick={() => {
-                          setContent(configListState[field.name].config);
+                          setContent(configListState[field.name].config); // 选择历史配置中的一个
                           onClose();
                         }}
                       >
@@ -66,7 +66,7 @@ const ConfigDrawer: React.FC<IProps> = props => {
                       </Button>
                     </Space>
                     <Form.Item name={[field.name, "config"]} label="配置" rules={REQUIRED_RULES}>
-                      <TextArea placeholder="请输入配置" autoSize={{ minRows: 10, maxRows: 10 }} />
+                      <TextArea placeholder="请输入配置" autoSize={{ minRows: 2, maxRows: 3 }} />
                     </Form.Item>
                   </div>
                 );

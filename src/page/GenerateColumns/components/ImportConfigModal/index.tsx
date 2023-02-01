@@ -18,10 +18,9 @@ const ImportConfigModal: React.FC<IProps> = props => {
 
   const onFinish = (values: any) => {
     try {
-      // eslint-disable-next-line
-      const columns = eval(values.content).map((v: any) => ({ ...v, align: v.align || "left" }));
-      saveConfigToStorage(JSON.stringify(columns, null, 2));
-      onSubmit?.(columns);
+      const allField = values.content.split(",");
+      saveConfigToStorage(JSON.stringify(allField));
+      onSubmit(allField);
     } catch (e) {
       return message.error("配置格式有误，请检查");
     }
@@ -38,7 +37,7 @@ const ImportConfigModal: React.FC<IProps> = props => {
               <Space size="middle">
                 <Button
                   onClick={() => {
-                    form.setFieldValue("content", JSON.stringify(CONFIG_EXAMPLE, null, 2));
+                    form.setFieldValue("content", CONFIG_EXAMPLE);
                   }}
                 >
                   导入示例
@@ -48,7 +47,10 @@ const ImportConfigModal: React.FC<IProps> = props => {
           }
           rules={REQUIRED_RULES}
         >
-          <TextArea placeholder="请输入配置" autoSize={{ minRows: 15, maxRows: 15 }} />
+          <TextArea
+            placeholder="请输入配置: name:姓名,age:年龄,sex:性别 中间以,分割"
+            autoSize={{ minRows: 15, maxRows: 15 }}
+          />
         </Form.Item>
         <Form.Item>
           <Space size="large">

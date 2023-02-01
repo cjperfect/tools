@@ -2,7 +2,7 @@ import React, { forwardRef, useEffect, useImperativeHandle, useState } from "rea
 import { Collapse, Form, Input, Button, Modal, InputNumber, Switch, Radio, Select, message, Space } from "antd";
 import { DEFAULT_ADD_FIELD, REQUIRED_RULES, RANDOM_TYPE_ARR } from "config/constant";
 import { DownOutlined, UpOutlined } from "@ant-design/icons";
-import { operateRandomType, saveConfigToStorage } from "utils";
+import { operateRandomType } from "utils";
 import DiyRandomTypeModal from "../diyRandomTypeDrawer";
 import "./index.less";
 
@@ -17,11 +17,12 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
   const { onSubmit } = props;
 
   const [form] = Form.useForm();
-  const [activeKey, setActiveKey] = useState([]);
-  const [visible, setVisible] = useState(false);
-  const [options, setOptions] = useState<Options[]>([]);
+  const [activeKey, setActiveKey] = useState([]); // 折叠的key
+  const [visible, setVisible] = useState(false); // 控制随机类型的抽屉显示与隐藏
+  const [options, setOptions] = useState<Options[]>([]); // 设置随机类型下拉框数据
 
   useEffect(() => {
+    // 设置随机类型下拉框数据
     setOptions([
       {
         label: "自定义随机类型",
@@ -47,7 +48,6 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
     if (!values.columns || !values.columns.length) {
       return message.error("至少需要一个字段");
     }
-    saveConfigToStorage(JSON.stringify(values.columns, null, 2));
     onSubmit?.(values);
   };
 
@@ -72,7 +72,7 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
         initialValues={{
-          variable: "columns",
+          variable: "dataSource",
           num: 10,
           columns: [DEFAULT_ADD_FIELD]
         }}

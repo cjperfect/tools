@@ -56,7 +56,9 @@ const CodeSnippet: React.FC<IProps> = props => {
             复制
           </Button>
         </p>
-        <CodeEditor value={code} language={language} />
+        <div className="editor-container">
+          <CodeEditor value={code} language={language} />
+        </div>
       </div>
     </div>
   );

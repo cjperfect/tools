@@ -21246,7 +21246,7 @@ function _unsupportedIterableToArray(o, minLen) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "static/js/" + ({"72":"CodeSnippet","268":"Home"}[chunkId] || chunkId) + "." + {"72":"29d6dd4b","268":"21a9df02","361":"346ca304","482":"a796a6df"}[chunkId] + ".chunk.js";
+/******/ 			return "static/js/" + ({"72":"CodeSnippet","268":"Home"}[chunkId] || chunkId) + "." + {"72":"993b00bd","268":"11516f51","361":"346ca304","482":"a796a6df"}[chunkId] + ".chunk.js";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -21255,7 +21255,7 @@ function _unsupportedIterableToArray(o, minLen) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.miniCssF = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "static/css/" + {"72":"CodeSnippet","268":"Home"}[chunkId] + "." + {"72":"7400ded5","268":"3cad8ae6"}[chunkId] + ".chunk.css";
+/******/ 			return "static/css/" + {"72":"CodeSnippet","268":"Home"}[chunkId] + "." + {"72":"198e3b0e","268":"3cad8ae6"}[chunkId] + ".chunk.css";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -24037,16 +24037,192 @@ Menu.Item = MenuItem;
 Menu.SubMenu = menu_SubMenu;
 Menu.ItemGroup = es/* ItemGroup */.BW;
 /* harmony default export */ var menu = (Menu);
+;// CONCATENATED MODULE: ./node_modules/@ant-design/icons-svg/es/asn/TableOutlined.js
+// This icon file is generated automatically.
+var TableOutlined = {
+  "icon": {
+    "tag": "svg",
+    "attrs": {
+      "viewBox": "64 64 896 896",
+      "focusable": "false"
+    },
+    "children": [{
+      "tag": "path",
+      "attrs": {
+        "d": "M928 160H96c-17.7 0-32 14.3-32 32v640c0 17.7 14.3 32 32 32h832c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32zm-40 208H676V232h212v136zm0 224H676V432h212v160zM412 432h200v160H412V432zm200-64H412V232h200v136zm-476 64h212v160H136V432zm0-200h212v136H136V232zm0 424h212v136H136V656zm276 0h200v136H412V656zm476 136H676V656h212v136z"
+      }
+    }]
+  },
+  "name": "table",
+  "theme": "outlined"
+};
+/* harmony default export */ var asn_TableOutlined = (TableOutlined);
+;// CONCATENATED MODULE: ./node_modules/@ant-design/icons/es/icons/TableOutlined.js
+
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+
+
+
+var TableOutlined_TableOutlined = function TableOutlined(props, ref) {
+  return /*#__PURE__*/react.createElement(AntdIcon/* default */.Z, (0,objectSpread2/* default */.Z)((0,objectSpread2/* default */.Z)({}, props), {}, {
+    ref: ref,
+    icon: asn_TableOutlined
+  }));
+};
+TableOutlined_TableOutlined.displayName = 'TableOutlined';
+/* harmony default export */ var icons_TableOutlined = (/*#__PURE__*/react.forwardRef(TableOutlined_TableOutlined));
+;// CONCATENATED MODULE: ./node_modules/@ant-design/icons-svg/es/asn/CodepenOutlined.js
+// This icon file is generated automatically.
+var CodepenOutlined = {
+  "icon": {
+    "tag": "svg",
+    "attrs": {
+      "viewBox": "64 64 896 896",
+      "focusable": "false"
+    },
+    "children": [{
+      "tag": "path",
+      "attrs": {
+        "d": "M911.7 385.3l-.3-1.5c-.2-1-.3-1.9-.6-2.9-.2-.6-.4-1.1-.5-1.7-.3-.8-.5-1.7-.9-2.5-.2-.6-.5-1.1-.8-1.7-.4-.8-.8-1.5-1.2-2.3-.3-.5-.6-1.1-1-1.6-.8-1.2-1.7-2.4-2.6-3.6-.5-.6-1.1-1.3-1.7-1.9-.4-.5-.9-.9-1.4-1.3-.6-.6-1.3-1.1-1.9-1.6-.5-.4-1-.8-1.6-1.2-.2-.1-.4-.3-.6-.4L531.1 117.8a34.3 34.3 0 00-38.1 0L127.3 361.3c-.2.1-.4.3-.6.4-.5.4-1 .8-1.6 1.2-.7.5-1.3 1.1-1.9 1.6-.5.4-.9.9-1.4 1.3-.6.6-1.2 1.2-1.7 1.9-1 1.1-1.8 2.3-2.6 3.6-.3.5-.7 1-1 1.6-.4.7-.8 1.5-1.2 2.3-.3.5-.5 1.1-.8 1.7-.3.8-.6 1.7-.9 2.5-.2.6-.4 1.1-.5 1.7-.2.9-.4 1.9-.6 2.9l-.3 1.5c-.2 1.5-.3 3-.3 4.5v243.5c0 1.5.1 3 .3 4.5l.3 1.5.6 2.9c.2.6.3 1.1.5 1.7.3.9.6 1.7.9 2.5.2.6.5 1.1.8 1.7.4.8.7 1.5 1.2 2.3.3.5.6 1.1 1 1.6.5.7.9 1.4 1.5 2.1l1.2 1.5c.5.6 1.1 1.3 1.7 1.9.4.5.9.9 1.4 1.3.6.6 1.3 1.1 1.9 1.6.5.4 1 .8 1.6 1.2.2.1.4.3.6.4L493 905.7c5.6 3.8 12.3 5.8 19.1 5.8 6.6 0 13.3-1.9 19.1-5.8l365.6-243.5c.2-.1.4-.3.6-.4.5-.4 1-.8 1.6-1.2.7-.5 1.3-1.1 1.9-1.6.5-.4.9-.9 1.4-1.3.6-.6 1.2-1.2 1.7-1.9l1.2-1.5 1.5-2.1c.3-.5.7-1 1-1.6.4-.8.8-1.5 1.2-2.3.3-.5.5-1.1.8-1.7.3-.8.6-1.7.9-2.5.2-.5.4-1.1.5-1.7.3-.9.4-1.9.6-2.9l.3-1.5c.2-1.5.3-3 .3-4.5V389.8c-.3-1.5-.4-3-.6-4.5zM546.4 210.5l269.4 179.4-120.3 80.4-149-99.6V210.5zm-68.8 0v160.2l-149 99.6-120.3-80.4 269.3-179.4zM180.7 454.1l86 57.5-86 57.5v-115zm296.9 358.5L208.3 633.2l120.3-80.4 149 99.6v160.2zM512 592.8l-121.6-81.2L512 430.3l121.6 81.2L512 592.8zm34.4 219.8V652.4l149-99.6 120.3 80.4-269.3 179.4zM843.3 569l-86-57.5 86-57.5v115z"
+      }
+    }]
+  },
+  "name": "codepen",
+  "theme": "outlined"
+};
+/* harmony default export */ var asn_CodepenOutlined = (CodepenOutlined);
+;// CONCATENATED MODULE: ./node_modules/@ant-design/icons/es/icons/CodepenOutlined.js
+
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+
+
+
+var CodepenOutlined_CodepenOutlined = function CodepenOutlined(props, ref) {
+  return /*#__PURE__*/react.createElement(AntdIcon/* default */.Z, (0,objectSpread2/* default */.Z)((0,objectSpread2/* default */.Z)({}, props), {}, {
+    ref: ref,
+    icon: asn_CodepenOutlined
+  }));
+};
+CodepenOutlined_CodepenOutlined.displayName = 'CodepenOutlined';
+/* harmony default export */ var icons_CodepenOutlined = (/*#__PURE__*/react.forwardRef(CodepenOutlined_CodepenOutlined));
+;// CONCATENATED MODULE: ./node_modules/@ant-design/icons-svg/es/asn/ChromeOutlined.js
+// This icon file is generated automatically.
+var ChromeOutlined = {
+  "icon": {
+    "tag": "svg",
+    "attrs": {
+      "viewBox": "64 64 896 896",
+      "focusable": "false"
+    },
+    "children": [{
+      "tag": "path",
+      "attrs": {
+        "d": "M928 512.3v-.3c0-229.8-186.2-416-416-416S96 282.2 96 512v.4c0 229.8 186.2 416 416 416s416-186.2 416-416v-.3.2zm-6.7-74.6l.6 3.3-.6-3.3zM676.7 638.2c53.5-82.2 52.5-189.4-11.1-263.7l162.4-8.4c20.5 44.4 32 93.8 32 145.9 0 185.2-144.6 336.6-327.1 347.4l143.8-221.2zM512 652.3c-77.5 0-140.2-62.7-140.2-140.2 0-77.7 62.7-140.2 140.2-140.2S652.2 434.5 652.2 512 589.5 652.3 512 652.3zm369.2-331.7l-3-5.7 3 5.7zM512 164c121.3 0 228.2 62.1 290.4 156.2l-263.6-13.9c-97.5-5.7-190.2 49.2-222.3 141.1L227.8 311c63.1-88.9 166.9-147 284.2-147zM102.5 585.8c26 145 127.1 264 261.6 315.1C229.6 850 128.5 731 102.5 585.8zM164 512c0-55.9 13.2-108.7 36.6-155.5l119.7 235.4c44.1 86.7 137.4 139.7 234 121.6l-74 145.1C302.9 842.5 164 693.5 164 512zm324.7 415.4c4 .2 8 .4 12 .5-4-.2-8-.3-12-.5z"
+      }
+    }]
+  },
+  "name": "chrome",
+  "theme": "outlined"
+};
+/* harmony default export */ var asn_ChromeOutlined = (ChromeOutlined);
+;// CONCATENATED MODULE: ./node_modules/@ant-design/icons/es/icons/ChromeOutlined.js
+
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+
+
+
+var ChromeOutlined_ChromeOutlined = function ChromeOutlined(props, ref) {
+  return /*#__PURE__*/react.createElement(AntdIcon/* default */.Z, (0,objectSpread2/* default */.Z)((0,objectSpread2/* default */.Z)({}, props), {}, {
+    ref: ref,
+    icon: asn_ChromeOutlined
+  }));
+};
+ChromeOutlined_ChromeOutlined.displayName = 'ChromeOutlined';
+/* harmony default export */ var icons_ChromeOutlined = (/*#__PURE__*/react.forwardRef(ChromeOutlined_ChromeOutlined));
+;// CONCATENATED MODULE: ./node_modules/@ant-design/icons-svg/es/asn/IeOutlined.js
+// This icon file is generated automatically.
+var IeOutlined = {
+  "icon": {
+    "tag": "svg",
+    "attrs": {
+      "viewBox": "64 64 896 896",
+      "focusable": "false"
+    },
+    "children": [{
+      "tag": "path",
+      "attrs": {
+        "d": "M852.6 367.6c16.3-36.9 32.1-90.7 32.1-131.8 0-109.1-119.5-147.6-314.5-57.9-161.4-10.8-316.8 110.5-355.6 279.7 46.3-52.3 117.4-123.4 183-151.7C316.1 378.3 246.7 470 194 565.6c-31.1 56.9-66 148.8-66 217.5 0 147.9 139.3 129.8 270.4 63 47.1 23.1 99.8 23.4 152.5 23.4 145.7 0 276.4-81.4 325.2-219H694.9c-78.8 132.9-295.2 79.5-295.2-71.2h493.2c9.6-65.4-2.5-143.6-40.3-211.7zM224.8 648.3c26.6 76.7 80.6 143.8 150.4 185-133.1 73.4-259.9 43.6-150.4-185zm174-163.3c3-82.7 75.4-142.3 156-142.3 80.1 0 153 59.6 156 142.3h-312zm276.8-281.4c32.1-15.4 72.8-33 108.8-33 47.1 0 81.4 32.6 81.4 80.6 0 30-11.1 73.5-21.9 101.8-39.3-63.5-98.9-122.4-168.3-149.4z"
+      }
+    }]
+  },
+  "name": "ie",
+  "theme": "outlined"
+};
+/* harmony default export */ var asn_IeOutlined = (IeOutlined);
+;// CONCATENATED MODULE: ./node_modules/@ant-design/icons/es/icons/IeOutlined.js
+
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+
+
+
+var IeOutlined_IeOutlined = function IeOutlined(props, ref) {
+  return /*#__PURE__*/react.createElement(AntdIcon/* default */.Z, (0,objectSpread2/* default */.Z)((0,objectSpread2/* default */.Z)({}, props), {}, {
+    ref: ref,
+    icon: asn_IeOutlined
+  }));
+};
+IeOutlined_IeOutlined.displayName = 'IeOutlined';
+/* harmony default export */ var icons_IeOutlined = (/*#__PURE__*/react.forwardRef(IeOutlined_IeOutlined));
+;// CONCATENATED MODULE: ./node_modules/@ant-design/icons-svg/es/asn/YuqueOutlined.js
+// This icon file is generated automatically.
+var YuqueOutlined = {
+  "icon": {
+    "tag": "svg",
+    "attrs": {
+      "viewBox": "64 64 896 896",
+      "focusable": "false"
+    },
+    "children": [{
+      "tag": "path",
+      "attrs": {
+        "d": "M854.6 370.6c-9.9-39.4 9.9-102.2 73.4-124.4l-67.9-3.6s-25.7-90-143.6-98c-117.8-8.1-194.9-3-195-3 .1 0 87.4 55.6 52.4 154.7-25.6 52.5-65.8 95.6-108.8 144.7-1.3 1.3-2.5 2.6-3.5 3.7C319.4 605 96 860 96 860c245.9 64.4 410.7-6.3 508.2-91.1 20.5-.2 35.9-.3 46.3-.3 135.8 0 250.6-117.6 245.9-248.4-3.2-89.9-31.9-110.2-41.8-149.6zm-204.1 334c-10.6 0-26.2.1-46.8.3l-23.6.2-17.8 15.5c-47.1 41-104.4 71.5-171.4 87.6-52.5 12.6-110 16.2-172.7 9.6 18-20.5 36.5-41.6 55.4-63.1 92-104.6 173.8-197.5 236.9-268.5l1.4-1.4 1.3-1.5c4.1-4.6 20.6-23.3 24.7-28.1 9.7-11.1 17.3-19.9 24.5-28.6 30.7-36.7 52.2-67.8 69-102.2l1.6-3.3 1.2-3.4c13.7-38.8 15.4-76.9 6.2-112.8 22.5.7 46.5 1.9 71.7 3.6 33.3 2.3 55.5 12.9 71.1 29.2 5.8 6 10.2 12.5 13.4 18.7 1 2 1.7 3.6 2.3 5l5 17.7c-15.7 34.5-19.9 73.3-11.4 107.2 3 11.8 6.9 22.4 12.3 34.4 2.1 4.7 9.5 20.1 11 23.3 10.3 22.7 15.4 43 16.7 78.7 3.3 94.6-82.7 181.9-182 181.9z"
+      }
+    }]
+  },
+  "name": "yuque",
+  "theme": "outlined"
+};
+/* harmony default export */ var asn_YuqueOutlined = (YuqueOutlined);
+;// CONCATENATED MODULE: ./node_modules/@ant-design/icons/es/icons/YuqueOutlined.js
+
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+
+
+
+var YuqueOutlined_YuqueOutlined = function YuqueOutlined(props, ref) {
+  return /*#__PURE__*/react.createElement(AntdIcon/* default */.Z, (0,objectSpread2/* default */.Z)((0,objectSpread2/* default */.Z)({}, props), {}, {
+    ref: ref,
+    icon: asn_YuqueOutlined
+  }));
+};
+YuqueOutlined_YuqueOutlined.displayName = 'YuqueOutlined';
+/* harmony default export */ var icons_YuqueOutlined = (/*#__PURE__*/react.forwardRef(YuqueOutlined_YuqueOutlined));
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(6417);
 ;// CONCATENATED MODULE: ./src/App.tsx
-var App_Header=es_layout.Header,App_Content=es_layout.Content,App_Footer=es_layout.Footer;var linkConfig=[{key:"/generate-columns",label:"生成表格columns"},{key:"/code-snippet",label:"代码片段"}];var App=function App(props){var _history$location,_history$location2;var children=props.children;var history=useHistory();var _useState=(0,react.useState)(((_history$location=history.location)===null||_history$location===void 0?void 0:_history$location.pathname)==="/"?"/generate-columns":(_history$location2=history.location)===null||_history$location2===void 0?void 0:_history$location2.pathname),_useState2=(0,slicedToArray/* default */.Z)(_useState,2),selectedKey=_useState2[0],setSelectedKey=_useState2[1];return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"main-page",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(App_Header,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(menu,{theme:"dark",mode:"horizontal",selectedKeys:[selectedKey],items:linkConfig,onClick:function onClick(_ref){var key=_ref.key;if(history.location.pathname===key)return;setSelectedKey(key);history.push(key);}})}),/*#__PURE__*/(0,jsx_runtime.jsx)(App_Content,{children:children}),/*#__PURE__*/(0,jsx_runtime.jsxs)(App_Footer,{style:{textAlign:"center"},children:["Generate Columns \xA92022 Created by Chen Jiang ",/*#__PURE__*/(0,jsx_runtime.jsx)("a",{href:"https://gitee.com/cjperfect/mock.git",children:"\u6E90\u7801\u5730\u5740"})]})]});};/* harmony default export */ var src_App = (App);
+var App_Header=es_layout.Header,App_Content=es_layout.Content,App_Footer=es_layout.Footer;/* 菜单页面 */var linkConfig=[{key:"/generate-columns",label:"生成表格columns",icon:/*#__PURE__*/(0,jsx_runtime.jsx)(icons_TableOutlined,{})},{key:"/code-snippet",label:"代码片段",icon:/*#__PURE__*/(0,jsx_runtime.jsx)(icons_CodepenOutlined,{})},{key:"/website",label:"个人博客",icon:/*#__PURE__*/(0,jsx_runtime.jsx)(icons_ChromeOutlined,{}),children:[{key:"https://blog.csdn.net/qq_39583550",label:"CSDN",icon:/*#__PURE__*/(0,jsx_runtime.jsx)(icons_IeOutlined,{})},{key:"https://cjperfect.gitee.io/tech-document/",label:"知识点记录",icon:/*#__PURE__*/(0,jsx_runtime.jsx)(icons_YuqueOutlined,{})}]}];var App=function App(props){var _history$location,_history$location2;var children=props.children;var history=useHistory();var _useState=(0,react.useState)(((_history$location=history.location)===null||_history$location===void 0?void 0:_history$location.pathname)==="/"?"/generate-columns":(_history$location2=history.location)===null||_history$location2===void 0?void 0:_history$location2.pathname),_useState2=(0,slicedToArray/* default */.Z)(_useState,2),selectedKey=_useState2[0],setSelectedKey=_useState2[1];return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"main-page",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(App_Header,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(menu,{mode:"horizontal",selectedKeys:[selectedKey],items:linkConfig,onClick:function onClick(_ref){var key=_ref.key;if(key.includes("http")){// 打开新的网页
+window.open(key);return;}if(history.location.pathname===key)return;setSelectedKey(key);history.push(key);}})}),/*#__PURE__*/(0,jsx_runtime.jsx)(App_Content,{children:children}),/*#__PURE__*/(0,jsx_runtime.jsxs)(App_Footer,{style:{textAlign:"center"},children:["Generate Columns \xA92022 Created by Chen Jiang ",/*#__PURE__*/(0,jsx_runtime.jsx)("a",{href:"https://gitee.com/cjperfect/mock.git",children:"\u6E90\u7801\u5730\u5740"})]})]});};/* harmony default export */ var src_App = (App);
 ;// CONCATENATED MODULE: ./src/router/config.ts
 /* 
 Webpack通过增加内联注释来告诉运行时，该有怎样的行为。通过向import中添加注释，我们可以执行诸如命名chunk或选择不同模式之类的操作。
 webpack在打包的时候，对异步引入的库代码（lodash）进行代码分割时（需要配置webpack的SplitChunkPlugin插件），为分割后的代码块取得名字
 */ // 生成表格columns
-var GenerateColumns=/*#__PURE__*/(0,react.lazy)(function(){return Promise.all(/* import() | Home */[__webpack_require__.e(361), __webpack_require__.e(482), __webpack_require__.e(268)]).then(__webpack_require__.bind(__webpack_require__, 6769));});// 代码片段
+var GenerateColumns=/*#__PURE__*/(0,react.lazy)(function(){return Promise.all(/* import() | Home */[__webpack_require__.e(361), __webpack_require__.e(482), __webpack_require__.e(268)]).then(__webpack_require__.bind(__webpack_require__, 3542));});// 代码片段
 var CodeSnippet=/*#__PURE__*/(0,react.lazy)(function(){return Promise.all(/* import() | CodeSnippet */[__webpack_require__.e(361), __webpack_require__.e(72)]).then(__webpack_require__.bind(__webpack_require__, 5092));});var routeConfig=[{path:"/generate-columns",component:GenerateColumns,exact:true},{path:"/code-snippet",component:CodeSnippet,exact:true}];
 // EXTERNAL MODULE: ./node_modules/lodash/debounce.js
 var debounce = __webpack_require__(2279);

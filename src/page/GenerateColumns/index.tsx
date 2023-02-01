@@ -8,6 +8,7 @@ import { CopyOutlined } from "@ant-design/icons";
 import { generateColumns } from "utils";
 import ImportConfigModal from "./components/ImportConfigModal";
 import ConfigDrawer from "./components/configDrawer";
+import { DEFAULT_ADD_FIELD } from "config/constant";
 
 interface IProps {
   title: string;
@@ -29,11 +30,20 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
     setVisible(false);
   };
 
-  /* 导入配置 */
+  /* 
+    根据导入的导入配置生成折叠面板(也就是表格的columns)
+  */
   const importSubmit = (values: any) => {
     formInputRef.current.setColumnsValue(
       "columns",
-      values.map((v: any) => ({ ...v, randomType: v.randomType || "ctitle" }))
+      values.map((v: any) => {
+        const [field, name] = v.split(":");
+        return {
+          ...DEFAULT_ADD_FIELD,
+          dataIndex: field,
+          title: name
+        };
+      })
     );
     setVisible(false);
   };
@@ -139,11 +149,18 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
         visible={configVisible}
         onClose={drawerClose}
         onSubmit={onSubmit}
-        setContent={columnsText => {
+        setContent={historyConfig => {
+          // 选择历史配置
           formInputRef.current.setColumnsValue(
             "columns",
-            // eslint-disable-next-line
-            eval(columnsText).map((v: any) => ({ ...v, randomType: v.randomType || "ctitle" }))
+            JSON.parse(historyConfig).map((v: any) => {
+              const [field, name] = v.split(":");
+              return {
+                ...DEFAULT_ADD_FIELD,
+                dataIndex: field,
+                title: name
+              };
+            })
           );
         }}
       />

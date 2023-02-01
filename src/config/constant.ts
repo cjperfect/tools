@@ -2,24 +2,7 @@
 
 export const REQUIRED_RULES = [{ required: true, message: "请输入" }];
 
-export const CONFIG_EXAMPLE: Column[] = [
-  {
-    dataIndex: "name",
-    title: "姓名",
-    ellipsis: true,
-    width: 150,
-    align: "left",
-    randomType: "cname"
-  },
-  {
-    dataIndex: "date",
-    title: "日期",
-    ellipsis: true,
-    width: 150,
-    align: "left",
-    randomType: "date"
-  }
-];
+export const CONFIG_EXAMPLE: string = "name:姓名,age:年龄,sex:性别";
 
 export type Field = {
   [extra: string]: any;
@@ -29,14 +12,14 @@ export type Field = {
  * 默认添加的字段信息
  */
 export const DEFAULT_ADD_FIELD: Field = {
-  dataIndex: "fundCode",
-  title: "产品名称",
+  dataIndex: "username",
+  title: "用户名",
   width: 150,
   fixed: false,
   align: "left",
   ellipsis: true,
   className: undefined,
-  randomType: "ctitle"
+  randomType: "cname"
 };
 
 /* 随机类型 */
