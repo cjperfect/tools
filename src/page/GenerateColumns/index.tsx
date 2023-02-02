@@ -41,7 +41,7 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
         return {
           ...DEFAULT_ADD_FIELD,
           dataIndex: field,
-          title: name,
+          title: name || "占位符",
         };
       })
     );
@@ -158,7 +158,7 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
               return {
                 ...DEFAULT_ADD_FIELD,
                 dataIndex: field,
-                title: name,
+                title: name || "占位符",
               };
             })
           );

@@ -3,6 +3,7 @@
 export const REQUIRED_RULES = [{ required: true, message: "请输入" }];
 
 export const CONFIG_EXAMPLE: string = "name:姓名,age:年龄,sex:性别";
+export const CONFIG_EXAMPLE2: string = "name,age,sex";
 
 export type Field = {
   [extra: string]: any;
@@ -19,7 +20,7 @@ export const DEFAULT_ADD_FIELD: Field = {
   align: "left",
   ellipsis: true,
   className: undefined,
-  randomType: "cname"
+  randomType: "cname",
 };
 
 /* 随机类型 */
@@ -30,93 +31,93 @@ export const RANDOM_TYPE_ARR: Options[] = [
       {
         key: "ctitle",
         value: "ctitle",
-        label: "标题"
+        label: "标题",
       },
       {
         key: "natural",
         value: "natural",
-        label: "自然数(正数)"
+        label: "自然数(正数)",
       },
       {
         key: "integer",
         value: "integer",
-        label: "整数(正负)"
+        label: "整数(正负)",
       },
       {
         key: "float",
         value: "float",
-        label: "浮点数（两位小数）"
+        label: "浮点数（两位小数）",
       },
       {
         key: "cname",
         value: "cname",
-        label: "名字"
+        label: "名字",
       },
       {
         key: "date",
         value: "date",
-        label: "日期"
+        label: "日期",
       },
       {
         key: "time",
         value: "time",
-        label: "时间"
+        label: "时间",
       },
       {
         key: "datetime",
         value: "datetime",
-        label: "日期时间"
+        label: "日期时间",
       },
       {
         key: "cparagraph",
         value: "cparagraph",
-        label: "长文本"
+        label: "长文本",
       },
       {
         key: "sex",
         value: "sex",
-        label: "性别"
+        label: "性别",
       },
       {
         key: "city",
         value: "city",
-        label: "城市"
+        label: "城市",
       },
       {
         key: "province",
         value: "province",
-        label: "省份"
+        label: "省份",
       },
       {
         key: "zip",
         value: "zip",
-        label: "邮政编码"
+        label: "邮政编码",
       },
       {
         key: "email",
         value: "email",
-        label: "邮箱"
+        label: "邮箱",
       },
       {
         key: "string",
         value: "string",
-        label: "字符串"
+        label: "字符串",
       },
       {
         key: "url",
         value: "url",
-        label: "URL"
+        label: "URL",
       },
       {
         key: "ip",
         value: "ip",
-        label: "IP"
+        label: "IP",
       },
       {
         key: "",
         value: "",
-        label: "空数据"
-      }
-    ]
-  }
+        label: "空数据",
+      },
+    ],
+  },
 ];

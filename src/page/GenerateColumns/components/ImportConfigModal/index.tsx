@@ -1,7 +1,7 @@
 /* 导入配置，模态框 */
 import React from "react";
 import { Input, Button, Modal, Form, Space, message } from "antd";
-import { CONFIG_EXAMPLE, REQUIRED_RULES } from "config/constant";
+import { CONFIG_EXAMPLE, REQUIRED_RULES, CONFIG_EXAMPLE2 } from "config/constant";
 import { saveConfigToStorage } from "utils";
 const { TextArea } = Input;
 
@@ -37,10 +37,17 @@ const ImportConfigModal: React.FC<IProps> = props => {
               <Space size="middle">
                 <Button
                   onClick={() => {
+                    form.setFieldValue("content", CONFIG_EXAMPLE2);
+                  }}
+                >
+                  导入示例 (第一种)
+                </Button>
+                <Button
+                  onClick={() => {
                     form.setFieldValue("content", CONFIG_EXAMPLE);
                   }}
                 >
-                  导入示例
+                  导入示例 (第二种)
                 </Button>
               </Space>
             </>
@@ -48,7 +55,7 @@ const ImportConfigModal: React.FC<IProps> = props => {
           rules={REQUIRED_RULES}
         >
           <TextArea
-            placeholder="请输入配置: name:姓名,age:年龄,sex:性别 中间以,分割"
+            placeholder="请输入配置: &#13;&#13;第一种: name,age,sex (仅关心测试数据) &#13;&#13;第二种: name:姓名,age:年龄,sex:性别 (同时关心table组件的columns)"
             autoSize={{ minRows: 15, maxRows: 15 }}
           />
         </Form.Item>

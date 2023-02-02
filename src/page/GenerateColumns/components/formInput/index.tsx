@@ -26,9 +26,9 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
     setOptions([
       {
         label: "自定义随机类型",
-        options: operateRandomType.changeOption()
+        options: operateRandomType.changeOption(),
       },
-      ...RANDOM_TYPE_ARR
+      ...RANDOM_TYPE_ARR,
     ]);
   }, [visible]);
 
@@ -39,7 +39,7 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
       cancelText: "取消",
       onOk() {
         form.resetFields();
-      }
+      },
     });
   };
 
@@ -59,7 +59,7 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
   useImperativeHandle(ref, () => ({
     setColumnsValue: (field: string, values: ColumnInterface) => {
       form.setFieldValue(field, values);
-    }
+    },
   }));
 
   return (
@@ -74,7 +74,7 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
         initialValues={{
           variable: "dataSource",
           num: 10,
-          columns: [DEFAULT_ADD_FIELD]
+          columns: [DEFAULT_ADD_FIELD],
         }}
       >
         <Form.Item name="variable" label="变量名" rules={REQUIRED_RULES}>
@@ -86,8 +86,8 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
           rules={[
             {
               required: true,
-              message: "请输入"
-            }
+              message: "请输入",
+            },
           ]}
         >
           <InputNumber min={0} max={1000} placeholder="请输入" />
@@ -130,7 +130,7 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
                           <>
                             <Form.Item label="字段名" rules={REQUIRED_RULES} name={[field.name, "dataIndex"]}>
                               <Input
-                                style={{ width: 150 }}
+                                style={{ width: 120 }}
                                 placeholder="fundCode"
                                 onClick={e => {
                                   e.stopPropagation();
