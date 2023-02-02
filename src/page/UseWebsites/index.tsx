@@ -12,7 +12,7 @@ const WebSite: React.FC<IProps> = props => {
       {Object.keys(websiteObj).map(k => {
         return (
           <div key={k}>
-            <h3>{k}</h3>
+            <h2>{k}</h2>
             <div className="container">
               {websiteObj[k].map(({ url, title, icon }) => {
                 return (

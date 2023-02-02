@@ -21408,7 +21408,7 @@ function _unsupportedIterableToArray(o, minLen) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "static/js/" + ({"72":"CodeSnippet","268":"Home","593":"Websites"}[chunkId] || chunkId) + "." + {"72":"43d3cebf","268":"373b5f12","482":"09de9459","593":"a8909f21","684":"d2889306"}[chunkId] + ".chunk.js";
+/******/ 			return "static/js/" + ({"72":"CodeSnippet","268":"Home","593":"Websites"}[chunkId] || chunkId) + "." + {"72":"43d3cebf","268":"373b5f12","482":"09de9459","593":"3ac0fde1","684":"d2889306"}[chunkId] + ".chunk.js";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -21417,7 +21417,7 @@ function _unsupportedIterableToArray(o, minLen) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.miniCssF = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "static/css/" + {"72":"CodeSnippet","268":"Home","593":"Websites"}[chunkId] + "." + {"72":"198e3b0e","268":"3cad8ae6","593":"799a38ae"}[chunkId] + ".chunk.css";
+/******/ 			return "static/css/" + {"72":"CodeSnippet","268":"Home","593":"Websites"}[chunkId] + "." + {"72":"198e3b0e","268":"3cad8ae6","593":"95537891"}[chunkId] + ".chunk.css";
 /******/ 		};
 /******/ 	}();
 /******/ 	

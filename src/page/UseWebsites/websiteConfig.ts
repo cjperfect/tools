@@ -31,9 +31,19 @@ export const websiteObj: { [extra: string]: Website[] } = {
       icon: "images/websites/csstricks.png",
     },
     {
+      url: "https://github.com/ascoders/weekly",
+      title: "前端技术周刊",
+      icon: "images/websites/jszk.png",
+    },
+    {
       url: "https://github.com/chokcoco/iCSS",
       title: "CSS特效集合",
       icon: "images/websites/css.png",
+    },
+    {
+      url: "https://github.com/stephentian/33-js-concepts",
+      title: "JavaScript开发者应懂的33个概念",
+      icon: "images/websites/33js.png",
     },
   ],
   前端工具: [
@@ -41,6 +51,11 @@ export const websiteObj: { [extra: string]: Website[] } = {
       url: "https://www.json.cn/",
       title: "JSON在线转换",
       icon: "images/websites/json.png",
+    },
+    {
+      url: "https://leetcode.cn/problemset/all/",
+      title: "Leetcode算法",
+      icon: "images/websites/leetcode.png",
     },
     {
       url: "https://cssgrid-generator.netlify.app",
@@ -61,6 +76,26 @@ export const websiteObj: { [extra: string]: Website[] } = {
       url: "https://www.jsv9000.app/",
       title: "可视化JS运行过程",
       icon: "images/websites/js.png",
+    },
+    {
+      url: "https://codepen.io/",
+      title: "在线代码编辑器",
+      icon: "images/websites/code.png",
+    },
+    {
+      url: "https://animista.net/",
+      title: "CSS动画效果(提供代码)",
+      icon: "images/websites/css.png",
+    },
+    {
+      url: "https://coolbackgrounds.io/",
+      title: "炫酷背景图",
+      icon: "images/websites/coolbg.png",
+    },
+    {
+      url: "https://caniuse.com/",
+      title: "查询属性兼容性",
+      icon: "images/websites/jrx.png",
     },
   ],
 };
