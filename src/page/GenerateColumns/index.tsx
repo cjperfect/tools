@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Tabs, Button, message, Space, Empty } from "antd";
+import { Tabs, Button, message, Space } from "antd";
 import "./index.less";
 import FormInput from "./components/formInput";
 import CodeEditor from "components/CodeEditor";
@@ -20,7 +20,7 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
     dataText: "",
     columnsText: "",
     data: [],
-    columns: []
+    columns: [],
   });
 
   const [visible, setVisible] = useState(false);
@@ -41,7 +41,7 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
         return {
           ...DEFAULT_ADD_FIELD,
           dataIndex: field,
-          title: name
+          title: name,
         };
       })
     );
@@ -114,11 +114,11 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
                     </Button>
                     <CodeEditor value={result.dataText} language="javascript" />
                   </>
-                )
+                ),
               },
               {
                 key: "column",
-                label: "生成配置columns",
+                label: "生成配置Ant design table组件的columns",
                 children: (
                   <>
                     <Button
@@ -134,8 +134,8 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
 
                     <CodeEditor value={result.columnsText} language="javascript" />
                   </>
-                )
-              }
+                ),
+              },
             ]}
           ></Tabs>
         </div>
@@ -158,7 +158,7 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
               return {
                 ...DEFAULT_ADD_FIELD,
                 dataIndex: field,
-                title: name
+                title: name,
               };
             })
           );

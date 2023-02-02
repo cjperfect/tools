@@ -12,18 +12,27 @@ webpack在打包的时候，对异步引入的库代码（lodash）进行代码�
 */
 // 生成表格columns
 const GenerateColumns = lazy(() => import(/* webpackChunkName: "Home" */ "../page/GenerateColumns"));
+
 // 代码片段
 const CodeSnippet = lazy(() => import(/* webpackChunkName: "CodeSnippet" */ "../page/CodeSnippet"));
 
+// 常用网站
+const UseWebsites = lazy(() => import(/* webpackChunkName: "Websites" */ "../page/UseWebsites"));
+
 export const routeConfig = [
   {
-    path: "/generate-columns",
+    path: "/",
     component: GenerateColumns,
-    exact: true
+    exact: true,
   },
   {
     path: "/code-snippet",
     component: CodeSnippet,
-    exact: true
-  }
+    exact: true,
+  },
+  {
+    path: "/websites",
+    component: UseWebsites,
+    exact: true,
+  },
 ];

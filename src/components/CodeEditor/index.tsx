@@ -15,8 +15,10 @@ const CodeEditor: React.FC<IProps> = (props: IProps) => {
       startingLineNumber={1}
       language={language}
       style={oneDark}
-      lineNumberStyle={{ color: "#ddd", fontSize: 16 }}
       wrapLines={true}
+      customStyle={{
+        fontSize: 16,
+      }}
     >
       {value}
     </SyntaxHighlighter>

@@ -2,7 +2,14 @@ import React, { useState } from "react";
 import "./style/index.less";
 import { useHistory } from "react-router-dom";
 import { Layout, Menu } from "antd";
-import { ChromeOutlined, CodepenOutlined, IeOutlined, TableOutlined, YuqueOutlined } from "@ant-design/icons";
+import {
+  ChromeOutlined,
+  CodepenOutlined,
+  IeOutlined,
+  RedditOutlined,
+  TableOutlined,
+  YuqueOutlined,
+} from "@ant-design/icons";
 const { Header, Content, Footer } = Layout;
 
 interface IProps {
@@ -19,7 +26,7 @@ type LinkType = {
 /* 菜单页面 */
 const linkConfig: LinkType[] = [
   {
-    key: "/generate-columns",
+    key: "/",
     label: "生成测试数据",
     icon: <TableOutlined />,
   },
@@ -29,14 +36,19 @@ const linkConfig: LinkType[] = [
     icon: <CodepenOutlined />,
   },
   {
-    key: "/website",
+    key: "/websites",
+    label: "常用网站",
+    icon: <IeOutlined />,
+  },
+  {
+    key: "/blog",
     label: "个人博客",
     icon: <ChromeOutlined />,
     children: [
       {
         key: "https://blog.csdn.net/qq_39583550",
         label: "CSDN",
-        icon: <IeOutlined />,
+        icon: <RedditOutlined />,
       },
       {
         key: "https://cjperfect.gitee.io/tech-document/",
@@ -50,9 +62,7 @@ const linkConfig: LinkType[] = [
 const App: React.FC<IProps> = (props: IProps) => {
   const { children } = props;
   const history = useHistory();
-  const [selectedKey, setSelectedKey] = useState(
-    history.location?.pathname === "/" ? "/generate-columns" : history.location?.pathname
-  );
+  const [selectedKey, setSelectedKey] = useState(history.location?.pathname);
 
   return (
     <div className="main-page">

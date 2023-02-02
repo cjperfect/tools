@@ -22,3 +22,10 @@ interface Options {
   label: string;
   options: OptionType[];
 }
+
+// 常用网站
+interface Website {
+  title: string;
+  url: string;
+  icon?: any;
+}

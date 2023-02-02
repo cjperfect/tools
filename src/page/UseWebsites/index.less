@@ -1,0 +1,41 @@
+.website-container {
+  padding: 20px;
+  > div {
+    margin-bottom: 20px;
+    h3 {
+      margin-bottom: 20px;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+
+      > .item {
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        padding: 20px;
+        transition: all 0.5s;
+        &:hover {
+          box-shadow: 0 6px 16px -8px #00000014, 0 9px 28px #0000000d, 0 12px 48px 16px #00000008;
+        }
+
+        .title {
+          border-bottom: 2px solid #1890ff;
+          padding: 0 5px 5px 5px;
+        }
+        a {
+          overflow-wrap: anywhere;
+        }
+
+        img {
+          height: 60px;
+        }
+      }
+    }
+  }
+}

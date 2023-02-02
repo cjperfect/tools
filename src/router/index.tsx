@@ -1,8 +1,9 @@
 import React from "react";
 import { RouteType, routeConfig } from "./config";
 import BaseLoading from "components/BaesLoading";
-import { Route, Redirect, Switch, HashRouter } from "react-router-dom";
+import { Route, Switch, HashRouter } from "react-router-dom";
 import App from "../App";
+import NotFoundPage from "components/NotFoundPage";
 
 interface IProps {
   children?: React.ReactNode;
@@ -24,7 +25,8 @@ function MainRouter(props: IProps) {
                         const { path, component, exact } = route;
                         return <Route key={path} path={path} component={component} exact={exact} />;
                       })}
-                      <Redirect to={"/generate-columns"} />
+                      <NotFoundPage />
+                      {/* <Redirect to={"/"} /> */}
                     </Switch>
                   </React.Suspense>
                 </App>

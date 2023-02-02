@@ -1,7 +1,7 @@
 /* 生成代码片段 */
 import React, { useState } from "react";
 import CodeEditor from "components/CodeEditor";
-import { Button, message } from "antd";
+import { Button, message, Empty } from "antd";
 import { codeSnippetMap } from "config/codeSnippet";
 import { CopyOutlined, FormOutlined } from "@ant-design/icons";
 import { snippetConfig } from "./buttonConfig";
@@ -57,7 +57,7 @@ const CodeSnippet: React.FC<IProps> = props => {
           </Button>
         </p>
         <div className="editor-container">
-          <CodeEditor value={code} language={language} />
+          {code ? <CodeEditor value={code} language={language} /> : <Empty description="暂无数据" />}
         </div>
       </div>
     </div>

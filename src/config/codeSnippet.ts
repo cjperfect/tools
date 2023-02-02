@@ -55,32 +55,6 @@ function checkCardNo(val) {
   }
 }
 `,
-  tsGlobal: `// common.d.ts文件
-
-// interface全局访问
-interface OptionType {
-  key: string;
-  value: string;
-  label: string;
-}
-
-// 下面就是声明全局type
-type TestType1 = {good: string}
-declare type TestType2 = {good: string}
-
-
-// 声明全局type第二种方式
-export {}; // 如果不是*.d.ts文件可能还需要导出
-declare global {
-  type TestType = {
-    good: string;
-  };
-
-  namespace GD {
-    type GDTestType = { GDGood: string };
-  }
-}
-`,
   cssEllipsis: `/* 单行 */
 .box{
   /* 超出的文本隐藏 */
