@@ -12,21 +12,21 @@ interface IProps {
 type LinkType = {
   key: string;
   label: string;
-  [extra: string]: any;
   children?: LinkType[];
+  [extra: string]: any;
 };
 
 /* 菜单页面 */
 const linkConfig: LinkType[] = [
   {
     key: "/generate-columns",
-    label: "生成表格columns",
-    icon: <TableOutlined />
+    label: "生成测试数据",
+    icon: <TableOutlined />,
   },
   {
     key: "/code-snippet",
-    label: "代码片段",
-    icon: <CodepenOutlined />
+    label: "常用代码片段",
+    icon: <CodepenOutlined />,
   },
   {
     key: "/website",
@@ -36,15 +36,15 @@ const linkConfig: LinkType[] = [
       {
         key: "https://blog.csdn.net/qq_39583550",
         label: "CSDN",
-        icon: <IeOutlined />
+        icon: <IeOutlined />,
       },
       {
         key: "https://cjperfect.gitee.io/tech-document/",
         label: "知识点记录",
-        icon: <YuqueOutlined />
-      }
-    ]
-  }
+        icon: <YuqueOutlined />,
+      },
+    ],
+  },
 ];
 
 const App: React.FC<IProps> = (props: IProps) => {

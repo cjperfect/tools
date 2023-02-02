@@ -1,6 +1,5 @@
 export const codeSnippetMap: { [extra: string]: string } = {
-  randomNum: `
-/**
+  randomNum: `/**
  * 生成一个范围内的随机数
  */
 const getRandom = (min, max) => {
@@ -24,8 +23,7 @@ console.log(getRandom(7, 9));
 // 简写
 const getRandom = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 `,
-  idReg: `
-/*
+  idReg: `/*
 * @Description: 身份证号验证
 * @param {String} val 需要验证的号码
 * 这里只检查身份证号码是否符合规范，包括长度，类型。
@@ -36,8 +34,7 @@ function checkCardNo(val) {
   return reg.test(val)
 }`,
 
-  searchParams: `
-function request(params){
+  searchParams: `function request(params){
   const newParams = {
     ...oldSearchParams,
     pageNum: pagination.current,
@@ -58,8 +55,7 @@ function request(params){
   }
 }
 `,
-  tsGlobal: `
-// common.d.ts文件
+  tsGlobal: `// common.d.ts文件
 
 // interface全局访问
 interface OptionType {
@@ -85,8 +81,7 @@ declare global {
   }
 }
 `,
-  cssEllipsis: `
-/* 单行 */
+  cssEllipsis: `/* 单行 */
 .box{
   /* 超出的文本隐藏 */
   overflow: hidden; 
@@ -108,8 +103,7 @@ declare global {
   -webkit-line-clamp:2; 
 }
 `,
-  diyHook: `
-/* 自定义hooks */
+  diyHook: `/* 自定义hooks */
 import { useEffect, useRef } from "react";
 
 /**
@@ -143,5 +137,9 @@ export const useUpdateEffect = (callback, deps) => {
     // eslint-disable-next-line
   }, deps);
 };
-`
+`,
+  randomStr: `Math.random().toString(36).substr(2)`,
+  randomArray: `let list = ["chenjiang", 1, 3, 5, "jiangchen"]
+let res = list.sort(() => Math.random() - 0.5)
+console.log(res)`,
 };
