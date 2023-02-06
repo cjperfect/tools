@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Tabs, Button, message, Space } from "antd";
+import { Tabs, Button, message, Space, Empty } from "antd";
 import "./index.less";
 import FormInput from "./components/formInput";
 import CodeEditor from "components/CodeEditor";
@@ -99,8 +99,8 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
             items={[
               {
                 key: "data",
-                label: "生成测试数据",
-                children: (
+                label: "测试数据",
+                children: result.dataText ? (
                   <>
                     <Button
                       icon={<CopyOutlined />}
@@ -114,12 +114,14 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
                     </Button>
                     <CodeEditor value={result.dataText} language="javascript" />
                   </>
+                ) : (
+                  <Empty description="暂无数据, 请点击一键生成" />
                 ),
               },
               {
                 key: "column",
-                label: "生成配置Ant design table组件的columns",
-                children: (
+                label: "Ant design table组件的columns配置",
+                children: result.columnsText ? (
                   <>
                     <Button
                       icon={<CopyOutlined />}
@@ -134,6 +136,8 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
 
                     <CodeEditor value={result.columnsText} language="javascript" />
                   </>
+                ) : (
+                  <Empty description="暂无数据, 请点击一键生成" />
                 ),
               },
             ]}
