@@ -53,6 +53,21 @@ export const websiteObj: { [extra: string]: Website[] } = {
       icon: "images/websites/json.png",
     },
     {
+      url: "https://flatuicolors.com/",
+      title: "配色网站",
+      icon: "images/websites/flatuicolors.png",
+    },
+    {
+      url: "https://jsonplaceholder.typicode.com/",
+      title: "提供在线接口",
+      icon: "images/websites/jsonapi.png",
+    },
+    {
+      url: "https://excalidraw.com/",
+      title: "在线画图",
+      icon: "images/websites/excalidraw.png",
+    },
+    {
       url: "https://leetcode.cn/problemset/all/",
       title: "Leetcode算法",
       icon: "images/websites/leetcode.png",
