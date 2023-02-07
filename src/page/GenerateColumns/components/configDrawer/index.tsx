@@ -39,7 +39,7 @@ const ConfigDrawer: React.FC<IProps> = props => {
   };
 
   return (
-    <Drawer title="历史导入的配置" placement={"right"} open={visible} key={"right"} size="large" onClose={onClose}>
+    <Drawer title="查看历史字段" placement={"right"} open={visible} key={"right"} size="large" onClose={onClose}>
       {configListState.length ? (
         <Form form={form} onFinish={onFinish} layout="vertical" onFinishFailed={onFinishFailed}>
           <Form.List name={"configList"}>
@@ -66,7 +66,7 @@ const ConfigDrawer: React.FC<IProps> = props => {
                       </Button>
                     </Space>
                     <Form.Item name={[field.name, "config"]} label="配置" rules={REQUIRED_RULES}>
-                      <TextArea placeholder="请输入配置" autoSize={{ minRows: 2, maxRows: 3 }} />
+                      <TextArea placeholder="请输入配置" autoSize={{ minRows: 2, maxRows: 3 }} readOnly />
                     </Form.Item>
                   </div>
                 );
@@ -86,7 +86,7 @@ const ConfigDrawer: React.FC<IProps> = props => {
                     cancelText: "取消",
                     onOk() {
                       init();
-                    }
+                    },
                   });
                 }}
               >

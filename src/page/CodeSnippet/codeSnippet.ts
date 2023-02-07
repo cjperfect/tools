@@ -116,4 +116,73 @@ export const useUpdateEffect = (callback, deps) => {
   randomArray: `let list = ["chenjiang", 1, 3, 5, "jiangchen"]
 let res = list.sort(() => Math.random() - 0.5)
 console.log(res)`,
+  randomColor: `// 随机生成rbg值
+function rgb() {
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  let rgb = "rgb(" + r + "," + g + "," + b + ")";
+  return rgb;
+}
+
+// 随机生成16进制颜色
+function color16() {
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  let color = "#" + r.toString(16) + g.toString(16) + b.toString(16);
+  return color;
+}`,
+  tablerender: `const [dataSource, setDataSource] = useState([]);
+const dataSourceRef = useRef([]);
+
+useEffect(() => {
+  dataSourceRef.current = dataSource;
+}, [dataSource]);
+
+const columns = [
+  {
+    dataIndex: "name",
+    title: "姓名",
+    render(val, text) {
+      // 如果不使用useEffect, 无论外面怎么setDataSource，render里面永远是第一次的值
+      // console.log(dataSource)
+
+      console.log(dataSourceRef.current); // 就可以获取最新的了
+    }
+  }
+];
+`,
+  tableop: `// 表格只有一条数据的时候不能删除，新增按钮永远在最后一条身上
+const columns = [
+  {
+    title: "操作",
+    key: "op",
+    width: 120,
+    fixed: "",
+    render(val, record, index) {
+      return (
+        <span className="port-operate-column">
+          {dataSourceRef.current.length > 1 ? (
+            <i
+              className="iconfont icon-btn-delete"
+              onClick={() => {
+                removeFunc(record.id);
+              }}
+            ></i>
+          ) : null}
+          {index === dataSourceRef.current.length - 1 ? (
+            <i
+              className="iconfont icon-btn-plus"
+              onClick={() => {
+                addFunc();
+              }}
+            ></i>
+          ) : null}
+        </span>
+      );
+    }
+  }
+];
+  `,
 };

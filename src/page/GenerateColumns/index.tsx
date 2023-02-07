@@ -77,7 +77,7 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
                   setVisible(true);
                 }}
               >
-                导入配置
+                批量添加字段
               </Button>
 
               <Button
@@ -85,7 +85,7 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
                   setConfigVisible(true);
                 }}
               >
-                查看已导入的配置
+                查看历史字段
               </Button>
             </Space>
             <FormInput ref={formInputRef} onSubmit={createColumns} />
@@ -94,54 +94,54 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
         <div className="code">
           {/* 右边预览区域 */}
           <h2 className="title">测试代码</h2>
-          <Tabs
-            defaultActiveKey="1"
-            items={[
-              {
-                key: "data",
-                label: "测试数据",
-                children: result.dataText ? (
-                  <>
-                    <Button
-                      icon={<CopyOutlined />}
-                      onClick={() => {
-                        if (!result.dataText) return message.info("没有啥要复制的");
-                        copy(result.dataText);
-                        message.success("已复制到剪切板");
-                      }}
-                    >
-                      复制
-                    </Button>
-                    <CodeEditor value={result.dataText} language="javascript" />
-                  </>
-                ) : (
-                  <Empty description="暂无数据, 请点击一键生成" />
-                ),
-              },
-              {
-                key: "column",
-                label: "Ant design table组件的columns配置",
-                children: result.columnsText ? (
-                  <>
-                    <Button
-                      icon={<CopyOutlined />}
-                      onClick={() => {
-                        if (!result.columnsText) return message.info("没有啥要复制的");
-                        copy(result.columnsText);
-                        message.success("已复制到剪切板");
-                      }}
-                    >
-                      复制
-                    </Button>
+          {result.dataText ? (
+            <Tabs
+              defaultActiveKey="1"
+              items={[
+                {
+                  key: "data",
+                  label: "测试数据",
+                  children: (
+                    <>
+                      <Button
+                        icon={<CopyOutlined />}
+                        onClick={() => {
+                          if (!result.dataText) return message.info("没有啥要复制的");
+                          copy(result.dataText);
+                          message.success("已复制到剪切板");
+                        }}
+                      >
+                        复制
+                      </Button>
+                      <CodeEditor value={result.dataText} language="javascript" />
+                    </>
+                  ),
+                },
+                {
+                  key: "column",
+                  label: "Ant design table组件的columns配置",
+                  children: (
+                    <>
+                      <Button
+                        icon={<CopyOutlined />}
+                        onClick={() => {
+                          if (!result.columnsText) return message.info("没有啥要复制的");
+                          copy(result.columnsText);
+                          message.success("已复制到剪切板");
+                        }}
+                      >
+                        复制
+                      </Button>
 
-                    <CodeEditor value={result.columnsText} language="javascript" />
-                  </>
-                ) : (
-                  <Empty description="暂无数据, 请点击一键生成" />
-                ),
-              },
-            ]}
-          ></Tabs>
+                      <CodeEditor value={result.columnsText} language="javascript" />
+                    </>
+                  ),
+                },
+              ]}
+            />
+          ) : (
+            <Empty description="暂无数据, 请点击一键生成" />
+          )}
         </div>
       </div>
 

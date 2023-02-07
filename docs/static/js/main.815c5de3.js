@@ -21408,7 +21408,7 @@ function _unsupportedIterableToArray(o, minLen) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "static/js/" + ({"72":"CodeSnippet","268":"Home","593":"Websites"}[chunkId] || chunkId) + "." + {"72":"43d3cebf","268":"849dc9ca","482":"09de9459","593":"fb252d79","684":"d2889306"}[chunkId] + ".chunk.js";
+/******/ 			return "static/js/" + ({"72":"CodeSnippet","268":"Home","593":"Websites"}[chunkId] || chunkId) + "." + {"72":"e4789e78","268":"8df1438b","482":"09de9459","593":"fb252d79","684":"d2889306"}[chunkId] + ".chunk.js";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -24394,7 +24394,7 @@ Webpack通过增加内联注释来告诉运行时，该有怎样的行为。通�
 webpack在打包的时候，对异步引入的库代码（lodash）进行代码分割时（需要配置webpack的SplitChunkPlugin插件），为分割后的代码块取得名字
 */ // 生成表格columns
 var GenerateColumns=/*#__PURE__*/(0,react.lazy)(function(){return Promise.all(/* import() | Home */[__webpack_require__.e(684), __webpack_require__.e(482), __webpack_require__.e(268)]).then(__webpack_require__.bind(__webpack_require__, 3542));});// 代码片段
-var CodeSnippet=/*#__PURE__*/(0,react.lazy)(function(){return Promise.all(/* import() | CodeSnippet */[__webpack_require__.e(684), __webpack_require__.e(72)]).then(__webpack_require__.bind(__webpack_require__, 5092));});// 常用网站
+var CodeSnippet=/*#__PURE__*/(0,react.lazy)(function(){return Promise.all(/* import() | CodeSnippet */[__webpack_require__.e(684), __webpack_require__.e(72)]).then(__webpack_require__.bind(__webpack_require__, 966));});// 常用网站
 var UseWebsites=/*#__PURE__*/(0,react.lazy)(function(){return __webpack_require__.e(/* import() | Websites */ 593).then(__webpack_require__.bind(__webpack_require__, 3829));});var routeConfig=[{path:"/",component:GenerateColumns,exact:true},{path:"/code-snippet",component:CodeSnippet,exact:true},{path:"/websites",component:UseWebsites,exact:true}];
 // EXTERNAL MODULE: ./node_modules/lodash/debounce.js
 var debounce = __webpack_require__(2279);

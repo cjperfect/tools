@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import CodeEditor from "components/CodeEditor";
 import { Button, message, Empty } from "antd";
-import { codeSnippetMap } from "config/codeSnippet";
+import { codeSnippetMap } from "page/CodeSnippet/codeSnippet";
 import { CopyOutlined, FormOutlined } from "@ant-design/icons";
 import { snippetConfig } from "./buttonConfig";
 import copy from "copy-to-clipboard";
