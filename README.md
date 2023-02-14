@@ -8,25 +8,13 @@
 >
 > 另外平时常用的一些功能函数提取出来, 要用的时候就不必去百度找, 提高开发效率;
 
-## 部署流程
+访问地址：
 
-先 fork 项目, 写代码, 执行命令, 最后发起合并请求
+- https://cjperfect.gitee.io/  或者  https://cxkyyds.xyz/ （走的是github，国内访问较慢）
 
-```shell
-yarn build
+额外：
 
-git add .
-git commit -m 'update'
-git pull origin master
-git push origin master
-```
+- 个人CSDN：https://blog.csdn.net/qq_39583550
 
-稍等几分钟就部署到 github 服务器上，可以使用 cxkyyds.xyz 域名访问了
-
-#### 项目配置流程
-
-[配置流程](https://blog.csdn.net/qq_39583550/article/details/128343627)
-
-#### 如何还需要配置 prettier, eslint, styleline
-
-[配置教程](https://blog.csdn.net/qq_39583550/article/details/125458727)
+- 基于vuepress搭建的博客：
+  - https://cjperfect.gitee.io/tech-document/   或者    https://cxkyyds.xyz/tech-document/ （走的是github，国内可能访问较慢）
