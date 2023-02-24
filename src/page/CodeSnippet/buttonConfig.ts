@@ -8,6 +8,7 @@ export const snippetConfig: { [extra: string]: SnippetType[] } = {
     { type: "idReg", btnText: "身份证号验证" },
     { type: "searchParams", btnText: "查询请求模板(缓存查询条件)" },
     { type: "tobase64", btnText: "本地图片转换成base64" },
+    { type: "previewPdf", btnText: "本地预览PDF" },
   ],
   css: [{ type: "cssEllipsis", btnText: "CSS超出部分省略号", language: "css" }],
   react: [

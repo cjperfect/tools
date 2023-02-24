@@ -208,4 +208,29 @@ convertImgToBase64(url, function (base64Img) {
   console.log(base64Img);
 });
   `,
+  previewPdf: `cosnt res = ajax("localhost/aip/preview", params, "post", {
+  responseType: "arraybuffer",
+});
+
+let hasData = true;
+try {
+  // 解码成字符串
+  const uint8_msg = new Uint8Array(res?.slice(0, 300));
+  const decodedString = String.fromCharCode.apply(null, uint8_msg);
+  hasData = decodedString.includes("PDF");
+  if (!hasData) {
+    let enc = new TextDecoder("utf-8");
+    let uint8_msg = new Uint8Array(res);
+    let bufferRes = JSON.parse(enc.decode(uint8_msg));
+    message.error(bufferRes.msg);
+  }
+} catch (error) {
+  hasData = false;
+}
+if (hasData) {
+  const URL = window.URL || window.webkitURL;
+  const fileUrl = URL.createObjectURL(new Blob([res], { type: "application/pdf" }));
+  window.open(fileUrl, "_blank");
+}
+`,
 };
