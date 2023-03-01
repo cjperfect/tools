@@ -13,6 +13,9 @@ webpack在打包的时候，对异步引入的库代码（lodash）进行代码�
 // 生成表格columns
 const GenerateColumns = lazy(() => import(/* webpackChunkName: "Home" */ "../page/GenerateColumns"));
 
+// 可视化JSON数据
+const JSONTreeViewer = lazy(() => import(/* webpackChunkName: "Home" */ "../page/JSONTreeViewer"));
+
 // 代码片段
 const CodeSnippet = lazy(() => import(/* webpackChunkName: "CodeSnippet" */ "../page/CodeSnippet"));
 
@@ -23,6 +26,11 @@ export const routeConfig = [
   {
     path: "/",
     component: GenerateColumns,
+    exact: true,
+  },
+  {
+    path: "/json-viewer",
+    component: JSONTreeViewer,
     exact: true,
   },
   {

@@ -6,6 +6,7 @@ import {
   ChromeOutlined,
   CodepenOutlined,
   IeOutlined,
+  ReadOutlined,
   RedditOutlined,
   TableOutlined,
   YuqueOutlined,
@@ -27,8 +28,13 @@ type LinkType = {
 const linkConfig: LinkType[] = [
   {
     key: "/",
-    label: "生成测试数据",
+    label: "表格测试数据",
     icon: <TableOutlined />,
+  },
+  {
+    key: "/json-viewer",
+    label: "JSON测试数据",
+    icon: <ReadOutlined />,
   },
   {
     key: "/code-snippet",
