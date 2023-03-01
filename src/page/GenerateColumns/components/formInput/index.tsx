@@ -150,6 +150,9 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
                                 }
                               />
                             </Form.Item>
+                            <Form.Item name={[field.name, "title"]} className="only-show-field">
+                              <Input style={{ width: 150 }} placeholder="产品名称" disabled />
+                            </Form.Item>
                           </>
                         }
                         extra={
@@ -192,13 +195,7 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
                         }
                       >
                         <Form.Item label="字段中文" rules={REQUIRED_RULES} name={[field.name, "title"]}>
-                          <Input
-                            style={{ width: 150 }}
-                            placeholder="产品名称"
-                            onClick={e => {
-                              e.stopPropagation();
-                            }}
-                          />
+                          <Input style={{ width: 150 }} placeholder="产品名称" />
                         </Form.Item>
                         <Form.Item label="宽度" rules={REQUIRED_RULES} name={[field.name, "width"]}>
                           <InputNumber placeholder="请输入" min={50} max={1000} />

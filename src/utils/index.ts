@@ -14,7 +14,7 @@ export const generateColumns = (values: ColumnInterface) => {
       title,
       ellipsis,
       width,
-      align
+      align,
     });
   });
 
@@ -36,6 +36,12 @@ export const generateColumns = (values: ColumnInterface) => {
         if (randomType === "sex") {
           // 性别
           temp[dataIndex] = random.pick(["男", "女"]);
+        } else if (randomType === "natural") {
+          // 自然数, 正整数
+          temp[dataIndex] = random[randomType](0, 10000);
+        } else if (randomType === "integer") {
+          // 整数, 正负整数
+          temp[dataIndex] = random[randomType](-100, 100);
         } else if (randomType === "float") {
           // 两位小数的浮点数
           temp[dataIndex] = random[randomType](0, 100, 2, 2);
@@ -59,7 +65,7 @@ export const generateColumns = (values: ColumnInterface) => {
     data,
     columns,
     dataText: `const ${variable} = ${JSON.stringify(data, null, 2)}`,
-    columnsText: `const columns = ${JSON.stringify(newColumns, null, 2)}`
+    columnsText: `const columns = ${JSON.stringify(newColumns, null, 2)}`,
   };
 };
 
@@ -91,9 +97,9 @@ export const operateRandomType = {
       data.push({
         key,
         value: key,
-        label: key
+        label: key,
       });
     }
     return data;
-  }
+  },
 };

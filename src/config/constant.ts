@@ -36,12 +36,12 @@ export const RANDOM_TYPE_ARR: Options[] = [
       {
         key: "natural",
         value: "natural",
-        label: "自然数(正数)",
+        label: "自然数(正数: 0,10000)",
       },
       {
         key: "integer",
         value: "integer",
-        label: "整数(正负)",
+        label: "整数(正负: -100,100)",
       },
       {
         key: "float",
