@@ -63,6 +63,11 @@ export const websiteObj: { [extra: string]: Website[] } = {
       icon: "images/websites/jsonapi.png",
     },
     {
+      url: "https://designer.mocky.io/",
+      title: "自定义在线接口",
+      icon: "images/websites/mocky.png",
+    },
+    {
       url: "https://excalidraw.com/",
       title: "在线画图",
       icon: "images/websites/excalidraw.png",
