@@ -32,11 +32,6 @@ const linkConfig: LinkType[] = [
     icon: <TableOutlined />,
   },
   {
-    key: "/json-viewer",
-    label: "JSON测试数据",
-    icon: <ReadOutlined />,
-  },
-  {
     key: "/code-snippet",
     label: "常用代码片段",
     icon: <CodepenOutlined />,
