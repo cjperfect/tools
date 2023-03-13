@@ -19,7 +19,7 @@ const $ajax = (url = "", params = {}, method = "get", config: { [extra: string]:
   });
 
   http.interceptors.request.use(
-    (config: AxiosRequestConfig): any => {
+    (config: RequestType): any => {
       return config;
     },
     (err: any) => {

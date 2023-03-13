@@ -7,7 +7,6 @@ import { CopyOutlined, FormOutlined } from "@ant-design/icons";
 import { snippetConfig } from "./buttonConfig";
 import copy from "copy-to-clipboard";
 import "./index.less";
-import { useEffect } from "react";
 
 interface IProps {}
 
