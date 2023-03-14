@@ -5,7 +5,7 @@ import FormInput from "./components/formInput";
 import CodeEditor from "components/CodeEditor";
 import copy from "copy-to-clipboard";
 import { CopyOutlined } from "@ant-design/icons";
-import { generateColumns } from "utils";
+import { generateColumns } from "page/GenerateColumns/utils";
 import ImportConfigModal from "./components/ImportConfigModal";
 import ConfigDrawer from "./components/configDrawer";
 import { DEFAULT_ADD_FIELD } from "config/constant";
@@ -37,7 +37,7 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
     formInputRef.current.setColumnsValue(
       "columns",
       values.map((v: any) => {
-        const [field, name] = v.split(":");
+        const [field, name] = v.split("-");
         return {
           ...DEFAULT_ADD_FIELD,
           dataIndex: field,
@@ -158,7 +158,7 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
           formInputRef.current.setColumnsValue(
             "columns",
             JSON.parse(historyConfig).map((v: any) => {
-              const [field, name] = v.split(":");
+              const [field, name] = v.split("-");
               return {
                 ...DEFAULT_ADD_FIELD,
                 dataIndex: field,

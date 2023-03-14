@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Drawer, Form, Input, Button, Space, Collapse, message, Modal } from "antd";
 import { REQUIRED_RULES } from "config/constant";
-import { operateRandomType } from "utils";
+import { operateRandomType } from "../../utils";
 import "./index.less";
 const { TextArea } = Input;
 const { Panel } = Collapse;
@@ -25,7 +25,7 @@ const DiyRandomTypeModal: React.FC<IProps> = props => {
     for (let k in typeMap) {
       state.push({
         randomName: k,
-        randomValue: typeMap[k].join(",")
+        randomValue: typeMap[k].join("&"),
       });
     }
     setRadomState(state);
@@ -42,7 +42,7 @@ const DiyRandomTypeModal: React.FC<IProps> = props => {
   const onFinish = (values: any) => {
     const { typeList } = values;
     const newTypes = typeList.reduce((prev: any, { randomName, randomValue }: any) => {
-      prev[randomName] = randomValue?.split(",");
+      prev[randomName] = randomValue?.split("&");
       return prev;
     }, {});
     operateRandomType.set(JSON.stringify(newTypes));
@@ -115,7 +115,7 @@ const DiyRandomTypeModal: React.FC<IProps> = props => {
                       >
                         <Form.Item label={"随机值："} rules={REQUIRED_RULES} name={[field.name, "randomValue"]}>
                           <TextArea
-                            placeholder="以英文逗号分隔，如：chenjiang,aoteman,huluwa"
+                            placeholder="以&分隔 如：chenjiang&aoteman&huluwa"
                             autoSize={{ minRows: 5, maxRows: 5 }}
                           />
                         </Form.Item>
@@ -140,7 +140,7 @@ const DiyRandomTypeModal: React.FC<IProps> = props => {
                   cancelText: "取消",
                   onOk() {
                     init();
-                  }
+                  },
                 });
               }}
             >

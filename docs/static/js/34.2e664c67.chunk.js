@@ -1,20 +1,9 @@
-(self["webpackChunkgenerate_columns"] = self["webpackChunkgenerate_columns"] || []).push([[482],{
+(self["webpackChunkgenerate_columns"] = self["webpackChunkgenerate_columns"] || []).push([[34],{
 
-/***/ 7440:
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ 3276:
+/***/ (function(__unused_webpack_module, __webpack_exports__) {
 
 "use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "Z": function() { return /* binding */ icons_DownOutlined; }
-});
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js
-var objectSpread2 = __webpack_require__(1413);
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(7313);
-;// CONCATENATED MODULE: ./node_modules/@ant-design/icons-svg/es/asn/DownOutlined.js
 // This icon file is generated automatically.
 var DownOutlined = {
   "icon": {
@@ -33,96 +22,14 @@ var DownOutlined = {
   "name": "down",
   "theme": "outlined"
 };
-/* harmony default export */ var asn_DownOutlined = (DownOutlined);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/components/AntdIcon.js + 3 modules
-var AntdIcon = __webpack_require__(7469);
-;// CONCATENATED MODULE: ./node_modules/@ant-design/icons/es/icons/DownOutlined.js
-
-// GENERATE BY ./scripts/generate.ts
-// DON NOT EDIT IT MANUALLY
-
-
-
-var DownOutlined_DownOutlined = function DownOutlined(props, ref) {
-  return /*#__PURE__*/react.createElement(AntdIcon/* default */.Z, (0,objectSpread2/* default */.Z)((0,objectSpread2/* default */.Z)({}, props), {}, {
-    ref: ref,
-    icon: asn_DownOutlined
-  }));
-};
-DownOutlined_DownOutlined.displayName = 'DownOutlined';
-/* harmony default export */ var icons_DownOutlined = (/*#__PURE__*/react.forwardRef(DownOutlined_DownOutlined));
+/* harmony default export */ __webpack_exports__["Z"] = (DownOutlined);
 
 /***/ }),
 
-/***/ 765:
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+/***/ 4169:
+/***/ (function(__unused_webpack_module, __webpack_exports__) {
 
 "use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "Z": function() { return /* binding */ icons_SearchOutlined; }
-});
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js
-var objectSpread2 = __webpack_require__(1413);
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(7313);
-;// CONCATENATED MODULE: ./node_modules/@ant-design/icons-svg/es/asn/SearchOutlined.js
-// This icon file is generated automatically.
-var SearchOutlined = {
-  "icon": {
-    "tag": "svg",
-    "attrs": {
-      "viewBox": "64 64 896 896",
-      "focusable": "false"
-    },
-    "children": [{
-      "tag": "path",
-      "attrs": {
-        "d": "M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0011.6 0l43.6-43.5a8.2 8.2 0 000-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z"
-      }
-    }]
-  },
-  "name": "search",
-  "theme": "outlined"
-};
-/* harmony default export */ var asn_SearchOutlined = (SearchOutlined);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/components/AntdIcon.js + 3 modules
-var AntdIcon = __webpack_require__(7469);
-;// CONCATENATED MODULE: ./node_modules/@ant-design/icons/es/icons/SearchOutlined.js
-
-// GENERATE BY ./scripts/generate.ts
-// DON NOT EDIT IT MANUALLY
-
-
-
-var SearchOutlined_SearchOutlined = function SearchOutlined(props, ref) {
-  return /*#__PURE__*/react.createElement(AntdIcon/* default */.Z, (0,objectSpread2/* default */.Z)((0,objectSpread2/* default */.Z)({}, props), {}, {
-    ref: ref,
-    icon: asn_SearchOutlined
-  }));
-};
-SearchOutlined_SearchOutlined.displayName = 'SearchOutlined';
-/* harmony default export */ var icons_SearchOutlined = (/*#__PURE__*/react.forwardRef(SearchOutlined_SearchOutlined));
-
-/***/ }),
-
-/***/ 8578:
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "Z": function() { return /* binding */ icons_UpOutlined; }
-});
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js
-var objectSpread2 = __webpack_require__(1413);
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(7313);
-;// CONCATENATED MODULE: ./node_modules/@ant-design/icons-svg/es/asn/UpOutlined.js
 // This icon file is generated automatically.
 var UpOutlined = {
   "icon": {
@@ -141,24 +48,57 @@ var UpOutlined = {
   "name": "up",
   "theme": "outlined"
 };
-/* harmony default export */ var asn_UpOutlined = (UpOutlined);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/components/AntdIcon.js + 3 modules
-var AntdIcon = __webpack_require__(7469);
-;// CONCATENATED MODULE: ./node_modules/@ant-design/icons/es/icons/UpOutlined.js
+/* harmony default export */ __webpack_exports__["Z"] = (UpOutlined);
+
+/***/ }),
+
+/***/ 2344:
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1413);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7313);
+/* harmony import */ var _ant_design_icons_svg_es_asn_DownOutlined__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3276);
+/* harmony import */ var _components_AntdIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6821);
 
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
 
 
 
-var UpOutlined_UpOutlined = function UpOutlined(props, ref) {
-  return /*#__PURE__*/react.createElement(AntdIcon/* default */.Z, (0,objectSpread2/* default */.Z)((0,objectSpread2/* default */.Z)({}, props), {}, {
+var DownOutlined = function DownOutlined(props, ref) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_AntdIcon__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z, (0,_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z)((0,_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z)({}, props), {}, {
     ref: ref,
-    icon: asn_UpOutlined
+    icon: _ant_design_icons_svg_es_asn_DownOutlined__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z
   }));
 };
-UpOutlined_UpOutlined.displayName = 'UpOutlined';
-/* harmony default export */ var icons_UpOutlined = (/*#__PURE__*/react.forwardRef(UpOutlined_UpOutlined));
+DownOutlined.displayName = 'DownOutlined';
+/* harmony default export */ __webpack_exports__["Z"] = (/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(DownOutlined));
+
+/***/ }),
+
+/***/ 9356:
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1413);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7313);
+/* harmony import */ var _ant_design_icons_svg_es_asn_UpOutlined__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4169);
+/* harmony import */ var _components_AntdIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6821);
+
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+
+
+
+var UpOutlined = function UpOutlined(props, ref) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_AntdIcon__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z, (0,_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z)((0,_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z)({}, props), {}, {
+    ref: ref,
+    icon: _ant_design_icons_svg_es_asn_UpOutlined__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z
+  }));
+};
+UpOutlined.displayName = 'UpOutlined';
+/* harmony default export */ __webpack_exports__["Z"] = (/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(UpOutlined));
 
 /***/ }),
 
@@ -267,6 +207,7 @@ function useDom(render, debug) {
 var dynamicCSS = __webpack_require__(170);
 ;// CONCATENATED MODULE: ./node_modules/rc-util/es/getScrollBarSize.js
 /* eslint-disable no-param-reassign */
+
 var cached;
 function getScrollBarSize(fresh) {
   if (typeof document === 'undefined') {
@@ -565,8 +506,8 @@ __webpack_require__.d(__webpack_exports__, {
 var esm_extends = __webpack_require__(7462);
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
 var defineProperty = __webpack_require__(4942);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/icons/RightOutlined.js + 1 modules
-var RightOutlined = __webpack_require__(5186);
+// EXTERNAL MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/RightOutlined.js + 1 modules
+var RightOutlined = __webpack_require__(9906);
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
 var classnames = __webpack_require__(6123);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
@@ -1095,8 +1036,8 @@ var esm_extends = __webpack_require__(7462);
 var defineProperty = __webpack_require__(4942);
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js + 1 modules
 var slicedToArray = __webpack_require__(9439);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/icons/CloseOutlined.js + 1 modules
-var CloseOutlined = __webpack_require__(1829);
+// EXTERNAL MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/CloseOutlined.js + 1 modules
+var CloseOutlined = __webpack_require__(1079);
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
 var classnames = __webpack_require__(6123);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
@@ -1106,6 +1047,8 @@ var objectSpread2 = __webpack_require__(1413);
 var react = __webpack_require__(7313);
 // EXTERNAL MODULE: ./node_modules/@rc-component/portal/es/index.js + 7 modules
 var es = __webpack_require__(2647);
+// EXTERNAL MODULE: ./node_modules/rc-util/es/hooks/useLayoutEffect.js
+var useLayoutEffect = __webpack_require__(2846);
 // EXTERNAL MODULE: ./node_modules/rc-motion/es/index.js + 11 modules
 var rc_motion_es = __webpack_require__(1293);
 ;// CONCATENATED MODULE: ./node_modules/rc-drawer/es/DrawerPanel.js
@@ -1158,7 +1101,6 @@ function warnCheck(props) {
 
 
 
-// import type ScrollLocker from 'rc-util/lib/Dom/scrollLocker';
 
 
 
@@ -1169,7 +1111,7 @@ var sentinelStyle = {
   outline: 'none',
   position: 'absolute'
 };
-function DrawerPopup(props) {
+function DrawerPopup(props, ref) {
   var _ref, _pushConfig$distance, _pushConfig, _classNames;
   var prefixCls = props.prefixCls,
     open = props.open,
@@ -1200,6 +1142,9 @@ function DrawerPopup(props) {
   var panelRef = react.useRef();
   var sentinelStartRef = react.useRef();
   var sentinelEndRef = react.useRef();
+  react.useImperativeHandle(ref, function () {
+    return panelRef.current;
+  });
   var onPanelKeyDown = function onPanelKeyDown(event) {
     var keyCode = event.keyCode,
       shiftKey = event.shiftKey;
@@ -1226,6 +1171,7 @@ function DrawerPopup(props) {
       case KeyCode/* default.ESC */.Z.ESC:
         {
           if (onClose && keyboard) {
+            event.stopPropagation();
             onClose(event);
           }
           break;
@@ -1241,7 +1187,7 @@ function DrawerPopup(props) {
         preventScroll: true
       });
     }
-  }, [open, autoFocus]);
+  }, [open]);
   // ============================ Push ============================
   var _React$useState = react.useState(false),
     _React$useState2 = (0,slicedToArray/* default */.Z)(_React$useState, 2),
@@ -1378,7 +1324,11 @@ function DrawerPopup(props) {
     "data-sentinel": "end"
   })));
 }
+var RefDrawerPopup = /*#__PURE__*/react.forwardRef(DrawerPopup);
+if (false) {}
+/* harmony default export */ var es_DrawerPopup = (RefDrawerPopup);
 ;// CONCATENATED MODULE: ./node_modules/rc-drawer/es/Drawer.js
+
 
 
 
@@ -1412,10 +1362,23 @@ var Drawer = function Drawer(props) {
     setAnimatedVisible = _React$useState2[1];
   // ============================= Warn =============================
   if (false) {}
+  // ============================ Focus =============================
+  var panelRef = react.useRef();
+  var lastActiveRef = react.useRef();
+  (0,useLayoutEffect/* default */.Z)(function () {
+    if (open) {
+      lastActiveRef.current = document.activeElement;
+    }
+  }, [open]);
   // ============================= Open =============================
   var internalAfterOpenChange = function internalAfterOpenChange(nextVisible) {
+    var _panelRef$current;
     setAnimatedVisible(nextVisible);
     afterOpenChange === null || afterOpenChange === void 0 ? void 0 : afterOpenChange(nextVisible);
+    if (!nextVisible && lastActiveRef.current && !((_panelRef$current = panelRef.current) === null || _panelRef$current === void 0 ? void 0 : _panelRef$current.contains(lastActiveRef.current))) {
+      var _lastActiveRef$curren;
+      (_lastActiveRef$curren = lastActiveRef.current) === null || _lastActiveRef$curren === void 0 ? void 0 : _lastActiveRef$curren.focus();
+    }
   };
   // ============================ Render ============================
   if (!forceRender && !animatedVisible && !open && destroyOnClose) {
@@ -1431,14 +1394,15 @@ var Drawer = function Drawer(props) {
     mask: mask,
     maskClosable: maskClosable,
     inline: getContainer === false,
-    afterOpenChange: internalAfterOpenChange
+    afterOpenChange: internalAfterOpenChange,
+    ref: panelRef
   });
   return /*#__PURE__*/react.createElement(es/* default */.Z, {
     open: open || forceRender || animatedVisible,
     autoDestroy: false,
     getContainer: getContainer,
     autoLock: mask && (open || animatedVisible)
-  }, /*#__PURE__*/react.createElement(DrawerPopup, drawerPopupProps));
+  }, /*#__PURE__*/react.createElement(es_DrawerPopup, drawerPopupProps));
 };
 if (false) {}
 /* harmony default export */ var es_Drawer = (Drawer);
@@ -1681,7 +1645,7 @@ var NoFormStyle = function NoFormStyle(_ref) {
 
 /***/ }),
 
-/***/ 8740:
+/***/ 2465:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2231,14 +2195,14 @@ function useItemRef() {
   }
   return getRef;
 }
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/icons/CheckCircleFilled.js + 1 modules
-var CheckCircleFilled = __webpack_require__(9649);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/icons/CloseCircleFilled.js + 1 modules
-var CloseCircleFilled = __webpack_require__(8315);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/icons/ExclamationCircleFilled.js + 1 modules
-var ExclamationCircleFilled = __webpack_require__(8925);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/icons/LoadingOutlined.js + 1 modules
-var LoadingOutlined = __webpack_require__(2508);
+// EXTERNAL MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/CheckCircleFilled.js + 1 modules
+var CheckCircleFilled = __webpack_require__(3390);
+// EXTERNAL MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/CloseCircleFilled.js + 1 modules
+var CloseCircleFilled = __webpack_require__(9403);
+// EXTERNAL MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/ExclamationCircleFilled.js + 1 modules
+var ExclamationCircleFilled = __webpack_require__(5602);
+// EXTERNAL MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/LoadingOutlined.js + 1 modules
+var LoadingOutlined = __webpack_require__(4470);
 // EXTERNAL MODULE: ./node_modules/rc-util/es/hooks/useLayoutEffect.js
 var useLayoutEffect = __webpack_require__(2846);
 // EXTERNAL MODULE: ./node_modules/rc-util/es/omit.js
@@ -2505,9 +2469,9 @@ var QuestionCircleOutlined = {
   "theme": "outlined"
 };
 /* harmony default export */ var asn_QuestionCircleOutlined = (QuestionCircleOutlined);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/components/AntdIcon.js + 3 modules
-var AntdIcon = __webpack_require__(7469);
-;// CONCATENATED MODULE: ./node_modules/@ant-design/icons/es/icons/QuestionCircleOutlined.js
+// EXTERNAL MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/components/AntdIcon.js + 3 modules
+var AntdIcon = __webpack_require__(6321);
+;// CONCATENATED MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/QuestionCircleOutlined.js
 
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
@@ -3269,7 +3233,7 @@ es_form_Form.create = function () {
 
 /***/ }),
 
-/***/ 7127:
+/***/ 8935:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3287,17 +3251,36 @@ var defineProperty = __webpack_require__(4942);
 var esm_typeof = __webpack_require__(1002);
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js + 1 modules
 var slicedToArray = __webpack_require__(9439);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/icons/DownOutlined.js + 1 modules
-var DownOutlined = __webpack_require__(7440);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/icons/UpOutlined.js + 1 modules
-var UpOutlined = __webpack_require__(8578);
+// EXTERNAL MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/DownOutlined.js
+var DownOutlined = __webpack_require__(2546);
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js
+var objectSpread2 = __webpack_require__(1413);
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(7313);
+// EXTERNAL MODULE: ./node_modules/@ant-design/icons-svg/es/asn/UpOutlined.js
+var asn_UpOutlined = __webpack_require__(4169);
+// EXTERNAL MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/components/AntdIcon.js + 3 modules
+var AntdIcon = __webpack_require__(6321);
+;// CONCATENATED MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/UpOutlined.js
+
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+
+
+
+var UpOutlined = function UpOutlined(props, ref) {
+  return /*#__PURE__*/react.createElement(AntdIcon/* default */.Z, (0,objectSpread2/* default */.Z)((0,objectSpread2/* default */.Z)({}, props), {}, {
+    ref: ref,
+    icon: asn_UpOutlined/* default */.Z
+  }));
+};
+UpOutlined.displayName = 'UpOutlined';
+/* harmony default export */ var icons_UpOutlined = (/*#__PURE__*/react.forwardRef(UpOutlined));
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
 var classnames = __webpack_require__(6123);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js
 var objectWithoutProperties = __webpack_require__(5987);
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(7313);
 // EXTERNAL MODULE: ./node_modules/rc-util/es/KeyCode.js
 var KeyCode = __webpack_require__(9242);
 // EXTERNAL MODULE: ./node_modules/rc-util/es/hooks/useLayoutEffect.js
@@ -4380,7 +4363,7 @@ var input_number_InputNumber = /*#__PURE__*/react.forwardRef(function (props, re
   var _useCompactItemContex = (0,Compact/* useCompactItemContext */.ri)(prefixCls, direction),
     compactSize = _useCompactItemContex.compactSize,
     compactItemClassnames = _useCompactItemContex.compactItemClassnames;
-  var upIcon = /*#__PURE__*/react.createElement(UpOutlined/* default */.Z, {
+  var upIcon = /*#__PURE__*/react.createElement(icons_UpOutlined, {
     className: "".concat(prefixCls, "-handler-up-inner")
   });
   var downIcon = /*#__PURE__*/react.createElement(DownOutlined/* default */.Z, {
@@ -4478,7 +4461,7 @@ var input_number_InputNumber = /*#__PURE__*/react.forwardRef(function (props, re
 
 /***/ }),
 
-/***/ 7786:
+/***/ 8482:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4539,8 +4522,8 @@ var Group = function Group(props) {
 /* harmony default export */ var input_Group = (Group);
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/typeof.js
 var esm_typeof = __webpack_require__(1002);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/icons/CloseCircleFilled.js + 1 modules
-var CloseCircleFilled = __webpack_require__(8315);
+// EXTERNAL MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/CloseCircleFilled.js + 1 modules
+var CloseCircleFilled = __webpack_require__(9403);
 ;// CONCATENATED MODULE: ./node_modules/rc-input/es/utils/commonUtils.js
 function hasAddon(props) {
   return !!(props.addonBefore || props.addonAfter);
@@ -5163,9 +5146,9 @@ var EyeInvisibleOutlined = {
   "theme": "outlined"
 };
 /* harmony default export */ var asn_EyeInvisibleOutlined = (EyeInvisibleOutlined);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/components/AntdIcon.js + 3 modules
-var AntdIcon = __webpack_require__(7469);
-;// CONCATENATED MODULE: ./node_modules/@ant-design/icons/es/icons/EyeInvisibleOutlined.js
+// EXTERNAL MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/components/AntdIcon.js + 3 modules
+var AntdIcon = __webpack_require__(6321);
+;// CONCATENATED MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/EyeInvisibleOutlined.js
 
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
@@ -5200,7 +5183,7 @@ var EyeOutlined = {
   "theme": "outlined"
 };
 /* harmony default export */ var asn_EyeOutlined = (EyeOutlined);
-;// CONCATENATED MODULE: ./node_modules/@ant-design/icons/es/icons/EyeOutlined.js
+;// CONCATENATED MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/EyeOutlined.js
 
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
@@ -5327,8 +5310,8 @@ var Password = /*#__PURE__*/react.forwardRef(function (props, ref) {
 });
 if (false) {}
 /* harmony default export */ var input_Password = (Password);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/icons/SearchOutlined.js + 1 modules
-var SearchOutlined = __webpack_require__(765);
+// EXTERNAL MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/SearchOutlined.js + 1 modules
+var SearchOutlined = __webpack_require__(1067);
 // EXTERNAL MODULE: ./node_modules/antd/es/button/index.js
 var es_button = __webpack_require__(9491);
 // EXTERNAL MODULE: ./node_modules/antd/es/_util/reactNode.js
@@ -6175,14 +6158,14 @@ __webpack_require__.d(__webpack_exports__, {
 var toConsumableArray = __webpack_require__(3433);
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
 var esm_extends = __webpack_require__(7462);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/icons/CheckCircleOutlined.js + 1 modules
-var CheckCircleOutlined = __webpack_require__(6430);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/icons/CloseCircleOutlined.js + 1 modules
-var CloseCircleOutlined = __webpack_require__(5049);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/icons/ExclamationCircleOutlined.js + 1 modules
-var ExclamationCircleOutlined = __webpack_require__(3598);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/icons/InfoCircleOutlined.js + 1 modules
-var InfoCircleOutlined = __webpack_require__(9959);
+// EXTERNAL MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/CheckCircleOutlined.js + 1 modules
+var CheckCircleOutlined = __webpack_require__(8405);
+// EXTERNAL MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/CloseCircleOutlined.js + 1 modules
+var CloseCircleOutlined = __webpack_require__(3747);
+// EXTERNAL MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/ExclamationCircleOutlined.js + 1 modules
+var ExclamationCircleOutlined = __webpack_require__(4400);
+// EXTERNAL MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/InfoCircleOutlined.js + 1 modules
+var InfoCircleOutlined = __webpack_require__(4997);
 // EXTERNAL MODULE: ./node_modules/rc-util/es/React/render.js
 var React_render = __webpack_require__(182);
 // EXTERNAL MODULE: ./node_modules/react/index.js
@@ -6302,8 +6285,8 @@ var ActionButton = function ActionButton(props) {
 /* harmony default export */ var _util_ActionButton = (ActionButton);
 // EXTERNAL MODULE: ./node_modules/antd/es/_util/motion.js
 var motion = __webpack_require__(3553);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/icons/CloseOutlined.js + 1 modules
-var CloseOutlined = __webpack_require__(1829);
+// EXTERNAL MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/CloseOutlined.js + 1 modules
+var CloseOutlined = __webpack_require__(1079);
 // EXTERNAL MODULE: ./node_modules/@rc-component/portal/es/index.js + 7 modules
 var es = __webpack_require__(2647);
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js
@@ -6320,6 +6303,7 @@ function getUseId() {
   return fullClone.useId;
 }
 var uuid = 0;
+
 /** @private Note only worked in develop env. Not work in production. */
 function resetUuid() {
   if (false) {}
@@ -6339,12 +6323,15 @@ function useId(id) {
       setInnerId("rc_unique_".concat(nextId));
     }
   }, []);
+
   // Developer passed id is single source of truth
   if (id) {
     return id;
   }
+
   // Test env always return mock id
   if (false) {}
+
   // Return react native id or inner id
   return reactNativeId || innerId;
 }
@@ -7910,7 +7897,7 @@ radio_Radio.__ANT_RADIO = true;
 
 /***/ }),
 
-/***/ 1890:
+/***/ 9740:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11780,9 +11767,9 @@ var CheckOutlined = {
   "theme": "outlined"
 };
 /* harmony default export */ var asn_CheckOutlined = (CheckOutlined);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/components/AntdIcon.js + 3 modules
-var AntdIcon = __webpack_require__(7469);
-;// CONCATENATED MODULE: ./node_modules/@ant-design/icons/es/icons/CheckOutlined.js
+// EXTERNAL MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/components/AntdIcon.js + 3 modules
+var AntdIcon = __webpack_require__(6321);
+;// CONCATENATED MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/CheckOutlined.js
 
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
@@ -11797,16 +11784,16 @@ var CheckOutlined_CheckOutlined = function CheckOutlined(props, ref) {
 };
 CheckOutlined_CheckOutlined.displayName = 'CheckOutlined';
 /* harmony default export */ var icons_CheckOutlined = (/*#__PURE__*/react.forwardRef(CheckOutlined_CheckOutlined));
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/icons/CloseCircleFilled.js + 1 modules
-var CloseCircleFilled = __webpack_require__(8315);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/icons/CloseOutlined.js + 1 modules
-var CloseOutlined = __webpack_require__(1829);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/icons/DownOutlined.js + 1 modules
-var DownOutlined = __webpack_require__(7440);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/icons/LoadingOutlined.js + 1 modules
-var LoadingOutlined = __webpack_require__(2508);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/icons/SearchOutlined.js + 1 modules
-var SearchOutlined = __webpack_require__(765);
+// EXTERNAL MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/CloseCircleFilled.js + 1 modules
+var CloseCircleFilled = __webpack_require__(9403);
+// EXTERNAL MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/CloseOutlined.js + 1 modules
+var CloseOutlined = __webpack_require__(1079);
+// EXTERNAL MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/DownOutlined.js
+var DownOutlined = __webpack_require__(2546);
+// EXTERNAL MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/LoadingOutlined.js + 1 modules
+var LoadingOutlined = __webpack_require__(4470);
+// EXTERNAL MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/SearchOutlined.js + 1 modules
+var SearchOutlined = __webpack_require__(1067);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/select/utils/iconUtil.js
 
 
@@ -12238,8 +12225,8 @@ __webpack_require__.d(__webpack_exports__, {
 var esm_extends = __webpack_require__(7462);
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
 var defineProperty = __webpack_require__(4942);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/icons/LoadingOutlined.js + 1 modules
-var LoadingOutlined = __webpack_require__(2508);
+// EXTERNAL MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/LoadingOutlined.js + 1 modules
+var LoadingOutlined = __webpack_require__(4470);
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
 var classnames = __webpack_require__(6123);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
@@ -12389,7 +12376,7 @@ if (false) {}
 
 /***/ }),
 
-/***/ 3251:
+/***/ 4393:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12403,10 +12390,10 @@ __webpack_require__.d(__webpack_exports__, {
 var defineProperty = __webpack_require__(4942);
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
 var esm_extends = __webpack_require__(7462);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/icons/CloseOutlined.js + 1 modules
-var CloseOutlined = __webpack_require__(1829);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/icons/EllipsisOutlined.js + 1 modules
-var EllipsisOutlined = __webpack_require__(1033);
+// EXTERNAL MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/CloseOutlined.js + 1 modules
+var CloseOutlined = __webpack_require__(1079);
+// EXTERNAL MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/EllipsisOutlined.js + 1 modules
+var EllipsisOutlined = __webpack_require__(3756);
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js
 var objectSpread2 = __webpack_require__(1413);
 // EXTERNAL MODULE: ./node_modules/react/index.js
@@ -12443,9 +12430,9 @@ var PlusOutlined = {
   "theme": "outlined"
 };
 /* harmony default export */ var asn_PlusOutlined = (PlusOutlined);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/components/AntdIcon.js + 3 modules
-var AntdIcon = __webpack_require__(7469);
-;// CONCATENATED MODULE: ./node_modules/@ant-design/icons/es/icons/PlusOutlined.js
+// EXTERNAL MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/components/AntdIcon.js + 3 modules
+var AntdIcon = __webpack_require__(6321);
+;// CONCATENATED MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/PlusOutlined.js
 
 // GENERATE BY ./scripts/generate.ts
 // DON NOT EDIT IT MANUALLY
@@ -12561,6 +12548,8 @@ function TabPanelList(_ref) {
 var toConsumableArray = __webpack_require__(3433);
 // EXTERNAL MODULE: ./node_modules/rc-resize-observer/es/index.js + 4 modules
 var rc_resize_observer_es = __webpack_require__(5172);
+// EXTERNAL MODULE: ./node_modules/rc-util/es/hooks/useEvent.js
+var useEvent = __webpack_require__(9978);
 // EXTERNAL MODULE: ./node_modules/rc-util/es/raf.js
 var raf = __webpack_require__(5557);
 // EXTERNAL MODULE: ./node_modules/rc-util/es/ref.js
@@ -12582,71 +12571,25 @@ function useOffsets(tabs, tabSizes, holderScrollWidth) {
     var rightOffset = lastOffset.left + lastOffset.width;
     for (var i = 0; i < tabs.length; i += 1) {
       var key = tabs[i].key;
-      var data = tabSizes.get(key); // Reuse last one when not exist yet
+      var data = tabSizes.get(key);
 
+      // Reuse last one when not exist yet
       if (!data) {
         var _tabs;
         data = tabSizes.get((_tabs = tabs[i - 1]) === null || _tabs === void 0 ? void 0 : _tabs.key) || DEFAULT_SIZE;
       }
-      var entity = map.get(key) || (0,objectSpread2/* default */.Z)({}, data); // Right
+      var entity = map.get(key) || (0,objectSpread2/* default */.Z)({}, data);
 
-      entity.right = rightOffset - entity.left - entity.width; // Update entity
+      // Right
+      entity.right = rightOffset - entity.left - entity.width;
 
+      // Update entity
       map.set(key, entity);
     }
     return map;
   }, [tabs.map(function (tab) {
     return tab.key;
   }).join('_'), tabSizes, holderScrollWidth]);
-}
-;// CONCATENATED MODULE: ./node_modules/rc-tabs/es/hooks/useRaf.js
-
-
-
-function useRaf(callback) {
-  var rafRef = (0,react.useRef)();
-  var removedRef = (0,react.useRef)(false);
-  function trigger() {
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-    if (!removedRef.current) {
-      raf/* default.cancel */.Z.cancel(rafRef.current);
-      rafRef.current = (0,raf/* default */.Z)(function () {
-        callback.apply(void 0, args);
-      });
-    }
-  }
-  (0,react.useEffect)(function () {
-    //be compatible with react 18 StrictMode in dev
-    removedRef.current = false;
-    return function () {
-      removedRef.current = true;
-      raf/* default.cancel */.Z.cancel(rafRef.current);
-    };
-  }, []);
-  return trigger;
-}
-function useRafState(defaultState) {
-  var batchRef = (0,react.useRef)([]);
-  var _useState = (0,react.useState)({}),
-    _useState2 = (0,slicedToArray/* default */.Z)(_useState, 2),
-    forceUpdate = _useState2[1];
-  var state = (0,react.useRef)(typeof defaultState === 'function' ? defaultState() : defaultState);
-  var flushUpdate = useRaf(function () {
-    var current = state.current;
-    batchRef.current.forEach(function (callback) {
-      current = callback(current);
-    });
-    batchRef.current = [];
-    state.current = current;
-    forceUpdate({});
-  });
-  function updater(callback) {
-    batchRef.current.push(callback);
-    flushUpdate();
-  }
-  return [state.current, updater];
 }
 ;// CONCATENATED MODULE: ./node_modules/rc-tabs/es/hooks/useSyncState.js
 
@@ -12673,8 +12616,9 @@ function useSyncState(defaultState, onChange) {
 var MIN_SWIPE_DISTANCE = 0.1;
 var STOP_SWIPE_DISTANCE = 0.01;
 var REFRESH_INTERVAL = 20;
-var SPEED_OFF_MULTIPLE = Math.pow(0.995, REFRESH_INTERVAL); // ================================= Hook =================================
+var SPEED_OFF_MULTIPLE = Math.pow(0.995, REFRESH_INTERVAL);
 
+// ================================= Hook =================================
 function useTouchMove(ref, onOffset) {
   var _useState = (0,react.useState)(),
     _useState2 = (0,slicedToArray/* default */.Z)(_useState, 2),
@@ -12692,9 +12636,10 @@ function useTouchMove(ref, onOffset) {
     _useState8 = (0,slicedToArray/* default */.Z)(_useState7, 2),
     lastOffset = _useState8[0],
     setLastOffset = _useState8[1];
-  var motionRef = (0,react.useRef)(); // ========================= Events =========================
-  // >>> Touch events
+  var motionRef = (0,react.useRef)();
 
+  // ========================= Events =========================
+  // >>> Touch events
   function onTouchStart(e) {
     var _e$touches$ = e.touches[0],
       screenX = _e$touches$.screenX,
@@ -12729,14 +12674,16 @@ function useTouchMove(ref, onOffset) {
   function onTouchEnd() {
     if (!touchPosition) return;
     setTouchPosition(null);
-    setLastOffset(null); // Swipe if needed
+    setLastOffset(null);
 
+    // Swipe if needed
     if (lastOffset) {
       var distanceX = lastOffset.x / lastTimeDiff;
       var distanceY = lastOffset.y / lastTimeDiff;
       var absX = Math.abs(distanceX);
-      var absY = Math.abs(distanceY); // Skip swipe if low distance
+      var absY = Math.abs(distanceY);
 
+      // Skip swipe if low distance
       if (Math.max(absX, absY) < MIN_SWIPE_DISTANCE) return;
       var currentX = distanceX;
       var currentY = distanceY;
@@ -12750,13 +12697,15 @@ function useTouchMove(ref, onOffset) {
         onOffset(currentX * REFRESH_INTERVAL, currentY * REFRESH_INTERVAL);
       }, REFRESH_INTERVAL);
     }
-  } // >>> Wheel event
+  }
 
+  // >>> Wheel event
   var lastWheelDirectionRef = (0,react.useRef)();
   function onWheel(e) {
     var deltaX = e.deltaX,
-      deltaY = e.deltaY; // Convert both to x & y since wheel only happened on PC
+      deltaY = e.deltaY;
 
+    // Convert both to x & y since wheel only happened on PC
     var mixed = 0;
     var absX = Math.abs(deltaX);
     var absY = Math.abs(deltaY);
@@ -12772,8 +12721,9 @@ function useTouchMove(ref, onOffset) {
     if (onOffset(-mixed, -mixed)) {
       e.preventDefault();
     }
-  } // ========================= Effect =========================
+  }
 
+  // ========================= Effect =========================
   var touchEventsRef = (0,react.useRef)(null);
   touchEventsRef.current = {
     onTouchStart: onTouchStart,
@@ -12799,8 +12749,9 @@ function useTouchMove(ref, onOffset) {
     });
     document.addEventListener('touchend', onProxyTouchEnd, {
       passive: false
-    }); // No need to clean up since element removed
+    });
 
+    // No need to clean up since element removed
     ref.current.addEventListener('touchstart', onProxyTouchStart, {
       passive: false
     });
@@ -12810,6 +12761,62 @@ function useTouchMove(ref, onOffset) {
       document.removeEventListener('touchend', onProxyTouchEnd);
     };
   }, []);
+}
+// EXTERNAL MODULE: ./node_modules/rc-util/es/hooks/useLayoutEffect.js
+var useLayoutEffect = __webpack_require__(2846);
+;// CONCATENATED MODULE: ./node_modules/rc-tabs/es/hooks/useUpdate.js
+
+
+
+
+/**
+ * Help to merge callback with `useLayoutEffect`.
+ * One time will only trigger once.
+ */
+function useUpdate(callback) {
+  var _useState = (0,react.useState)(0),
+    _useState2 = (0,slicedToArray/* default */.Z)(_useState, 2),
+    count = _useState2[0],
+    setCount = _useState2[1];
+  var effectRef = (0,react.useRef)(0);
+  var callbackRef = (0,react.useRef)();
+  callbackRef.current = callback;
+
+  // Trigger on `useLayoutEffect`
+  (0,useLayoutEffect/* useLayoutUpdateEffect */.o)(function () {
+    var _callbackRef$current;
+    (_callbackRef$current = callbackRef.current) === null || _callbackRef$current === void 0 ? void 0 : _callbackRef$current.call(callbackRef);
+  }, [count]);
+
+  // Trigger to update count
+  return function () {
+    if (effectRef.current !== count) {
+      return;
+    }
+    effectRef.current += 1;
+    setCount(effectRef.current);
+  };
+}
+function useUpdateState(defaultState) {
+  var batchRef = (0,react.useRef)([]);
+  var _useState3 = (0,react.useState)({}),
+    _useState4 = (0,slicedToArray/* default */.Z)(_useState3, 2),
+    forceUpdate = _useState4[1];
+  var state = (0,react.useRef)(typeof defaultState === 'function' ? defaultState() : defaultState);
+  var flushUpdate = useUpdate(function () {
+    var current = state.current;
+    batchRef.current.forEach(function (callback) {
+      current = callback(current);
+    });
+    batchRef.current = [];
+    state.current = current;
+    forceUpdate({});
+  });
+  function updater(callback) {
+    batchRef.current.push(callback);
+    flushUpdate();
+  }
+  return [state.current, updater];
 }
 ;// CONCATENATED MODULE: ./node_modules/rc-tabs/es/hooks/useVisibleRange.js
 
@@ -12879,6 +12886,10 @@ function stringify(obj) {
   }
   return JSON.stringify(tgt);
 }
+var RC_TABS_DOUBLE_QUOTE = 'TABS_DQ';
+function genDataNodeKey(key) {
+  return String(key).replace(/"/g, RC_TABS_DOUBLE_QUOTE);
+}
 ;// CONCATENATED MODULE: ./node_modules/rc-tabs/es/TabNavList/AddButton.js
 
 function AddButton(_ref, ref) {
@@ -12911,8 +12922,9 @@ var ExtraContent = /*#__PURE__*/react.forwardRef(function (_ref, ref) {
     prefixCls = _ref.prefixCls,
     extra = _ref.extra;
   if (!extra) return null;
-  var content; // Parse extra
+  var content;
 
+  // Parse extra
   var assertExtra = {};
   if ((0,esm_typeof/* default */.Z)(extra) === 'object' && ! /*#__PURE__*/react.isValidElement(extra)) {
     assertExtra = extra;
@@ -13224,7 +13236,6 @@ function OperationNode(_ref, ref) {
     onTabClick = _ref.onTabClick,
     getPopupContainer = _ref.getPopupContainer,
     popupClassName = _ref.popupClassName;
-
   // ======================== Dropdown ========================
   var _useState = (0,react.useState)(false),
     _useState2 = (0,slicedToArray/* default */.Z)(_useState, 2),
@@ -13322,8 +13333,9 @@ function OperationNode(_ref, ref) {
         if (selectedKey !== null) onTabClick(selectedKey, e);
         break;
     }
-  } // ========================= Effect =========================
+  }
 
+  // ========================= Effect =========================
   (0,react.useEffect)(function () {
     // We use query element here to avoid React strict warning
     var ele = document.getElementById(selectedItemId);
@@ -13335,8 +13347,9 @@ function OperationNode(_ref, ref) {
     if (!open) {
       setSelectedKey(null);
     }
-  }, [open]); // ========================= Render =========================
+  }, [open]);
 
+  // ========================= Render =========================
   var moreStyle = (0,defineProperty/* default */.Z)({}, rtl ? 'marginRight' : 'marginLeft', tabBarGutter);
   if (!tabs.length) {
     moreStyle.visibility = 'hidden';
@@ -13388,6 +13401,7 @@ function OperationNode(_ref, ref) {
 
 
 
+
 function TabNode(_ref) {
   var _classNames;
   var prefixCls = _ref.prefixCls,
@@ -13422,10 +13436,11 @@ function TabNode(_ref) {
     });
   }
   var node = /*#__PURE__*/react.createElement("div", {
-    key: key // ref={ref}
+    key: key
+    // ref={ref}
     ,
 
-    "data-node-key": key,
+    "data-node-key": genDataNodeKey(key),
     className: classnames_default()(tabPrefix, (_classNames = {}, (0,defineProperty/* default */.Z)(_classNames, "".concat(tabPrefix, "-with-remove"), removable), (0,defineProperty/* default */.Z)(_classNames, "".concat(tabPrefix, "-active"), active), (0,defineProperty/* default */.Z)(_classNames, "".concat(tabPrefix, "-disabled"), disabled), _classNames)),
     style: style,
     onClick: onInternalClick
@@ -13484,6 +13499,7 @@ function TabNode(_ref) {
 
 
 
+
 var getSize = function getSize(refObj) {
   var _ref = refObj.current || {},
     _ref$offsetWidth = _ref.offsetWidth,
@@ -13492,10 +13508,10 @@ var getSize = function getSize(refObj) {
     offsetHeight = _ref$offsetHeight === void 0 ? 0 : _ref$offsetHeight;
   return [offsetWidth, offsetHeight];
 };
+
 /**
  * Convert `SizeInfo` to unit value. Such as [123, 456] with `top` position get `123`
  */
-
 var getUnitValue = function getUnitValue(size, tabPositionTopOrBottom) {
   return size[tabPositionTopOrBottom ? 0 : 1];
 };
@@ -13524,7 +13540,8 @@ function TabNavList(props, ref) {
   var tabsWrapperRef = (0,react.useRef)();
   var tabListRef = (0,react.useRef)();
   var operationsRef = (0,react.useRef)();
-  var innerAddButtonRef = (0,react.useRef)(); // const [getBtnRef, removeBtnRef] = useRefs<HTMLDivElement>();
+  var innerAddButtonRef = (0,react.useRef)();
+  // const [getBtnRef, removeBtnRef] = useRefs<HTMLDivElement>();
 
   var tabPositionTopOrBottom = tabPosition === 'top' || tabPosition === 'bottom';
   var _useSyncState = useSyncState(0, function (next, prev) {
@@ -13563,19 +13580,21 @@ function TabNavList(props, ref) {
     _useState8 = (0,slicedToArray/* default */.Z)(_useState7, 2),
     operationSize = _useState8[0],
     setOperationSize = _useState8[1];
-  var _useRafState = useRafState(new Map()),
-    _useRafState2 = (0,slicedToArray/* default */.Z)(_useRafState, 2),
-    tabSizes = _useRafState2[0],
-    setTabSizes = _useRafState2[1];
-  var tabOffsets = useOffsets(tabs, tabSizes, tabContentSize[0]); // ========================== Unit =========================
+  var _useUpdateState = useUpdateState(new Map()),
+    _useUpdateState2 = (0,slicedToArray/* default */.Z)(_useUpdateState, 2),
+    tabSizes = _useUpdateState2[0],
+    setTabSizes = _useUpdateState2[1];
+  var tabOffsets = useOffsets(tabs, tabSizes, tabContentSize[0]);
 
+  // ========================== Unit =========================
   var containerExcludeExtraSizeValue = getUnitValue(containerExcludeExtraSize, tabPositionTopOrBottom);
   var tabContentSizeValue = getUnitValue(tabContentSize, tabPositionTopOrBottom);
   var addSizeValue = getUnitValue(addSize, tabPositionTopOrBottom);
   var operationSizeValue = getUnitValue(operationSize, tabPositionTopOrBottom);
   var needScroll = containerExcludeExtraSizeValue < tabContentSizeValue + addSizeValue;
-  var visibleTabContentValue = needScroll ? containerExcludeExtraSizeValue - operationSizeValue : containerExcludeExtraSizeValue - addSizeValue; // ========================== Util =========================
+  var visibleTabContentValue = needScroll ? containerExcludeExtraSizeValue - operationSizeValue : containerExcludeExtraSizeValue - addSizeValue;
 
+  // ========================== Util =========================
   var operationsHiddenClassName = "".concat(prefixCls, "-nav-operations-hidden");
   var transformMin = 0;
   var transformMax = 0;
@@ -13597,8 +13616,9 @@ function TabNavList(props, ref) {
       return transformMax;
     }
     return value;
-  } // ========================= Mobile ========================
+  }
 
+  // ========================= Mobile ========================
   var touchMovingRef = (0,react.useRef)();
   var _useState9 = (0,react.useState)(),
     _useState10 = (0,slicedToArray/* default */.Z)(_useState9, 2),
@@ -13616,9 +13636,10 @@ function TabNavList(props, ref) {
         var newValue = alignInRange(value + offset);
         return newValue;
       });
-    } // Skip scroll if place is enough
+    }
 
-    if (containerExcludeExtraSizeValue >= tabContentSizeValue) {
+    // Skip scroll if place is enough
+    if (!needScroll) {
       return false;
     }
     if (tabPositionTopOrBottom) {
@@ -13638,9 +13659,10 @@ function TabNavList(props, ref) {
       }, 100);
     }
     return clearTouchMoving;
-  }, [lockAnimation]); // ===================== Visible Range =====================
-  // Render tab node & collect tab offset
+  }, [lockAnimation]);
 
+  // ===================== Visible Range =====================
+  // Render tab node & collect tab offset
   var _useVisibleRange = useVisibleRange(tabOffsets,
     // Container
     visibleTabContentValue,
@@ -13656,9 +13678,10 @@ function TabNavList(props, ref) {
     })),
     _useVisibleRange2 = (0,slicedToArray/* default */.Z)(_useVisibleRange, 2),
     visibleStart = _useVisibleRange2[0],
-    visibleEnd = _useVisibleRange2[1]; // ========================= Scroll ========================
+    visibleEnd = _useVisibleRange2[1];
 
-  var scrollToTab = function scrollToTab() {
+  // ========================= Scroll ========================
+  var scrollToTab = (0,useEvent/* default */.Z)(function () {
     var key = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : activeKey;
     var tabOffset = tabOffsets.get(key) || {
       width: 0,
@@ -13669,15 +13692,17 @@ function TabNavList(props, ref) {
     };
     if (tabPositionTopOrBottom) {
       // ============ Align with top & bottom ============
-      var newTransform = transformLeft; // RTL
+      var newTransform = transformLeft;
 
+      // RTL
       if (rtl) {
         if (tabOffset.right < transformLeft) {
           newTransform = tabOffset.right;
         } else if (tabOffset.right + tabOffset.width > transformLeft + visibleTabContentValue) {
           newTransform = tabOffset.right + tabOffset.width - visibleTabContentValue;
         }
-      } // LTR
+      }
+      // LTR
       else if (tabOffset.left < -transformLeft) {
         newTransform = -tabOffset.left;
       } else if (tabOffset.left + tabOffset.width > -transformLeft + visibleTabContentValue) {
@@ -13696,8 +13721,9 @@ function TabNavList(props, ref) {
       setTransformLeft(0);
       setTransformTop(alignInRange(_newTransform));
     }
-  }; // ========================== Tab ==========================
+  });
 
+  // ========================== Tab ==========================
   var tabNodeStyle = {};
   if (tabPosition === 'top' || tabPosition === 'bottom') {
     tabNodeStyle[rtl ? 'marginRight' : 'marginLeft'] = tabBarGutter;
@@ -13712,7 +13738,6 @@ function TabNavList(props, ref) {
       key: key,
       tab: tab
       /* first node should not have margin left */,
-
       style: i === 0 ? undefined : tabNodeStyle,
       closable: tab.closable,
       editable: editable,
@@ -13727,23 +13752,24 @@ function TabNavList(props, ref) {
         doLockAnimation();
         if (!tabsWrapperRef.current) {
           return;
-        } // Focus element will make scrollLeft change which we should reset back
-
+        }
+        // Focus element will make scrollLeft change which we should reset back
         if (!rtl) {
           tabsWrapperRef.current.scrollLeft = 0;
         }
         tabsWrapperRef.current.scrollTop = 0;
       }
     });
-  }); // Update buttons records
+  });
 
+  // Update buttons records
   var updateTabSizes = function updateTabSizes() {
     return setTabSizes(function () {
       var newSizes = new Map();
       tabs.forEach(function (_ref2) {
         var _tabListRef$current;
         var key = _ref2.key;
-        var btnNode = (_tabListRef$current = tabListRef.current) === null || _tabListRef$current === void 0 ? void 0 : _tabListRef$current.querySelector("[data-node-key=\"".concat(key, "\"]"));
+        var btnNode = (_tabListRef$current = tabListRef.current) === null || _tabListRef$current === void 0 ? void 0 : _tabListRef$current.querySelector("[data-node-key=\"".concat(genDataNodeKey(key), "\"]"));
         if (btnNode) {
           newSizes.set(key, {
             width: btnNode.offsetWidth,
@@ -13761,7 +13787,7 @@ function TabNavList(props, ref) {
   }, [tabs.map(function (tab) {
     return tab.key;
   }).join('_')]);
-  var onListHolderResize = useRaf(function () {
+  var onListHolderResize = useUpdate(function () {
     // Update wrapper records
     var containerSize = getSize(containerRef);
     var extraLeftSize = getSize(extraLeftRef);
@@ -13770,24 +13796,29 @@ function TabNavList(props, ref) {
     var newAddSize = getSize(innerAddButtonRef);
     setAddSize(newAddSize);
     var newOperationSize = getSize(operationsRef);
-    setOperationSize(newOperationSize); // Which includes add button size
+    setOperationSize(newOperationSize);
 
+    // Which includes add button size
     var tabContentFullSize = getSize(tabListRef);
-    setTabContentSize([tabContentFullSize[0] - newAddSize[0], tabContentFullSize[1] - newAddSize[1]]); // Update buttons records
+    setTabContentSize([tabContentFullSize[0] - newAddSize[0], tabContentFullSize[1] - newAddSize[1]]);
 
+    // Update buttons records
     updateTabSizes();
-  }); // ======================== Dropdown =======================
+  });
 
+  // ======================== Dropdown =======================
   var startHiddenTabs = tabs.slice(0, visibleStart);
   var endHiddenTabs = tabs.slice(visibleEnd + 1);
-  var hiddenTabs = [].concat((0,toConsumableArray/* default */.Z)(startHiddenTabs), (0,toConsumableArray/* default */.Z)(endHiddenTabs)); // =================== Link & Operations ===================
+  var hiddenTabs = [].concat((0,toConsumableArray/* default */.Z)(startHiddenTabs), (0,toConsumableArray/* default */.Z)(endHiddenTabs));
 
+  // =================== Link & Operations ===================
   var _useState11 = (0,react.useState)(),
     _useState12 = (0,slicedToArray/* default */.Z)(_useState11, 2),
     inkStyle = _useState12[0],
     setInkStyle = _useState12[1];
-  var activeTabOffset = tabOffsets.get(activeKey); // Delay set ink style to avoid remove tab blink
+  var activeTabOffset = tabOffsets.get(activeKey);
 
+  // Delay set ink style to avoid remove tab blink
   var inkBarRafRef = (0,react.useRef)();
   function cleanInkBarRaf() {
     raf/* default.cancel */.Z.cancel(inkBarRafRef.current);
@@ -13812,16 +13843,21 @@ function TabNavList(props, ref) {
       setInkStyle(newInkStyle);
     });
     return cleanInkBarRaf;
-  }, [activeTabOffset, tabPositionTopOrBottom, rtl]); // ========================= Effect ========================
+  }, [activeTabOffset, tabPositionTopOrBottom, rtl]);
 
+  // ========================= Effect ========================
   (0,react.useEffect)(function () {
-    scrollToTab(); // eslint-disable-next-line
-  }, [activeKey, stringify(activeTabOffset), stringify(tabOffsets), tabPositionTopOrBottom]); // Should recalculate when rtl changed
+    scrollToTab();
+    // eslint-disable-next-line
+  }, [activeKey, transformMin, transformMax, stringify(activeTabOffset), stringify(tabOffsets), tabPositionTopOrBottom]);
 
+  // Should recalculate when rtl changed
   (0,react.useEffect)(function () {
-    onListHolderResize(); // eslint-disable-next-line
-  }, [rtl]); // ========================= Render ========================
+    onListHolderResize();
+    // eslint-disable-next-line
+  }, [rtl]);
 
+  // ========================= Render ========================
   var hasDropdown = !!hiddenTabs.length;
   var wrapPrefix = "".concat(prefixCls, "-nav-wrap");
   var pingLeft;
@@ -13831,14 +13867,14 @@ function TabNavList(props, ref) {
   if (tabPositionTopOrBottom) {
     if (rtl) {
       pingRight = transformLeft > 0;
-      pingLeft = transformLeft + containerExcludeExtraSizeValue < tabContentSizeValue;
+      pingLeft = transformLeft !== transformMax;
     } else {
       pingLeft = transformLeft < 0;
-      pingRight = -transformLeft + containerExcludeExtraSizeValue < tabContentSizeValue;
+      pingRight = transformLeft !== transformMin;
     }
   } else {
     pingTop = transformTop < 0;
-    pingBottom = -transformTop + containerExcludeExtraSizeValue < tabContentSizeValue;
+    pingBottom = transformTop !== transformMin;
   }
   return /*#__PURE__*/react.createElement(rc_resize_observer_es/* default */.Z, {
     onResize: onListHolderResize
@@ -13907,6 +13943,7 @@ var Wrapper_excluded = ["renderTabBar"],
 
 
 
+
 // We have to create a TabNavList components.
 function TabNavListWrapper(_ref) {
   var renderTabBar = _ref.renderTabBar,
@@ -13957,8 +13994,9 @@ function useAnimateConfig() {
     mergedAnimated = (0,objectSpread2/* default */.Z)({
       inkBar: true
     }, (0,esm_typeof/* default */.Z)(animated) === 'object' ? animated : {});
-  } // Enable tabPane animation if provide motion
+  }
 
+  // Enable tabPane animation if provide motion
   if (mergedAnimated.tabPaneMotion && mergedAnimated.tabPane === undefined) {
     mergedAnimated.tabPane = true;
   }
@@ -13986,6 +14024,7 @@ var Tabs_excluded = ["id", "prefixCls", "className", "items", "direction", "acti
 
 
 
+
 /**
  * Should added antd:
  * - type
@@ -13995,8 +14034,8 @@ var Tabs_excluded = ["id", "prefixCls", "className", "items", "direction", "acti
  * - onPrevClick
  * - keyboard
  */
-// Used for accessibility
 
+// Used for accessibility
 var uuid = 0;
 function Tabs(_ref, ref) {
   var _classNames;
@@ -14032,8 +14071,9 @@ function Tabs(_ref, ref) {
     });
   }, [items]);
   var rtl = direction === 'rtl';
-  var mergedAnimated = useAnimateConfig(animated); // ======================== Mobile ========================
+  var mergedAnimated = useAnimateConfig(animated);
 
+  // ======================== Mobile ========================
   var _useState = (0,react.useState)(false),
     _useState2 = (0,slicedToArray/* default */.Z)(_useState, 2),
     mobile = _useState2[0],
@@ -14041,8 +14081,9 @@ function Tabs(_ref, ref) {
   (0,react.useEffect)(function () {
     // Only update on the client side
     setMobile((0,isMobile/* default */.Z)());
-  }, []); // ====================== Active Key ======================
+  }, []);
 
+  // ====================== Active Key ======================
   var _useMergedState = (0,useMergedState/* default */.Z)(function () {
       var _tabs$;
       return (_tabs$ = tabs[0]) === null || _tabs$ === void 0 ? void 0 : _tabs$.key;
@@ -14060,8 +14101,9 @@ function Tabs(_ref, ref) {
     }),
     _useState4 = (0,slicedToArray/* default */.Z)(_useState3, 2),
     activeIndex = _useState4[0],
-    setActiveIndex = _useState4[1]; // Reset active key if not exist anymore
+    setActiveIndex = _useState4[1];
 
+  // Reset active key if not exist anymore
   (0,react.useEffect)(function () {
     var newActiveIndex = tabs.findIndex(function (tab) {
       return tab.key === mergedActiveKey;
@@ -14074,22 +14116,25 @@ function Tabs(_ref, ref) {
     setActiveIndex(newActiveIndex);
   }, [tabs.map(function (tab) {
     return tab.key;
-  }).join('_'), mergedActiveKey, activeIndex]); // ===================== Accessibility ====================
+  }).join('_'), mergedActiveKey, activeIndex]);
 
+  // ===================== Accessibility ====================
   var _useMergedState3 = (0,useMergedState/* default */.Z)(null, {
       value: id
     }),
     _useMergedState4 = (0,slicedToArray/* default */.Z)(_useMergedState3, 2),
     mergedId = _useMergedState4[0],
-    setMergedId = _useMergedState4[1]; // Async generate id to avoid ssr mapping failed
+    setMergedId = _useMergedState4[1];
 
+  // Async generate id to avoid ssr mapping failed
   (0,react.useEffect)(function () {
     if (!id) {
       setMergedId("rc-tabs-".concat( false ? 0 : uuid));
       uuid += 1;
     }
-  }, []); // ======================== Events ========================
+  }, []);
 
+  // ======================== Events ========================
   function onInternalTabClick(key, e) {
     onTabClick === null || onTabClick === void 0 ? void 0 : onTabClick(key, e);
     var isActiveChanged = key !== mergedActiveKey;
@@ -14097,8 +14142,9 @@ function Tabs(_ref, ref) {
     if (isActiveChanged) {
       onChange === null || onChange === void 0 ? void 0 : onChange(key);
     }
-  } // ======================== Render ========================
+  }
 
+  // ======================== Render ========================
   var sharedProps = {
     id: mergedId,
     activeKey: mergedActiveKey,
@@ -14316,6 +14362,85 @@ function tabs_Tabs(_a) {
 }
 tabs_Tabs.TabPane = tabs_TabPane;
 /* harmony default export */ var tabs = (tabs_Tabs);
+
+/***/ }),
+
+/***/ 2546:
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(1413);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7313);
+/* harmony import */ var _ant_design_icons_svg_es_asn_DownOutlined__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(3276);
+/* harmony import */ var _components_AntdIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6321);
+
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+
+
+
+var DownOutlined = function DownOutlined(props, ref) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_AntdIcon__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z, (0,_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z)((0,_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z)({}, props), {}, {
+    ref: ref,
+    icon: _ant_design_icons_svg_es_asn_DownOutlined__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z
+  }));
+};
+DownOutlined.displayName = 'DownOutlined';
+/* harmony default export */ __webpack_exports__["Z"] = (/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(DownOutlined));
+
+/***/ }),
+
+/***/ 1067:
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "Z": function() { return /* binding */ icons_SearchOutlined; }
+});
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js
+var objectSpread2 = __webpack_require__(1413);
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(7313);
+;// CONCATENATED MODULE: ./node_modules/@ant-design/icons-svg/es/asn/SearchOutlined.js
+// This icon file is generated automatically.
+var SearchOutlined = {
+  "icon": {
+    "tag": "svg",
+    "attrs": {
+      "viewBox": "64 64 896 896",
+      "focusable": "false"
+    },
+    "children": [{
+      "tag": "path",
+      "attrs": {
+        "d": "M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0011.6 0l43.6-43.5a8.2 8.2 0 000-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z"
+      }
+    }]
+  },
+  "name": "search",
+  "theme": "outlined"
+};
+/* harmony default export */ var asn_SearchOutlined = (SearchOutlined);
+// EXTERNAL MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/components/AntdIcon.js + 3 modules
+var AntdIcon = __webpack_require__(6321);
+;// CONCATENATED MODULE: ./node_modules/antd/node_modules/@ant-design/icons/es/icons/SearchOutlined.js
+
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+
+
+
+var SearchOutlined_SearchOutlined = function SearchOutlined(props, ref) {
+  return /*#__PURE__*/react.createElement(AntdIcon/* default */.Z, (0,objectSpread2/* default */.Z)((0,objectSpread2/* default */.Z)({}, props), {}, {
+    ref: ref,
+    icon: asn_SearchOutlined
+  }));
+};
+SearchOutlined_SearchOutlined.displayName = 'SearchOutlined';
+/* harmony default export */ var icons_SearchOutlined = (/*#__PURE__*/react.forwardRef(SearchOutlined_SearchOutlined));
 
 /***/ }),
 
@@ -22471,6 +22596,7 @@ tabs_Tabs.TabPane = tabs_TabPane;
 var attributes = "accept acceptCharset accessKey action allowFullScreen allowTransparency\n    alt async autoComplete autoFocus autoPlay capture cellPadding cellSpacing challenge\n    charSet checked classID className colSpan cols content contentEditable contextMenu\n    controls coords crossOrigin data dateTime default defer dir disabled download draggable\n    encType form formAction formEncType formMethod formNoValidate formTarget frameBorder\n    headers height hidden high href hrefLang htmlFor httpEquiv icon id inputMode integrity\n    is keyParams keyType kind label lang list loop low manifest marginHeight marginWidth max maxLength media\n    mediaGroup method min minLength multiple muted name noValidate nonce open\n    optimum pattern placeholder poster preload radioGroup readOnly rel required\n    reversed role rowSpan rows sandbox scope scoped scrolling seamless selected\n    shape size sizes span spellCheck src srcDoc srcLang srcSet start step style\n    summary tabIndex target title type useMap value width wmode wrap";
 var eventsName = "onCopy onCut onPaste onCompositionEnd onCompositionStart onCompositionUpdate onKeyDown\n    onKeyPress onKeyUp onFocus onBlur onChange onInput onSubmit onClick onContextMenu onDoubleClick\n    onDrag onDragEnd onDragEnter onDragExit onDragLeave onDragOver onDragStart onDrop onMouseDown\n    onMouseEnter onMouseLeave onMouseMove onMouseOut onMouseOver onMouseUp onSelect onTouchCancel\n    onTouchEnd onTouchMove onTouchStart onScroll onWheel onAbort onCanPlay onCanPlayThrough\n    onDurationChange onEmptied onEncrypted onEnded onError onLoadedData onLoadedMetadata\n    onLoadStart onPause onPlay onPlaying onProgress onRateChange onSeeked onSeeking onStalled onSuspend onTimeUpdate onVolumeChange onWaiting onLoad onError";
 var propList = "".concat(attributes, " ").concat(eventsName).split(/[\s\n]+/);
+
 /* eslint-enable max-len */
 var ariaPrefix = 'aria-';
 var dataPrefix = 'data-';

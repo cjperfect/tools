@@ -2,7 +2,7 @@ import React, { forwardRef, useEffect, useImperativeHandle, useState } from "rea
 import { Collapse, Form, Input, Button, Modal, InputNumber, Switch, Radio, Select, message, Space } from "antd";
 import { DEFAULT_ADD_FIELD, REQUIRED_RULES, RANDOM_TYPE_ARR } from "config/constant";
 import { DownOutlined, UpOutlined } from "@ant-design/icons";
-import { operateRandomType } from "utils";
+import { operateRandomType } from "../../utils";
 import DiyRandomTypeModal from "../diyRandomTypeDrawer";
 import "./index.less";
 

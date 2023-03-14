@@ -13,6 +13,9 @@ webpack在打包的时候，对异步引入的库代码（lodash）进行代码�
 // 生成表格columns
 const GenerateColumns = lazy(() => import(/* webpackChunkName: "Home" */ "../page/GenerateColumns"));
 
+// 生成下拉框测试数据
+const SelectTestData = lazy(() => import(/* webpackChunkName: "Home" */ "../page/SelectTestData"));
+
 // 代码片段
 const CodeSnippet = lazy(() => import(/* webpackChunkName: "CodeSnippet" */ "../page/CodeSnippet"));
 
@@ -23,6 +26,11 @@ export const routeConfig = [
   {
     path: "/",
     component: GenerateColumns,
+    exact: true,
+  },
+  {
+    path: "/select-data",
+    component: SelectTestData,
     exact: true,
   },
   {

@@ -2,7 +2,7 @@
 import React from "react";
 import { Input, Button, Modal, Form, Space, message } from "antd";
 import { CONFIG_EXAMPLE, REQUIRED_RULES, CONFIG_EXAMPLE2 } from "config/constant";
-import { saveConfigToStorage } from "utils";
+import { saveConfigToStorage } from "../../utils";
 const { TextArea } = Input;
 
 interface IProps {
@@ -18,7 +18,7 @@ const ImportConfigModal: React.FC<IProps> = props => {
 
   const onFinish = (values: any) => {
     try {
-      const allField = values.content.split(",");
+      const allField = values.content.split("&");
       saveConfigToStorage(JSON.stringify(allField));
       onSubmit(allField);
     } catch (e) {
@@ -55,7 +55,7 @@ const ImportConfigModal: React.FC<IProps> = props => {
           rules={REQUIRED_RULES}
         >
           <TextArea
-            placeholder="请输入字段: &#13;&#13;第一种: name,age,sex (仅关心测试数据) &#13;&#13;第二种: name:姓名,age:年龄,sex:性别 (同时关心table组件的columns)"
+            placeholder="请输入字段: &#13;&#13;第一种: name&age&sex (仅关心测试数据) &#13;&#13;第二种: name-姓名&age-年龄&sex-性别 (同时关心table组件的columns)"
             autoSize={{ minRows: 15, maxRows: 15 }}
           />
         </Form.Item>

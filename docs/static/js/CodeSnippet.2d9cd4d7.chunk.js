@@ -32,7 +32,7 @@ var CodeEditor = __webpack_require__(3887);
 // EXTERNAL MODULE: ./node_modules/antd/es/button/index.js
 var es_button = __webpack_require__(9491);
 // EXTERNAL MODULE: ./node_modules/antd/es/message/index.js + 3 modules
-var message = __webpack_require__(6063);
+var message = __webpack_require__(7919);
 // EXTERNAL MODULE: ./node_modules/antd/es/empty/index.js + 2 modules
 var empty = __webpack_require__(8276);
 ;// CONCATENATED MODULE: ./src/page/CodeSnippet/codeSnippet.ts
@@ -64,8 +64,8 @@ var FormOutlined = {
   "theme": "outlined"
 };
 /* harmony default export */ var asn_FormOutlined = (FormOutlined);
-// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/components/AntdIcon.js + 3 modules
-var AntdIcon = __webpack_require__(7469);
+// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/components/AntdIcon.js + 6 modules
+var AntdIcon = __webpack_require__(6821);
 ;// CONCATENATED MODULE: ./node_modules/@ant-design/icons/es/icons/FormOutlined.js
 
 // GENERATE BY ./scripts/generate.ts

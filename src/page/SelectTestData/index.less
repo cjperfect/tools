@@ -1,4 +1,4 @@
-.generate-columns {
+.select-test-data {
   display: grid;
   grid-template-columns: repeat(2, calc(50% - 10px));
   column-gap: 20px;
@@ -20,23 +20,10 @@
     }
   }
 
-  .ant-tabs-tabpane {
-    .ant-btn {
-      display: inherit;
-      margin-left: auto;
-      margin-bottom: 10px;
-    }
-  }
-
   .condition {
     .container {
       height: calc(100% - 100px);
-
       overflow-y: overlay;
-
-      .config-btn-group {
-        margin-bottom: 20px;
-      }
     }
 
     .footer {
@@ -49,24 +36,14 @@
 
   .code {
     min-height: 500px;
-    .ant-tabs {
-      height: calc(100% - 100px);
 
-      .ant-tabs-content,
-      .ant-tabs-tabpane {
-        height: 100%;
+    .code-content {
+      padding: 20px;
 
-        pre {
-          height: calc(100% - 50px);
-        }
+      .ant-btn {
+        display: block;
+        margin-left: auto;
       }
     }
-  }
-}
-
-@media all and (max-width: 1650px) {
-  .generate-columns {
-    grid-template-columns: 1fr;
-    row-gap: 20px;
   }
 }

@@ -3,10 +3,10 @@ import "./style/index.less";
 import { useHistory } from "react-router-dom";
 import { Layout, Menu } from "antd";
 import {
+  BarsOutlined,
   ChromeOutlined,
   CodepenOutlined,
   IeOutlined,
-  ReadOutlined,
   RedditOutlined,
   TableOutlined,
   YuqueOutlined,
@@ -30,6 +30,11 @@ const linkConfig: LinkType[] = [
     key: "/",
     label: "表格测试数据",
     icon: <TableOutlined />,
+  },
+  {
+    key: "/select-data",
+    label: "下拉框测试数据",
+    icon: <BarsOutlined />,
   },
   {
     key: "/code-snippet",
