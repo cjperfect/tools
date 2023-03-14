@@ -1,7 +1,7 @@
 /* 导入配置，模态框 */
 import React from "react";
 import { Input, Button, Modal, Form, Space, message } from "antd";
-import { CONFIG_EXAMPLE, REQUIRED_RULES, CONFIG_EXAMPLE2 } from "config/constant";
+import { REQUIRED_RULES, CONFIG_EXAMPLE2, CONFIG_EXAMPLE1 } from "config/constant";
 import { saveConfigToStorage } from "../../utils";
 const { TextArea } = Input;
 
@@ -37,14 +37,14 @@ const ImportConfigModal: React.FC<IProps> = props => {
               <Space size="middle">
                 <Button
                   onClick={() => {
-                    form.setFieldValue("content", CONFIG_EXAMPLE2);
+                    form.setFieldValue("content", CONFIG_EXAMPLE1);
                   }}
                 >
                   示例 (第一种)
                 </Button>
                 <Button
                   onClick={() => {
-                    form.setFieldValue("content", CONFIG_EXAMPLE);
+                    form.setFieldValue("content", CONFIG_EXAMPLE2);
                   }}
                 >
                   示例 (第二种)

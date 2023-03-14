@@ -93,7 +93,7 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
         </div>
         <div className="code">
           {/* 右边预览区域 */}
-          <h2 className="title">测试代码</h2>
+          <h2 className="title">测试数据</h2>
           {result.dataText ? (
             <Tabs
               defaultActiveKey="1"

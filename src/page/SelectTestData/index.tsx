@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { Input, Button, Space, Empty, Form, message, Switch, Modal } from "antd";
 import "./index.less";
 import CodeEditor from "components/CodeEditor";
