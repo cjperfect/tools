@@ -21,22 +21,14 @@
   }
 
   .condition {
+    .control {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 20px;
+    }
     .container {
       height: calc(100% - 100px);
-      overflow-y: overlay;
-    }
-
-    .ant-btn {
-      display: flex;
-      margin-left: auto;
-      margin-right: 20px;
-    }
-
-    .footer {
-      padding: 20px;
-      .ant-btn {
-        margin-right: 20px;
-      }
     }
   }
 
@@ -44,11 +36,15 @@
     min-height: 500px;
 
     .code-content {
+      height: calc(100% - 80px);
       padding: 20px;
 
       .ant-btn {
         display: block;
         margin-left: auto;
+      }
+      pre {
+        max-height: calc(100% - 40px);
       }
     }
   }

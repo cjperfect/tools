@@ -9,7 +9,7 @@ interface IProps {
   data: any;
   onChange: (data: any) => void;
 }
-const NEW_NODE = { key: "test", value: "test", title: "test的中文" };
+const NEW_NODE = { key: "test", value: "test", title: "test的中文", label: "test的中文" };
 
 const DraggableTree: React.FC<IProps> = (props: IProps) => {
   const { data, onChange } = props;
@@ -29,8 +29,9 @@ const DraggableTree: React.FC<IProps> = (props: IProps) => {
       newNode: NEW_NODE,
       expandParent: true,
       parentKey: rowInfo ? rowInfo.treeIndex : undefined,
-      getNodeKey: ({ treeIndex }) => treeIndex,
+      getNodeKey: ({ treeIndex }: any) => treeIndex,
     });
+    onChange(newTree.treeData);
     setTreeData(newTree.treeData);
   };
 
@@ -43,8 +44,9 @@ const DraggableTree: React.FC<IProps> = (props: IProps) => {
     const newTree = removeNodeAtPath({
       treeData: treeData,
       path,
-      getNodeKey: ({ treeIndex }) => treeIndex,
+      getNodeKey: ({ treeIndex }: any) => treeIndex,
     });
+    onChange(newTree.treeData);
     setTreeData(newTree);
   };
 
@@ -52,7 +54,9 @@ const DraggableTree: React.FC<IProps> = (props: IProps) => {
    * 添加顶层节点
    */
   const addTopNode = () => {
-    setTreeData([...treeData, NEW_NODE]);
+    const data = [...treeData, NEW_NODE];
+    onChange(data);
+    setTreeData(data);
   };
 
   return (
@@ -67,15 +71,14 @@ const DraggableTree: React.FC<IProps> = (props: IProps) => {
         }}
         generateNodeProps={(rowInfo: any) => {
           const { node } = rowInfo;
-          console.log(node);
           return {
             title: (
-              <div className="field-wrap">
+              <div className="field-wrap" key={node.value}>
                 <div className="field-line">
                   <span>值：</span>
                   <Input
                     placeholder="请输入值"
-                    defaultValue={node.value as string}
+                    defaultValue={node.value}
                     onChange={e => {
                       const val = e.target.value.trim();
                       node.value = node.key = val;
@@ -86,7 +89,7 @@ const DraggableTree: React.FC<IProps> = (props: IProps) => {
                   <span>中文：</span>
                   <Input
                     placeholder="请输入值对应的中文"
-                    defaultValue={node.title as string}
+                    defaultValue={node.title}
                     onChange={e => {
                       const val = e.target.value.trim();
                       node.title = node.label = val;

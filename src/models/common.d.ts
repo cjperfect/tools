@@ -30,3 +30,5 @@ interface Website {
   url: string;
   icon?: any;
 }
+
+declare module "react-sortable-tree";
