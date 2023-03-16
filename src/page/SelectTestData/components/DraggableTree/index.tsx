@@ -9,7 +9,6 @@ interface IProps {
   data: any;
   onChange: (data: any) => void;
 }
-const NEW_NODE = { key: "test", value: "test", title: "test的中文", label: "test的中文" };
 
 const DraggableTree: React.FC<IProps> = (props: IProps) => {
   const { data, onChange } = props;
@@ -24,6 +23,7 @@ const DraggableTree: React.FC<IProps> = (props: IProps) => {
    * @param rowInfo 当前节点信息
    */
   const addNode = (rowInfo: any) => {
+    const NEW_NODE = { key: "test", value: "test", title: "test的中文", label: "test的中文" };
     const newTree = addNodeUnderParent({
       treeData: treeData,
       newNode: NEW_NODE,
@@ -46,7 +46,7 @@ const DraggableTree: React.FC<IProps> = (props: IProps) => {
       path,
       getNodeKey: ({ treeIndex }: any) => treeIndex,
     });
-    onChange(newTree.treeData);
+    onChange(newTree);
     setTreeData(newTree);
   };
 
@@ -54,7 +54,7 @@ const DraggableTree: React.FC<IProps> = (props: IProps) => {
    * 添加顶层节点
    */
   const addTopNode = () => {
-    const data = [...treeData, NEW_NODE];
+    const data = [...treeData, { key: "test", value: "test", title: "test的中文", label: "test的中文" }];
     onChange(data);
     setTreeData(data);
   };
@@ -73,7 +73,7 @@ const DraggableTree: React.FC<IProps> = (props: IProps) => {
           const { node } = rowInfo;
           return {
             title: (
-              <div className="field-wrap" key={node.value}>
+              <div className="field-wrap" key={node.value + node.title}>
                 <div className="field-line">
                   <span>值：</span>
                   <Input
