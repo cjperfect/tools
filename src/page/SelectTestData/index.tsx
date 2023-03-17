@@ -1,9 +1,9 @@
-import React, { useRef, useState } from "react";
-import { Input, Button, Space, Empty, Form, message, Switch, Modal } from "antd";
+import React, { useState } from "react";
+import { Button, Empty, message } from "antd";
 import "./index.less";
-import CodeEditor from "components/CodeEditor";
 import copy from "copy-to-clipboard";
 import { CopyOutlined } from "@ant-design/icons";
+import CodeEditor from "components/CodeEditor";
 import DraggableTree from "./components/DraggableTree";
 import ImportConfigModal from "./components/ImportConfigModal";
 

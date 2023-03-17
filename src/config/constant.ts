@@ -25,6 +25,12 @@ export const SELECT_DATA_TEMPLATE: string = `[
     "value": "css",
     "title": "前端css",
     "label": "前端css"
+  },
+  {
+    "key": "html",
+    "value": "html",
+    "title": "前端html",
+    "label": "前端html"
   }
 ]`; // 下拉数据导入配置模板
 
