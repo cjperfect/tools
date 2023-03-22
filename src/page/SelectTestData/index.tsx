@@ -63,7 +63,7 @@ const SelectTestData: React.FC<IProps> = (props: IProps) => {
                   JSON.stringify(
                     treeData,
                     (key, value) => {
-                      if (typeof value === "boolean") {
+                      if (typeof value === "boolean" || (Array.isArray(value) && !value.length)) {
                         return undefined;
                       }
                       return value;

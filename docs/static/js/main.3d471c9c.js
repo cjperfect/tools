@@ -22616,7 +22616,7 @@ function _unsupportedIterableToArray(o, minLen) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "static/js/" + ({"72":"CodeSnippet","268":"Home","593":"Websites"}[chunkId] || chunkId) + "." + {"72":"9eb45c02","268":"95cb3679","402":"9a4bfcdd","593":"48767021","963":"d7f18d7d"}[chunkId] + ".chunk.js";
+/******/ 			return "static/js/" + ({"72":"CodeSnippet","268":"Home","593":"Websites"}[chunkId] || chunkId) + "." + {"72":"9eb45c02","268":"3020211a","402":"9a4bfcdd","593":"48767021","963":"d7f18d7d"}[chunkId] + ".chunk.js";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -25621,7 +25621,7 @@ YuqueOutlined_YuqueOutlined.displayName = 'YuqueOutlined';
 var jsx_runtime = __webpack_require__(46417);
 ;// CONCATENATED MODULE: ./src/App.tsx
 var App_Header=es_layout.Header,App_Content=es_layout.Content,App_Footer=es_layout.Footer;/* 菜单页面 */var linkConfig=[{key:"/",label:"表格测试数据",icon:/*#__PURE__*/(0,jsx_runtime.jsx)(icons_TableOutlined,{})},{key:"/select-data",label:"下拉框测试数据",icon:/*#__PURE__*/(0,jsx_runtime.jsx)(es_icons_BarsOutlined,{})},{key:"/code-snippet",label:"常用代码片段",icon:/*#__PURE__*/(0,jsx_runtime.jsx)(icons_CodepenOutlined,{})},{key:"/websites",label:"常用网站",icon:/*#__PURE__*/(0,jsx_runtime.jsx)(icons_IeOutlined,{})},{key:"/blog",label:"个人博客",icon:/*#__PURE__*/(0,jsx_runtime.jsx)(icons_ChromeOutlined,{}),children:[{key:"https://blog.csdn.net/qq_39583550",label:"CSDN",icon:/*#__PURE__*/(0,jsx_runtime.jsx)(icons_RedditOutlined,{})},{key:"https://cjperfect.gitee.io/tech-document/",label:"知识点记录",icon:/*#__PURE__*/(0,jsx_runtime.jsx)(icons_YuqueOutlined,{})}]}];var App=function App(props){var _history$location;var children=props.children;var history=useHistory();var _useState=(0,react.useState)((_history$location=history.location)===null||_history$location===void 0?void 0:_history$location.pathname),_useState2=(0,slicedToArray/* default */.Z)(_useState,2),selectedKey=_useState2[0],setSelectedKey=_useState2[1];return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"main-page",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(App_Header,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(menu,{mode:"horizontal",selectedKeys:[selectedKey],items:linkConfig,onClick:function onClick(_ref){var key=_ref.key;if(key.includes("http")){// 打开新的网页
-window.open(key);return;}if(history.location.pathname===key)return;setSelectedKey(key);history.push(key);}})}),/*#__PURE__*/(0,jsx_runtime.jsx)(App_Content,{children:children}),/*#__PURE__*/(0,jsx_runtime.jsxs)(App_Footer,{style:{textAlign:"center"},children:["Generate Columns \xA92022 Created by Chen Jiang ",/*#__PURE__*/(0,jsx_runtime.jsx)("a",{href:"https://gitee.com/cjperfect/mock.git",children:"\u6E90\u7801\u5730\u5740"})]})]});};/* harmony default export */ var src_App = (App);
+window.open(key);return;}if(history.location.pathname===key)return;setSelectedKey(key);history.push(key);}})}),/*#__PURE__*/(0,jsx_runtime.jsx)(App_Content,{children:children}),/*#__PURE__*/(0,jsx_runtime.jsxs)(App_Footer,{style:{textAlign:"center"},children:["Generate Columns \xA92022 Created by Chen Jiang"," ",/*#__PURE__*/(0,jsx_runtime.jsx)("a",{href:"https://github.com/cjperfect/cjperfect.github.io",target:"_blank",rel:"noreferrer",children:"\u6E90\u7801\u5730\u5740"})]})]});};/* harmony default export */ var src_App = (App);
 ;// CONCATENATED MODULE: ./src/router/config.ts
 /* 
 Webpack通过增加内联注释来告诉运行时，该有怎样的行为。通过向import中添加注释，我们可以执行诸如命名chunk或选择不同模式之类的操作。
