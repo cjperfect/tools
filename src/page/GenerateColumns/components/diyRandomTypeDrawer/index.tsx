@@ -19,6 +19,9 @@ const DiyRandomTypeModal: React.FC<IProps> = props => {
   const [randomState, setRadomState] = useState<any>([{}]);
   const [form] = Form.useForm();
 
+  /**
+   * 初始化表单
+   */
   const init = () => {
     const typeMap = operateRandomType.get();
     const state = [];
@@ -115,7 +118,7 @@ const DiyRandomTypeModal: React.FC<IProps> = props => {
                       >
                         <Form.Item label={"随机值："} rules={REQUIRED_RULES} name={[field.name, "randomValue"]}>
                           <TextArea
-                            placeholder="以\n换行符分隔 如：&#13;chenjiang&#13;aoteman&#13;huluwa"
+                            placeholder="输入格式如下：&#13;chenjiang&#13;aoteman&#13;huluwa"
                             autoSize={{ minRows: 5, maxRows: 5 }}
                           />
                         </Form.Item>
