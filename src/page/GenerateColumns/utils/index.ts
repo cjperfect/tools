@@ -65,7 +65,7 @@ export const generateColumns = (values: ColumnInterface) => {
     data,
     columns,
     dataText: `const ${variable} = ${JSON.stringify(data, null, 2)}`,
-    columnsText: `const columns = ${JSON.stringify(newColumns, null, 2)}`,
+    columnsText: `const baseColumns = ${JSON.stringify(newColumns, null, 2)}`,
   };
 };
 
