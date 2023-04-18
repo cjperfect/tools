@@ -30,10 +30,8 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
     setVisible(false);
   };
 
-  /* 
-    根据导入的导入配置生成折叠面板(也就是表格的columns)
-  */
-  const importSubmit = (values: any) => {
+  // 调用formInput组件的setFieldsValue方法, 将用户的配置写入到表单中
+  const writeFormInput = (values: any) => {
     formInputRef.current.setColumnsValue(
       "columns",
       values.map((v: any) => {
@@ -45,6 +43,13 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
         };
       })
     );
+  };
+
+  /* 
+    根据导入的导入配置生成折叠面板(也就是表格的columns)
+  */
+  const importSubmit = (values: any) => {
+    writeFormInput(values);
     setVisible(false);
   };
 
@@ -154,18 +159,8 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
         onClose={drawerClose}
         onSubmit={onSubmit}
         setContent={historyConfig => {
-          // 选择历史配置
-          formInputRef.current.setColumnsValue(
-            "columns",
-            JSON.parse(historyConfig).map((v: any) => {
-              const [field, name] = v.split("-");
-              return {
-                ...DEFAULT_ADD_FIELD,
-                dataIndex: field,
-                title: name || "占位符",
-              };
-            })
-          );
+          // 将选择的配置写入到form表单中
+          writeFormInput(JSON.parse(historyConfig));
         }}
       />
     </>

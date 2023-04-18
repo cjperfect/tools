@@ -69,18 +69,6 @@ export const generateColumns = (values: ColumnInterface) => {
   };
 };
 
-// 保存配置到localstorage
-export const saveConfigToStorage = (val: any) => {
-  let data = [];
-  const obj = { config: val };
-  if (!localStorage.myConfig) {
-    data = [obj];
-  } else {
-    data = [...JSON.parse(localStorage.myConfig), obj];
-  }
-  localStorage.myConfig = JSON.stringify(data);
-};
-
 /* 从storage获取用户自定义类型 */
 export const operateRandomType = {
   get() {

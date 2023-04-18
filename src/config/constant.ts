@@ -2,8 +2,9 @@
 
 export const REQUIRED_RULES = [{ required: true, message: "请输入" }];
 
-export const CONFIG_EXAMPLE1: string = "name&age&sex";
-export const CONFIG_EXAMPLE2: string = "name-姓名&age-年龄&sex-性别";
+export const CONFIG_EXAMPLE1: string = "name\nage\nsex";
+export const CONFIG_EXAMPLE2: string = "name-姓名\nage-年龄\nsex-性别";
+export const CONFIG_EXAMPLE3: string = "姓名\n年龄\n性别";
 export const DEFAULT_SELECT_TEST_DATA: string = "0-女&1-男&2-保密";
 export const SELECT_DATA_TEMPLATE: string = `[
   {
