@@ -6,13 +6,13 @@ import "react-sortable-tree/style.css";
 import "./index.less";
 
 interface IProps {
-  data: any;
-  onChange: (data: any) => void;
+  data: any; // 拖拽树, 数据源
+  onChange: (data: any) => void; // 拖拽树change事件
 }
 
 const DraggableTree: React.FC<IProps> = (props: IProps) => {
   const { data, onChange } = props;
-  const [treeData, setTreeData] = useState<any>([]);
+  const [treeData, setTreeData] = useState<any>([]); // 数据源
 
   useEffect(() => {
     setTreeData(data);
@@ -24,6 +24,10 @@ const DraggableTree: React.FC<IProps> = (props: IProps) => {
    */
   const addNode = (rowInfo: any) => {
     const NEW_NODE = { key: "test", value: "test", title: "test的中文", label: "test的中文" };
+
+    /**
+     * addNodeUnderParent 组件里面带的工具方法
+     */
     const newTree = addNodeUnderParent({
       treeData: treeData,
       newNode: NEW_NODE,
@@ -41,6 +45,9 @@ const DraggableTree: React.FC<IProps> = (props: IProps) => {
    */
   const removeNode = (rowInfo: any) => {
     const { path } = rowInfo;
+    /**
+     * removeNodeAtPath 组件里面带的工具方法
+     */
     const newTree = removeNodeAtPath({
       treeData: treeData,
       path,

@@ -5,16 +5,21 @@ import { REQUIRED_RULES, SELECT_DATA_TEMPLATE } from "config/constant";
 const { TextArea } = Input;
 
 interface IProps {
-  visible: boolean;
-  onSubmit: (values: any) => void;
-  onCancel: () => void;
-  footer?: any;
+  visible: boolean; // 控制显示隐藏
+  onSubmit: (values: any) => void; // 表单提交事件
+  onCancel: () => void; // 弹框关闭事件
+  footer?: any; // 弹框footer
 }
 
 const ImportConfigModal: React.FC<IProps> = props => {
   const { visible, onSubmit, onCancel, footer } = props;
   const [form] = Form.useForm();
 
+  /**
+   * 表单提交事件
+   * @param values 表单收集的值
+   * @returns
+   */
   const onFinish = (values: any) => {
     try {
       const data = JSON.parse(values.content);
