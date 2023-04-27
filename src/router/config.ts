@@ -33,14 +33,4 @@ export const routeConfig = [
     component: SelectTestData,
     exact: true,
   },
-  // {
-  //   path: "/code-snippet",
-  //   component: CodeSnippet,
-  //   exact: true,
-  // },
-  // {
-  //   path: "/websites",
-  //   component: UseWebsites,
-  //   exact: true,
-  // },
 ];

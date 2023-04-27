@@ -2,15 +2,7 @@ import React, { useState } from "react";
 import "./style/index.less";
 import { useHistory } from "react-router-dom";
 import { Layout, Menu } from "antd";
-import {
-  BarsOutlined,
-  ChromeOutlined,
-  CodepenOutlined,
-  IeOutlined,
-  RedditOutlined,
-  TableOutlined,
-  YuqueOutlined,
-} from "@ant-design/icons";
+import { BarsOutlined, ChromeOutlined, RedditOutlined, TableOutlined } from "@ant-design/icons";
 const { Header, Content, Footer } = Layout;
 
 interface IProps {
@@ -33,19 +25,9 @@ const linkConfig: LinkType[] = [
   },
   {
     key: "/select-data",
-    label: "下拉框测试数据",
+    label: "树形测试数据",
     icon: <BarsOutlined />,
   },
-  // {
-  //   key: "/code-snippet",
-  //   label: "常用代码片段",
-  //   icon: <CodepenOutlined />,
-  // },
-  // {
-  //   key: "/websites",
-  //   label: "常用网站",
-  //   icon: <IeOutlined />,
-  // },
   {
     key: "/blog",
     label: "个人博客",
@@ -56,11 +38,6 @@ const linkConfig: LinkType[] = [
         label: "CSDN",
         icon: <RedditOutlined />,
       },
-      // {
-      //   key: "https://cjperfect.gitee.io/tech-document/",
-      //   label: "知识点记录",
-      //   icon: <YuqueOutlined />,
-      // },
     ],
   },
 ];
