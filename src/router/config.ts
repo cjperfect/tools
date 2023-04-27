@@ -16,11 +16,11 @@ const GenerateColumns = lazy(() => import(/* webpackChunkName: "Home" */ "../pag
 // 生成下拉框测试数据
 const SelectTestData = lazy(() => import(/* webpackChunkName: "Home" */ "../page/SelectTestData"));
 
-// 代码片段
-const CodeSnippet = lazy(() => import(/* webpackChunkName: "CodeSnippet" */ "../page/CodeSnippet"));
+// // 代码片段
+// const CodeSnippet = lazy(() => import(/* webpackChunkName: "CodeSnippet" */ "../page/CodeSnippet"));
 
-// 常用网站
-const UseWebsites = lazy(() => import(/* webpackChunkName: "Websites" */ "../page/UseWebsites"));
+// // 常用网站
+// const UseWebsites = lazy(() => import(/* webpackChunkName: "Websites" */ "../page/UseWebsites"));
 
 export const routeConfig = [
   {
@@ -33,14 +33,14 @@ export const routeConfig = [
     component: SelectTestData,
     exact: true,
   },
-  {
-    path: "/code-snippet",
-    component: CodeSnippet,
-    exact: true,
-  },
-  {
-    path: "/websites",
-    component: UseWebsites,
-    exact: true,
-  },
+  // {
+  //   path: "/code-snippet",
+  //   component: CodeSnippet,
+  //   exact: true,
+  // },
+  // {
+  //   path: "/websites",
+  //   component: UseWebsites,
+  //   exact: true,
+  // },
 ];

@@ -36,16 +36,16 @@ const linkConfig: LinkType[] = [
     label: "下拉框测试数据",
     icon: <BarsOutlined />,
   },
-  {
-    key: "/code-snippet",
-    label: "常用代码片段",
-    icon: <CodepenOutlined />,
-  },
-  {
-    key: "/websites",
-    label: "常用网站",
-    icon: <IeOutlined />,
-  },
+  // {
+  //   key: "/code-snippet",
+  //   label: "常用代码片段",
+  //   icon: <CodepenOutlined />,
+  // },
+  // {
+  //   key: "/websites",
+  //   label: "常用网站",
+  //   icon: <IeOutlined />,
+  // },
   {
     key: "/blog",
     label: "个人博客",
@@ -56,11 +56,11 @@ const linkConfig: LinkType[] = [
         label: "CSDN",
         icon: <RedditOutlined />,
       },
-      {
-        key: "https://cjperfect.gitee.io/tech-document/",
-        label: "知识点记录",
-        icon: <YuqueOutlined />,
-      },
+      // {
+      //   key: "https://cjperfect.gitee.io/tech-document/",
+      //   label: "知识点记录",
+      //   icon: <YuqueOutlined />,
+      // },
     ],
   },
 ];
