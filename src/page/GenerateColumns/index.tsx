@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
 import { Tabs, Button, message, Space, Empty } from "antd";
-import "./index.less";
 import FormInput from "./components/formInput";
 import CodeEditor from "components/CodeEditor";
 import copy from "copy-to-clipboard";
@@ -9,6 +8,7 @@ import { generateColumns } from "page/GenerateColumns/utils";
 import ImportConfigModal from "./components/ImportConfigModal";
 import ConfigDrawer from "./components/configDrawer";
 import { DEFAULT_ADD_FIELD } from "config/constant";
+import "./index.less";
 
 interface IProps {
   title: string;

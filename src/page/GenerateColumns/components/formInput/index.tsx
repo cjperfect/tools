@@ -17,7 +17,6 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
 
   const [form] = Form.useForm();
   const [activeKey, setActiveKey] = useState([]); // 折叠的key
-  const [visible, setVisible] = useState(false); // 控制随机类型的抽屉显示与隐藏
   const [options, setOptions] = useState<Options[]>([]); // 设置随机类型下拉框数据
 
   useEffect(() => {
@@ -29,7 +28,7 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
       },
       ...RANDOM_TYPE_ARR,
     ]);
-  }, [visible]);
+  }, []);
 
   const handleReset = () => {
     Modal.confirm({
@@ -101,14 +100,6 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
                   >
                     新增
                   </Button>
-                  {/* <Button
-                    type="primary"
-                    onClick={() => {
-                      setVisible(true);
-                    }}
-                  >
-                    新增随机类型
-                  </Button> */}
                 </Space>
                 <Collapse
                   activeKey={activeKey}
@@ -132,7 +123,7 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
                                 }}
                               />
                             </Form.Item>
-                            <Form.Item className="random-type" label={"随机值类型"} name={[field.name, "randomType"]}>
+                            <Form.Item className="random-type" label={"随机值"} name={[field.name, "randomType"]}>
                               <Select
                                 style={{ width: 180 }}
                                 options={options}

@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Button, Form, message, Badge, Card, Input, Collapse } from "antd";
-import { DEFAULT_ADD_FIELD, REQUIRED_RULES } from "../../config/constant";
+import { Button, Form, message, Badge, Card, Input } from "antd";
+import { REQUIRED_RULES } from "../../config/constant";
 import "./index.less";
 import { operateRandomType } from "page/GenerateColumns/utils";
-import { DeleteOutlined } from "@ant-design/icons";
-const { Panel } = Collapse;
 
 interface IProps {}
 
@@ -52,15 +50,7 @@ const RandomType: React.FC<IProps> = (props: IProps) => {
 
   return (
     <div className="random-type-container">
-      <Form
-        form={form}
-        onFinish={onFinish}
-        layout="horizontal"
-        onFinishFailed={onFinishFailed}
-        initialValues={{
-          randomList: [{}],
-        }}
-      >
+      <Form form={form} onFinish={onFinish} layout="horizontal" onFinishFailed={onFinishFailed}>
         <Form.Item className="submit-btn">
           <Button type="primary" htmlType="submit">
             保存
@@ -120,18 +110,6 @@ const RandomType: React.FC<IProps> = (props: IProps) => {
                           </Form.Item>
                         </Card>
                       </Badge.Ribbon>
-                      // <div className="random-type-item">
-
-                      //   <DeleteOutlined
-                      //     onClick={e => {
-                      //       e.stopPropagation();
-                      //       const newState = [...randomState];
-                      //       newState.splice(field.name, 1);
-                      //       remove(field.name);
-                      //     }}
-                      //   />
-
-                      // </div>
                     );
                   })}
                 </div>

@@ -19,12 +19,6 @@ const GenerateColumns = lazy(() => import(/* webpackChunkName: "GenerateColumns"
 // 自定义随机类型
 const RandomType = lazy(() => import(/* webpackChunkName: "RandomType" */ "../page/RandomType"));
 
-// // 代码片段
-// const CodeSnippet = lazy(() => import(/* webpackChunkName: "CodeSnippet" */ "../page/CodeSnippet"));
-
-// // 常用网站
-// const UseWebsites = lazy(() => import(/* webpackChunkName: "Websites" */ "../page/UseWebsites"));
-
 export const routeConfig = [
   {
     path: "/",

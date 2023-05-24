@@ -21671,7 +21671,7 @@ function _unsupportedIterableToArray(o, minLen) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "static/js/" + ({"344":"GenerateColumns","929":"RandomType"}[chunkId] || chunkId) + "." + {"344":"7b1ec58e","474":"ebc34d4a","860":"0340d699","929":"31bc6afc"}[chunkId] + ".chunk.js";
+/******/ 			return "static/js/" + ({"344":"GenerateColumns","929":"RandomType"}[chunkId] || chunkId) + "." + {"344":"ba79b790","535":"f696dc5c","841":"e597c3f9","929":"cf18356f"}[chunkId] + ".chunk.js";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -21680,7 +21680,7 @@ function _unsupportedIterableToArray(o, minLen) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.miniCssF = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "static/css/" + {"344":"GenerateColumns","929":"RandomType"}[chunkId] + "." + {"344":"af24c509","929":"ebaefff5"}[chunkId] + ".chunk.css";
+/******/ 			return "static/css/" + {"344":"GenerateColumns","929":"RandomType"}[chunkId] + "." + {"344":"d60ed1fe","929":"ebaefff5"}[chunkId] + ".chunk.css";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -24600,14 +24600,10 @@ window.open(key);return;}if(history.location.pathname===key)return;setSelectedKe
 Webpack通过增加内联注释来告诉运行时，该有怎样的行为。通过向import中添加注释，我们可以执行诸如命名chunk或选择不同模式之类的操作。
 webpack在打包的时候，对异步引入的库代码（lodash）进行代码分割时（需要配置webpack的SplitChunkPlugin插件），为分割后的代码块取得名字
 */ // 生成表格columns
-var GenerateColumns=/*#__PURE__*/(0,react.lazy)(function(){return Promise.all(/* import() | GenerateColumns */[__webpack_require__.e(860), __webpack_require__.e(474), __webpack_require__.e(344)]).then(__webpack_require__.bind(__webpack_require__, 576));});// 生成下拉框测试数据
+var GenerateColumns=/*#__PURE__*/(0,react.lazy)(function(){return Promise.all(/* import() | GenerateColumns */[__webpack_require__.e(535), __webpack_require__.e(841), __webpack_require__.e(344)]).then(__webpack_require__.bind(__webpack_require__, 576));});// 生成下拉框测试数据
 // const SelectTestData = lazy(() => import(/* webpackChunkName: "SelectTestData" */ "../page/SelectTestData"));
 // 自定义随机类型
-var RandomType=/*#__PURE__*/(0,react.lazy)(function(){return Promise.all(/* import() | RandomType */[__webpack_require__.e(860), __webpack_require__.e(929)]).then(__webpack_require__.bind(__webpack_require__, 2110));});// // 代码片段
-// const CodeSnippet = lazy(() => import(/* webpackChunkName: "CodeSnippet" */ "../page/CodeSnippet"));
-// // 常用网站
-// const UseWebsites = lazy(() => import(/* webpackChunkName: "Websites" */ "../page/UseWebsites"));
-var routeConfig=[{path:"/",component:GenerateColumns,exact:true},{path:"/randomType",component:RandomType,exact:true}// {
+var RandomType=/*#__PURE__*/(0,react.lazy)(function(){return Promise.all(/* import() | RandomType */[__webpack_require__.e(535), __webpack_require__.e(929)]).then(__webpack_require__.bind(__webpack_require__, 2110));});var routeConfig=[{path:"/",component:GenerateColumns,exact:true},{path:"/randomType",component:RandomType,exact:true}// {
 //   path: "/select-data",
 //   component: SelectTestData,
 //   exact: true,
