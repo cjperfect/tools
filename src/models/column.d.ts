@@ -21,7 +21,6 @@ interface Column {
  * 一键生成按钮生成数据的类型
  */
 interface ColumnInterface {
-  variable: string; // 以什么变量存放生成的结果
   num: number; // 生成多少条测试数据
   columns: Column[]; // 所有列
 }

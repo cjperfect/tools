@@ -1,0 +1,57 @@
+.random-type-container {
+  height: 100%;
+  .ant-form {
+    height: calc(100% - 40px);
+
+    .submit-btn {
+      margin-bottom: 10px;
+      text-align: right;
+      .ant-btn {
+        min-width: 100px;
+      }
+    }
+
+    .random-type-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+      grid-template-rows: repeat(auto-fill, 215px);
+      gap: 10px;
+
+      max-height: calc(100% - 40px);
+      overflow-y: auto;
+
+      padding: 16px;
+      position: relative;
+
+      .ant-ribbon-wrapper {
+        .ant-card {
+          padding-top: 10px;
+          padding-bottom: 10px;
+          box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.1), 0 10px 6px -6px rgba(0, 0, 0, 0.001);
+        }
+
+        .ant-ribbon {
+          opacity: 0;
+          transition: all 500ms;
+          user-select: none;
+        }
+
+        &:hover .ant-ribbon {
+          opacity: 1;
+        }
+
+        .delete-btn {
+          cursor: pointer;
+        }
+      }
+
+      .ant-form-item {
+        margin-bottom: 0;
+
+        .ant-form-item-label {
+          min-width: 110px;
+        }
+      }
+    }
+  }
+}

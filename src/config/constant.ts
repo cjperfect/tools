@@ -45,7 +45,7 @@ export type Field = {
 export const DEFAULT_ADD_FIELD: Field = {
   dataIndex: "username",
   title: "用户名",
-  width: 150,
+  width: 180,
   fixed: false,
   align: "left",
   ellipsis: true,

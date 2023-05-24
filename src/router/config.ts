@@ -11,10 +11,13 @@ Webpack通过增加内联注释来告诉运行时，该有怎样的行为。通�
 webpack在打包的时候，对异步引入的库代码（lodash）进行代码分割时（需要配置webpack的SplitChunkPlugin插件），为分割后的代码块取得名字
 */
 // 生成表格columns
-const GenerateColumns = lazy(() => import(/* webpackChunkName: "Home" */ "../page/GenerateColumns"));
+const GenerateColumns = lazy(() => import(/* webpackChunkName: "GenerateColumns" */ "../page/GenerateColumns"));
 
 // 生成下拉框测试数据
-const SelectTestData = lazy(() => import(/* webpackChunkName: "Home" */ "../page/SelectTestData"));
+// const SelectTestData = lazy(() => import(/* webpackChunkName: "SelectTestData" */ "../page/SelectTestData"));
+
+// 自定义随机类型
+const RandomType = lazy(() => import(/* webpackChunkName: "RandomType" */ "../page/RandomType"));
 
 // // 代码片段
 // const CodeSnippet = lazy(() => import(/* webpackChunkName: "CodeSnippet" */ "../page/CodeSnippet"));
@@ -29,8 +32,13 @@ export const routeConfig = [
     exact: true,
   },
   {
-    path: "/select-data",
-    component: SelectTestData,
+    path: "/randomType",
+    component: RandomType,
     exact: true,
   },
+  // {
+  //   path: "/select-data",
+  //   component: SelectTestData,
+  //   exact: true,
+  // },
 ];

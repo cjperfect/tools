@@ -3,7 +3,6 @@ import { Collapse, Form, Input, Button, Modal, InputNumber, Switch, Radio, Selec
 import { DEFAULT_ADD_FIELD, REQUIRED_RULES, RANDOM_TYPE_ARR } from "config/constant";
 import { DownOutlined, UpOutlined } from "@ant-design/icons";
 import { operateRandomType } from "../../utils";
-import DiyRandomTypeModal from "../diyRandomTypeDrawer";
 import "./index.less";
 
 const { Panel } = Collapse;
@@ -72,14 +71,10 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
         initialValues={{
-          variable: "dataSource",
           num: 10,
           columns: [DEFAULT_ADD_FIELD],
         }}
       >
-        <Form.Item name="variable" label="变量名" rules={REQUIRED_RULES}>
-          <Input placeholder="生成的配置用什么变量存放" maxLength={100} />
-        </Form.Item>
         <Form.Item
           name="num"
           label="生成多少条测试数据"
@@ -106,14 +101,14 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
                   >
                     新增
                   </Button>
-                  <Button
+                  {/* <Button
                     type="primary"
                     onClick={() => {
                       setVisible(true);
                     }}
                   >
                     新增随机类型
-                  </Button>
+                  </Button> */}
                 </Space>
                 <Collapse
                   activeKey={activeKey}
@@ -231,16 +226,6 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
           <Button onClick={handleReset}>重置</Button>
         </Form.Item>
       </Form>
-
-      <DiyRandomTypeModal
-        visible={visible}
-        onClose={() => {
-          setVisible(false);
-        }}
-        onSubmit={() => {
-          setVisible(false);
-        }}
-      />
     </>
   );
 });

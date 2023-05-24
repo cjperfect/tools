@@ -1,7 +1,7 @@
 import Mock from "mockjs";
 
 export const generateColumns = (values: ColumnInterface) => {
-  const { variable, num, columns = [] } = values;
+  const { num, columns = [] } = values;
 
   const newColumns = columns.map((curr: Column) => {
     const { align, className, dataIndex, ellipsis, fixed, title, width } = curr;
@@ -64,8 +64,8 @@ export const generateColumns = (values: ColumnInterface) => {
   return {
     data,
     columns,
-    dataText: `const ${variable} = ${JSON.stringify(data, null, 2)}`,
-    columnsText: `const baseColumns = ${JSON.stringify(newColumns, null, 2)}`,
+    dataText: `${JSON.stringify(data, null, 2)}`,
+    columnsText: `${JSON.stringify(newColumns, null, 2)}`,
   };
 };
 
