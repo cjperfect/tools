@@ -856,7 +856,7 @@ var motion = __webpack_require__(3553);
 // EXTERNAL MODULE: ./node_modules/antd/es/_util/type.js
 var type = __webpack_require__(6927);
 // EXTERNAL MODULE: ./node_modules/antd/es/space/Compact.js
-var Compact = __webpack_require__(905);
+var Compact = __webpack_require__(5531);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/drawer/index.js
 
 
@@ -2266,7 +2266,7 @@ var SizeContext = __webpack_require__(1631);
 // EXTERNAL MODULE: ./node_modules/antd/es/form/context.js
 var form_context = __webpack_require__(4431);
 // EXTERNAL MODULE: ./node_modules/antd/es/space/Compact.js
-var Compact = __webpack_require__(905);
+var Compact = __webpack_require__(5531);
 // EXTERNAL MODULE: ./node_modules/antd/es/_util/reactNode.js
 var reactNode = __webpack_require__(8138);
 // EXTERNAL MODULE: ./node_modules/antd/es/_util/statusUtils.js
@@ -3122,7 +3122,7 @@ var form_context = __webpack_require__(4431);
 // EXTERNAL MODULE: ./node_modules/antd/es/locale-provider/LocaleReceiver.js + 1 modules
 var LocaleReceiver = __webpack_require__(3267);
 // EXTERNAL MODULE: ./node_modules/antd/es/space/Compact.js
-var Compact = __webpack_require__(905);
+var Compact = __webpack_require__(5531);
 // EXTERNAL MODULE: ./node_modules/antd/es/_util/styleChecker.js
 var styleChecker = __webpack_require__(5401);
 // EXTERNAL MODULE: ./node_modules/antd/es/modal/locale.js
@@ -8147,7 +8147,7 @@ function getIcons(_ref) {
   };
 }
 // EXTERNAL MODULE: ./node_modules/antd/es/space/Compact.js
-var Compact = __webpack_require__(905);
+var Compact = __webpack_require__(5531);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/select/index.js
 
 
@@ -8369,7 +8369,7 @@ function Item(_ref) {
   }, split));
 }
 // EXTERNAL MODULE: ./node_modules/antd/es/space/Compact.js
-var Compact = __webpack_require__(905);
+var Compact = __webpack_require__(5531);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/space/index.js
 
 

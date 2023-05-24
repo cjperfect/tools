@@ -384,7 +384,7 @@ var DisabledContext = __webpack_require__(8438);
 // EXTERNAL MODULE: ./node_modules/antd/es/config-provider/SizeContext.js
 var SizeContext = __webpack_require__(1631);
 // EXTERNAL MODULE: ./node_modules/antd/es/space/Compact.js
-var Compact = __webpack_require__(905);
+var Compact = __webpack_require__(5531);
 // EXTERNAL MODULE: ./node_modules/antd/es/_util/reactNode.js
 var reactNode = __webpack_require__(8138);
 // EXTERNAL MODULE: ./node_modules/antd/es/_util/type.js
@@ -4687,7 +4687,7 @@ var DisabledContext = __webpack_require__(8438);
 // EXTERNAL MODULE: ./node_modules/antd/es/config-provider/SizeContext.js
 var SizeContext = __webpack_require__(1631);
 // EXTERNAL MODULE: ./node_modules/antd/es/space/Compact.js
-var Compact = __webpack_require__(905);
+var Compact = __webpack_require__(5531);
 // EXTERNAL MODULE: ./node_modules/antd/es/_util/statusUtils.js
 var statusUtils = __webpack_require__(5681);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/input/hooks/useRemovePasswordTimeout.js
@@ -6648,7 +6648,7 @@ function getConfirmLocale() {
 
 /***/ }),
 
-/***/ 905:
+/***/ 5531:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
