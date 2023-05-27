@@ -24,10 +24,19 @@
       position: relative;
 
       .ant-ribbon-wrapper {
+        .ant-card-head-title {
+          display: flex;
+          > div {
+            flex: 1;
+          }
+        }
         .ant-card {
-          padding-top: 10px;
-          padding-bottom: 10px;
+          padding: 0 24px 10px 10px;
           box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.1), 0 10px 6px -6px rgba(0, 0, 0, 0.001);
+
+          .ant-form-item-label {
+            min-width: 80px;
+          }
         }
 
         .ant-ribbon {

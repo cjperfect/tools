@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Button, Form, message, Badge, Card, Input } from "antd";
-import { REQUIRED_RULES } from "../../config/constant";
+import { Button, Form, message, Badge, Card, Input, Select } from "antd";
+import { REQUIRED_RULES } from "config/constant";
+import { allRandomType } from "./config";
+import { operateRandomType } from "utils";
 import "./index.less";
-import { operateRandomType } from "page/GenerateColumns/utils";
 
 interface IProps {}
 
@@ -18,9 +19,11 @@ const RandomType: React.FC<IProps> = (props: IProps) => {
     const typeMap = operateRandomType.get();
     const state = [];
     for (let k in typeMap) {
+      const { name, type, contentOrigin } = typeMap[k] || {};
       state.push({
-        randomName: k,
-        randomValue: typeMap[k].join("\n"),
+        name,
+        type,
+        content: contentOrigin,
       });
     }
     setRadomState(state);
@@ -36,10 +39,19 @@ const RandomType: React.FC<IProps> = (props: IProps) => {
   /* 保存 */
   const onFinish = (values: any) => {
     const { randomList } = values;
-    const newTypes = randomList.reduce((prev: any, { randomName, randomValue }: any) => {
-      prev[randomName] = randomValue?.split("\n").filter(Boolean);
+    const newTypes = randomList.reduce((prev: any, { name, content, type }: RandomType) => {
+      const obj = {
+        name,
+        type,
+        content: content?.split("\n").filter(Boolean),
+        contentOrigin: content,
+      };
+
+      prev[name] = obj;
+
       return prev;
     }, {});
+
     operateRandomType.set(JSON.stringify(newTypes));
     message.success("保存成功");
   };
@@ -50,7 +62,15 @@ const RandomType: React.FC<IProps> = (props: IProps) => {
 
   return (
     <div className="random-type-container">
-      <Form form={form} onFinish={onFinish} layout="horizontal" onFinishFailed={onFinishFailed}>
+      <Form
+        form={form}
+        onFinish={onFinish}
+        layout="horizontal"
+        onFinishFailed={onFinishFailed}
+        initialValues={{
+          type: "content",
+        }}
+      >
         <Form.Item className="submit-btn">
           <Button type="primary" htmlType="submit">
             保存
@@ -63,7 +83,7 @@ const RandomType: React.FC<IProps> = (props: IProps) => {
                 <Button
                   type="primary"
                   onClick={() => {
-                    add();
+                    add({ type: "content" });
                   }}
                 >
                   新增随机类型
@@ -91,18 +111,23 @@ const RandomType: React.FC<IProps> = (props: IProps) => {
                       >
                         <Card
                           title={
-                            <Form.Item label="随机类型名称" rules={REQUIRED_RULES} name={[field.name, "randomName"]}>
-                              <Input
-                                placeholder="姓名"
-                                onClick={e => {
-                                  e.stopPropagation();
-                                }}
-                              />
-                            </Form.Item>
+                            <>
+                              <Form.Item label="名称" rules={REQUIRED_RULES} name={[field.name, "name"]}>
+                                <Input
+                                  placeholder="姓名"
+                                  onClick={e => {
+                                    e.stopPropagation();
+                                  }}
+                                />
+                              </Form.Item>
+                              <Form.Item label="类型" rules={REQUIRED_RULES} name={[field.name, "type"]}>
+                                <Select options={allRandomType}></Select>
+                              </Form.Item>
+                            </>
                           }
                           size="small"
                         >
-                          <Form.Item label={"随机值："} rules={REQUIRED_RULES} name={[field.name, "randomValue"]}>
+                          <Form.Item label={"随机值："} rules={REQUIRED_RULES} name={[field.name, "content"]}>
                             <Input.TextArea
                               placeholder="输入格式如下：&#13;张三&#13;李四&#13;王五"
                               autoSize={{ minRows: 5, maxRows: 5 }}

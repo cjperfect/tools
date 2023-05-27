@@ -21671,7 +21671,7 @@ function _unsupportedIterableToArray(o, minLen) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "static/js/" + ({"344":"GenerateColumns","929":"RandomType"}[chunkId] || chunkId) + "." + {"344":"ba79b790","535":"f696dc5c","841":"e597c3f9","929":"cf18356f"}[chunkId] + ".chunk.js";
+/******/ 			return "static/js/" + ({"344":"GenerateColumns","929":"RandomType"}[chunkId] || chunkId) + "." + {"344":"a3d66715","559":"d34f5412","698":"bc786a43","929":"13914a15"}[chunkId] + ".chunk.js";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -21680,7 +21680,7 @@ function _unsupportedIterableToArray(o, minLen) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.miniCssF = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "static/css/" + {"344":"GenerateColumns","929":"RandomType"}[chunkId] + "." + {"344":"d60ed1fe","929":"ebaefff5"}[chunkId] + ".chunk.css";
+/******/ 			return "static/css/" + {"344":"GenerateColumns","929":"RandomType"}[chunkId] + "." + {"344":"d60ed1fe","929":"eb4d6f4c"}[chunkId] + ".chunk.css";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -24594,16 +24594,16 @@ var App_Header=es_layout.Header,App_Content=es_layout.Content,App_Footer=es_layo
 //   icon: <BarsOutlined />,
 // },
 {key:"/blog",label:"个人博客",icon:/*#__PURE__*/(0,jsx_runtime.jsx)(icons_ChromeOutlined,{}),children:[{key:"https://blog.csdn.net/qq_39583550",label:"CSDN",icon:/*#__PURE__*/(0,jsx_runtime.jsx)(icons_RedditOutlined,{})}]}];var App=function App(props){var _history$location;var children=props.children;var history=useHistory();var _useState=(0,react.useState)((_history$location=history.location)===null||_history$location===void 0?void 0:_history$location.pathname),_useState2=(0,slicedToArray/* default */.Z)(_useState,2),selectedKey=_useState2[0],setSelectedKey=_useState2[1];return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"main-page",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(App_Header,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(menu,{mode:"horizontal",selectedKeys:[selectedKey],items:linkConfig,onClick:function onClick(_ref){var key=_ref.key;if(key.includes("http")){// 打开新的网页
-window.open(key);return;}if(history.location.pathname===key)return;setSelectedKey(key);history.push(key);}})}),/*#__PURE__*/(0,jsx_runtime.jsx)(App_Content,{children:children}),/*#__PURE__*/(0,jsx_runtime.jsxs)(App_Footer,{style:{textAlign:"center"},children:["Generate Columns \xA92022 Created by Chen Jiang"," ",/*#__PURE__*/(0,jsx_runtime.jsx)("a",{href:"https://github.com/cjperfect/cjperfect.github.io",target:"_blank",rel:"noreferrer",children:"\u6E90\u7801\u5730\u5740"})]})]});};/* harmony default export */ var src_App = (App);
+window.open(key);return;}if(history.location.pathname===key)return;setSelectedKey(key);history.push(key);}})}),/*#__PURE__*/(0,jsx_runtime.jsx)(App_Content,{children:children})]});};/* harmony default export */ var src_App = (App);
 ;// CONCATENATED MODULE: ./src/router/config.ts
 /* 
 Webpack通过增加内联注释来告诉运行时，该有怎样的行为。通过向import中添加注释，我们可以执行诸如命名chunk或选择不同模式之类的操作。
 webpack在打包的时候，对异步引入的库代码（lodash）进行代码分割时（需要配置webpack的SplitChunkPlugin插件），为分割后的代码块取得名字
 */ // 生成表格columns
-var GenerateColumns=/*#__PURE__*/(0,react.lazy)(function(){return Promise.all(/* import() | GenerateColumns */[__webpack_require__.e(535), __webpack_require__.e(841), __webpack_require__.e(344)]).then(__webpack_require__.bind(__webpack_require__, 576));});// 生成下拉框测试数据
+var GenerateColumns=/*#__PURE__*/(0,react.lazy)(function(){return Promise.all(/* import() | GenerateColumns */[__webpack_require__.e(698), __webpack_require__.e(559), __webpack_require__.e(344)]).then(__webpack_require__.bind(__webpack_require__, 9503));});// 生成下拉框测试数据
 // const SelectTestData = lazy(() => import(/* webpackChunkName: "SelectTestData" */ "../page/SelectTestData"));
 // 自定义随机类型
-var RandomType=/*#__PURE__*/(0,react.lazy)(function(){return Promise.all(/* import() | RandomType */[__webpack_require__.e(535), __webpack_require__.e(929)]).then(__webpack_require__.bind(__webpack_require__, 2110));});var routeConfig=[{path:"/",component:GenerateColumns,exact:true},{path:"/randomType",component:RandomType,exact:true}// {
+var RandomType=/*#__PURE__*/(0,react.lazy)(function(){return Promise.all(/* import() | RandomType */[__webpack_require__.e(698), __webpack_require__.e(929)]).then(__webpack_require__.bind(__webpack_require__, 9038));});var routeConfig=[{path:"/",component:GenerateColumns,exact:true},{path:"/randomType",component:RandomType,exact:true}// {
 //   path: "/select-data",
 //   component: SelectTestData,
 //   exact: true,

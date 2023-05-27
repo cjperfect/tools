@@ -72,12 +72,6 @@ const App: React.FC<IProps> = (props: IProps) => {
         />
       </Header>
       <Content>{children}</Content>
-      <Footer style={{ textAlign: "center" }}>
-        Generate Columns ©2022 Created by Chen Jiang{" "}
-        <a href="https://github.com/cjperfect/cjperfect.github.io" target={"_blank"} rel="noreferrer">
-          源码地址
-        </a>
-      </Footer>
     </div>
   );
 };

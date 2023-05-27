@@ -7,7 +7,7 @@ import { CopyOutlined } from "@ant-design/icons";
 import { generateColumns } from "page/GenerateColumns/utils";
 import ImportConfigModal from "./components/ImportConfigModal";
 import ConfigDrawer from "./components/configDrawer";
-import { DEFAULT_ADD_FIELD } from "config/constant";
+import { DEFAULT_ADD_FIELD } from "./config";
 import "./index.less";
 
 interface IProps {
@@ -46,7 +46,7 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
   };
 
   /* 
-    根据导入的导入配置生成折叠面板(也就是表格的columns)
+    根据导入配置生成折叠面板(也就是表格的columns)
   */
   const importSubmit = (values: any) => {
     writeFormInput(values);

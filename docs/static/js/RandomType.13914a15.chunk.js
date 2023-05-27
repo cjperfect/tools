@@ -7,39 +7,15 @@
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "$y": function() { return /* binding */ CONFIG_EXAMPLE3; },
 /* harmony export */   "D4": function() { return /* binding */ CONFIG_EXAMPLE1; },
-/* harmony export */   "Kt": function() { return /* binding */ RANDOM_TYPE_ARR; },
 /* harmony export */   "RK": function() { return /* binding */ CONFIG_EXAMPLE2; },
-/* harmony export */   "f4": function() { return /* binding */ REQUIRED_RULES; },
-/* harmony export */   "lu": function() { return /* binding */ DEFAULT_ADD_FIELD; }
+/* harmony export */   "f4": function() { return /* binding */ REQUIRED_RULES; }
 /* harmony export */ });
 /* unused harmony exports DEFAULT_SELECT_TEST_DATA, SELECT_DATA_TEMPLATE */
 /* 存放一些常量 */var REQUIRED_RULES=[{required:true,message:"请输入"}];var CONFIG_EXAMPLE1="name\nage\nsex";var CONFIG_EXAMPLE2="name-姓名\nage-年龄\nsex-性别";var CONFIG_EXAMPLE3="姓名\n年龄\n性别";var DEFAULT_SELECT_TEST_DATA="0-女&1-男&2-保密";var SELECT_DATA_TEMPLATE="[\n  {\n    \"key\": \"js\",\n    \"value\": \"js\",\n    \"label\": \"\u524D\u7AEFjs\",\n    \"title\": \"\u524D\u7AEFjs\",\n    \"children\": [\n      {\n        \"key\": \"react\",\n        \"value\": \"react\",\n        \"title\": \"\u524D\u7AEFreact\",\n        \"label\": \"\u524D\u7AEFreact\"\n      }\n    ]\n  },\n  {\n    \"key\": \"css\",\n    \"value\": \"css\",\n    \"title\": \"\u524D\u7AEFcss\",\n    \"label\": \"\u524D\u7AEFcss\"\n  },\n  {\n    \"key\": \"html\",\n    \"value\": \"html\",\n    \"title\": \"\u524D\u7AEFhtml\",\n    \"label\": \"\u524D\u7AEFhtml\"\n  }\n]";// 下拉数据导入配置模板
-/**
- * 默认添加的字段信息
- */var DEFAULT_ADD_FIELD={dataIndex:"username",title:"用户名",width:180,fixed:false,align:"left",ellipsis:true,className:undefined,randomType:"cname"};/* 随机类型 */var RANDOM_TYPE_ARR=[{label:"内置随机类型",options:[{key:"ctitle",value:"ctitle",label:"标题"},{key:"natural",value:"natural",label:"自然数(正数: 0,10000)"},{key:"integer",value:"integer",label:"整数(正负: -100,100)"},{key:"float",value:"float",label:"浮点数（两位小数）"},{key:"cname",value:"cname",label:"名字"},{key:"date",value:"date",label:"日期"},{key:"time",value:"time",label:"时间"},{key:"datetime",value:"datetime",label:"日期时间"},{key:"cparagraph",value:"cparagraph",label:"长文本"},{key:"sex",value:"sex",label:"性别"},{key:"city",value:"city",label:"城市"},{key:"province",value:"province",label:"省份"},{key:"zip",value:"zip",label:"邮政编码"},{key:"email",value:"email",label:"邮箱"},{key:"string",value:"string",label:"字符串"},{key:"url",value:"url",label:"URL"},{key:"ip",value:"ip",label:"IP"},{key:"",value:"",label:"空数据"}]}];
 
 /***/ }),
 
-/***/ 1312:
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": function() { return /* binding */ generateColumns; },
-/* harmony export */   "t": function() { return /* binding */ operateRandomType; }
-/* harmony export */ });
-/* harmony import */ var mockjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1325);
-/* harmony import */ var mockjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mockjs__WEBPACK_IMPORTED_MODULE_0__);
-var generateColumns=function generateColumns(values){var num=values.num,_values$columns=values.columns,columns=_values$columns===void 0?[]:_values$columns;var newColumns=columns.map(function(curr){var align=curr.align,className=curr.className,dataIndex=curr.dataIndex,ellipsis=curr.ellipsis,fixed=curr.fixed,title=curr.title,width=curr.width;var obj={};if(className)obj.className=className;if(fixed)obj.fixed=fixed;return Object.assign(obj,{dataIndex:dataIndex,title:title,ellipsis:ellipsis,width:width,align:align});});var random=(mockjs__WEBPACK_IMPORTED_MODULE_0___default().Random);var diyRandomTypeByStorage=operateRandomType.get();var data=[];var _loop=function _loop(){var temp={id:random.id()};columns.forEach(function(column){var randomType=column.randomType,dataIndex=column.dataIndex;if(diyRandomTypeByStorage[randomType]){/* 处理自定义类型 */temp[dataIndex]=random.pick(diyRandomTypeByStorage[randomType]);}else{/* 处理mockjs自带的类型 */if(randomType==="sex"){// 性别
-temp[dataIndex]=random.pick(["男","女"]);}else if(randomType==="natural"){// 自然数, 正整数
-temp[dataIndex]=random[randomType](0,10000);}else if(randomType==="integer"){// 整数, 正负整数
-temp[dataIndex]=random[randomType](-100,100);}else if(randomType==="float"){// 两位小数的浮点数
-temp[dataIndex]=random[randomType](0,100,2,2);}else if(randomType===""){// 空字符串
-temp[dataIndex]="";}else if(randomType==="url"){// url
-temp[dataIndex]=random[randomType]("http");}else if(randomType==="ctitle"){temp[dataIndex]=random[randomType](8,15);}else{temp[dataIndex]=random[randomType]();}}});data.push(temp);};for(var i=1;i<=num;i++){_loop();}return{data:data,columns:columns,dataText:"".concat(JSON.stringify(data,null,2)),columnsText:"".concat(JSON.stringify(newColumns,null,2))};};/* 从storage获取用户自定义类型 */var operateRandomType={get:function get(){return localStorage.diyTypeArr?JSON.parse(localStorage.diyTypeArr||"{}"):{};},set:function set(val){localStorage.diyTypeArr=val;},/* 改变成下拉框option形式 */changeOption:function changeOption(){var data=[];var current=this.get();for(var key in current){data.push({key:key,value:key,label:key});}return data;}};
-
-/***/ }),
-
-/***/ 2110:
+/***/ 9038:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // ESM COMPAT FLAG
@@ -1088,20 +1064,35 @@ es_card_Card.Meta = card_Meta;
 /* harmony default export */ var card = (es_card_Card);
 // EXTERNAL MODULE: ./node_modules/antd/es/input/index.js + 19 modules
 var input = __webpack_require__(8482);
+// EXTERNAL MODULE: ./node_modules/antd/es/select/index.js + 48 modules
+var es_select = __webpack_require__(9740);
 // EXTERNAL MODULE: ./src/config/constant.ts
 var constant = __webpack_require__(4246);
+;// CONCATENATED MODULE: ./src/page/RandomType/config.ts
+var allRandomType=[{key:"content",value:"content",label:"随机用户提供内容"}//   { key: "rangeNum", value: "rangeNum", label: "随机范围数" },
+];
+// EXTERNAL MODULE: ./src/utils/index.ts
+var utils = __webpack_require__(2425);
 ;// CONCATENATED MODULE: ./src/page/RandomType/index.less
 // extracted by mini-css-extract-plugin
 
-// EXTERNAL MODULE: ./src/page/GenerateColumns/utils/index.ts
-var utils = __webpack_require__(1312);
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(6417);
 ;// CONCATENATED MODULE: ./src/page/RandomType/index.tsx
 var RandomType=function RandomType(props){var _Form$useForm=es_form/* default.useForm */.Z.useForm(),_Form$useForm2=(0,slicedToArray/* default */.Z)(_Form$useForm,1),form=_Form$useForm2[0];var _useState=(0,react.useState)([{}]),_useState2=(0,slicedToArray/* default */.Z)(_useState,2),randomState=_useState2[0],setRadomState=_useState2[1];/**
    * 初始化表单
-   */var init=function init(){var typeMap=utils/* operateRandomType.get */.t.get();var state=[];for(var k in typeMap){state.push({randomName:k,randomValue:typeMap[k].join("\n")});}setRadomState(state);form.setFieldValue("randomList",state.length?state:[{}]);};(0,react.useEffect)(function(){message/* default.warn */.ZP.warn("填写完记得保存哦");init();// eslint-disable-next-line
-},[]);/* 保存 */var onFinish=function onFinish(values){var randomList=values.randomList;var newTypes=randomList.reduce(function(prev,_ref){var randomName=_ref.randomName,randomValue=_ref.randomValue;prev[randomName]=randomValue===null||randomValue===void 0?void 0:randomValue.split("\n").filter(Boolean);return prev;},{});utils/* operateRandomType.set */.t.set(JSON.stringify(newTypes));message/* default.success */.ZP.success("保存成功");};var onFinishFailed=function onFinishFailed(){return message/* default.error */.ZP.error("有必填项没填");};return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"random-type-container",children:/*#__PURE__*/(0,jsx_runtime.jsxs)(es_form/* default */.Z,{form:form,onFinish:onFinish,layout:"horizontal",onFinishFailed:onFinishFailed,children:[/*#__PURE__*/(0,jsx_runtime.jsx)(es_form/* default.Item */.Z.Item,{className:"submit-btn",children:/*#__PURE__*/(0,jsx_runtime.jsx)(es_button/* default */.Z,{type:"primary",htmlType:"submit",children:"\u4FDD\u5B58"})}),/*#__PURE__*/(0,jsx_runtime.jsx)(es_form/* default.List */.Z.List,{name:"randomList",children:function children(fields,_ref2){var add=_ref2.add,remove=_ref2.remove;return/*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(es_button/* default */.Z,{type:"primary",onClick:function onClick(){add();},children:"\u65B0\u589E\u968F\u673A\u7C7B\u578B"}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"random-type-list",children:fields.map(function(field){return/*#__PURE__*/(0,jsx_runtime.jsx)(badge.Ribbon,{color:"red",text:/*#__PURE__*/(0,jsx_runtime.jsx)("span",{className:"delete-btn",onClick:function onClick(e){e.stopPropagation();var newState=(0,toConsumableArray/* default */.Z)(randomState);newState.splice(field.name,1);remove(field.name);},children:"\u5220\u9664"}),children:/*#__PURE__*/(0,jsx_runtime.jsx)(card,{title:/*#__PURE__*/(0,jsx_runtime.jsx)(es_form/* default.Item */.Z.Item,{label:"\u968F\u673A\u7C7B\u578B\u540D\u79F0",rules:constant/* REQUIRED_RULES */.f4,name:[field.name,"randomName"],children:/*#__PURE__*/(0,jsx_runtime.jsx)(input/* default */.Z,{placeholder:"\u59D3\u540D",onClick:function onClick(e){e.stopPropagation();}})}),size:"small",children:/*#__PURE__*/(0,jsx_runtime.jsx)(es_form/* default.Item */.Z.Item,{label:"随机值：",rules:constant/* REQUIRED_RULES */.f4,name:[field.name,"randomValue"],children:/*#__PURE__*/(0,jsx_runtime.jsx)(input/* default.TextArea */.Z.TextArea,{placeholder:"\u8F93\u5165\u683C\u5F0F\u5982\u4E0B\uFF1A\r\u5F20\u4E09\r\u674E\u56DB\r\u738B\u4E94",autoSize:{minRows:5,maxRows:5}})})})},field.key);})})]});}})]})});};/* harmony default export */ var page_RandomType = (RandomType);
+   */var init=function init(){var typeMap=utils/* operateRandomType.get */.t.get();var state=[];for(var k in typeMap){var _ref=typeMap[k]||{},name=_ref.name,type=_ref.type,contentOrigin=_ref.contentOrigin;state.push({name:name,type:type,content:contentOrigin});}setRadomState(state);form.setFieldValue("randomList",state.length?state:[{}]);};(0,react.useEffect)(function(){message/* default.warn */.ZP.warn("填写完记得保存哦");init();// eslint-disable-next-line
+},[]);/* 保存 */var onFinish=function onFinish(values){var randomList=values.randomList;var newTypes=randomList.reduce(function(prev,_ref2){var name=_ref2.name,content=_ref2.content,type=_ref2.type;var obj={name:name,type:type,content:content===null||content===void 0?void 0:content.split("\n").filter(Boolean),contentOrigin:content};prev[name]=obj;return prev;},{});utils/* operateRandomType.set */.t.set(JSON.stringify(newTypes));message/* default.success */.ZP.success("保存成功");};var onFinishFailed=function onFinishFailed(){return message/* default.error */.ZP.error("有必填项没填");};return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"random-type-container",children:/*#__PURE__*/(0,jsx_runtime.jsxs)(es_form/* default */.Z,{form:form,onFinish:onFinish,layout:"horizontal",onFinishFailed:onFinishFailed,initialValues:{type:"content"},children:[/*#__PURE__*/(0,jsx_runtime.jsx)(es_form/* default.Item */.Z.Item,{className:"submit-btn",children:/*#__PURE__*/(0,jsx_runtime.jsx)(es_button/* default */.Z,{type:"primary",htmlType:"submit",children:"\u4FDD\u5B58"})}),/*#__PURE__*/(0,jsx_runtime.jsx)(es_form/* default.List */.Z.List,{name:"randomList",children:function children(fields,_ref3){var add=_ref3.add,remove=_ref3.remove;return/*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(es_button/* default */.Z,{type:"primary",onClick:function onClick(){add({type:"content"});},children:"\u65B0\u589E\u968F\u673A\u7C7B\u578B"}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"random-type-list",children:fields.map(function(field){return/*#__PURE__*/(0,jsx_runtime.jsx)(badge.Ribbon,{color:"red",text:/*#__PURE__*/(0,jsx_runtime.jsx)("span",{className:"delete-btn",onClick:function onClick(e){e.stopPropagation();var newState=(0,toConsumableArray/* default */.Z)(randomState);newState.splice(field.name,1);remove(field.name);},children:"\u5220\u9664"}),children:/*#__PURE__*/(0,jsx_runtime.jsx)(card,{title:/*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(es_form/* default.Item */.Z.Item,{label:"\u540D\u79F0",rules:constant/* REQUIRED_RULES */.f4,name:[field.name,"name"],children:/*#__PURE__*/(0,jsx_runtime.jsx)(input/* default */.Z,{placeholder:"\u59D3\u540D",onClick:function onClick(e){e.stopPropagation();}})}),/*#__PURE__*/(0,jsx_runtime.jsx)(es_form/* default.Item */.Z.Item,{label:"\u7C7B\u578B",rules:constant/* REQUIRED_RULES */.f4,name:[field.name,"type"],children:/*#__PURE__*/(0,jsx_runtime.jsx)(es_select/* default */.Z,{options:allRandomType})})]}),size:"small",children:/*#__PURE__*/(0,jsx_runtime.jsx)(es_form/* default.Item */.Z.Item,{label:"随机值：",rules:constant/* REQUIRED_RULES */.f4,name:[field.name,"content"],children:/*#__PURE__*/(0,jsx_runtime.jsx)(input/* default.TextArea */.Z.TextArea,{placeholder:"\u8F93\u5165\u683C\u5F0F\u5982\u4E0B\uFF1A\r\u5F20\u4E09\r\u674E\u56DB\r\u738B\u4E94",autoSize:{minRows:5,maxRows:5}})})})},field.key);})})]});}})]})});};/* harmony default export */ var page_RandomType = (RandomType);
+
+/***/ }),
+
+/***/ 2425:
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "t": function() { return /* binding */ operateRandomType; }
+/* harmony export */ });
+/* 从storage获取用户自定义类型 */var operateRandomType={get:function get(){return JSON.parse(localStorage.diyTypeArr||"{}");},set:function set(val){localStorage.diyTypeArr=val;},/* 改变成下拉框option形式 */changeOption:function changeOption(){var data=[];var current=this.get();for(var key in current){data.push({key:key,value:key,label:key});}return data;}};
 
 /***/ })
 

@@ -13,10 +13,6 @@ interface Column {
   [extra: string]: any;
 }
 
-// type Column = {
-//   [K in keyof T]: [K];
-// };
-
 /**
  * 一键生成按钮生成数据的类型
  */

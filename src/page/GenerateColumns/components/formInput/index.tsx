@@ -1,8 +1,9 @@
 import React, { forwardRef, useEffect, useImperativeHandle, useState } from "react";
 import { Collapse, Form, Input, Button, Modal, InputNumber, Switch, Radio, Select, message, Space } from "antd";
-import { DEFAULT_ADD_FIELD, REQUIRED_RULES, RANDOM_TYPE_ARR } from "config/constant";
+import { REQUIRED_RULES } from "config/constant";
 import { DownOutlined, UpOutlined } from "@ant-design/icons";
-import { operateRandomType } from "../../utils";
+import { operateRandomType } from "utils";
+import { RANDOM_TYPE_ARR, DEFAULT_ADD_FIELD } from "../../config";
 import "./index.less";
 
 const { Panel } = Collapse;
