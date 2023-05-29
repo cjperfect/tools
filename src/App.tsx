@@ -3,7 +3,7 @@ import "./style/index.less";
 import { useHistory } from "react-router-dom";
 import { Layout, Menu } from "antd";
 import { FieldStringOutlined, ChromeOutlined, RedditOutlined, TableOutlined } from "@ant-design/icons";
-const { Header, Content, Footer } = Layout;
+const { Header, Content } = Layout;
 
 interface IProps {
   children?: React.ReactNode;

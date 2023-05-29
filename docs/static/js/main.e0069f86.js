@@ -21671,7 +21671,7 @@ function _unsupportedIterableToArray(o, minLen) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "static/js/" + ({"344":"GenerateColumns","929":"RandomType"}[chunkId] || chunkId) + "." + {"344":"2539390b","559":"d34f5412","698":"bc786a43","929":"1dcef7f0"}[chunkId] + ".chunk.js";
+/******/ 			return "static/js/" + ({"344":"GenerateColumns","929":"RandomType"}[chunkId] || chunkId) + "." + {"344":"2539390b","559":"d34f5412","698":"bc786a43","929":"652a8ef0"}[chunkId] + ".chunk.js";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -24588,7 +24588,7 @@ RedditOutlined_RedditOutlined.displayName = 'RedditOutlined';
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(6417);
 ;// CONCATENATED MODULE: ./src/App.tsx
-var App_Header=es_layout.Header,App_Content=es_layout.Content,App_Footer=es_layout.Footer;/* 菜单页面 */var linkConfig=[{key:"/",label:"Ant Table测试数据",icon:/*#__PURE__*/(0,jsx_runtime.jsx)(icons_TableOutlined,{})},{key:"/randomType",label:"自定义随机类型",icon:/*#__PURE__*/(0,jsx_runtime.jsx)(icons_FieldStringOutlined,{})},// {
+var App_Header=es_layout.Header,App_Content=es_layout.Content;/* 菜单页面 */var linkConfig=[{key:"/",label:"Ant Table测试数据",icon:/*#__PURE__*/(0,jsx_runtime.jsx)(icons_TableOutlined,{})},{key:"/randomType",label:"自定义随机类型",icon:/*#__PURE__*/(0,jsx_runtime.jsx)(icons_FieldStringOutlined,{})},// {
 //   key: "/select-data",
 //   label: "树形测试数据",
 //   icon: <BarsOutlined />,

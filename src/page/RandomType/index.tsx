@@ -62,15 +62,7 @@ const RandomType: React.FC<IProps> = (props: IProps) => {
 
   return (
     <div className="random-type-container">
-      <Form
-        form={form}
-        onFinish={onFinish}
-        layout="horizontal"
-        onFinishFailed={onFinishFailed}
-        initialValues={{
-          type: "content",
-        }}
-      >
+      <Form form={form} onFinish={onFinish} layout="horizontal" onFinishFailed={onFinishFailed}>
         <Form.Item className="submit-btn">
           <Button type="primary" htmlType="submit">
             保存
@@ -120,8 +112,13 @@ const RandomType: React.FC<IProps> = (props: IProps) => {
                                   }}
                                 />
                               </Form.Item>
-                              <Form.Item label="类型" rules={REQUIRED_RULES} name={[field.name, "type"]}>
-                                <Select options={allRandomType} defaultValue="content"></Select>
+                              <Form.Item
+                                label="类型"
+                                rules={REQUIRED_RULES}
+                                name={[field.name, "type"]}
+                                initialValue="content"
+                              >
+                                <Select options={allRandomType}></Select>
                               </Form.Item>
                             </>
                           }
