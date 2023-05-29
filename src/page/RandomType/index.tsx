@@ -121,7 +121,7 @@ const RandomType: React.FC<IProps> = (props: IProps) => {
                                 />
                               </Form.Item>
                               <Form.Item label="类型" rules={REQUIRED_RULES} name={[field.name, "type"]}>
-                                <Select options={allRandomType}></Select>
+                                <Select options={allRandomType} defaultValue="content"></Select>
                               </Form.Item>
                             </>
                           }

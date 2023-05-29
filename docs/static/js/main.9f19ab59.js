@@ -21671,7 +21671,7 @@ function _unsupportedIterableToArray(o, minLen) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "static/js/" + ({"344":"GenerateColumns","929":"RandomType"}[chunkId] || chunkId) + "." + {"344":"a3d66715","559":"d34f5412","698":"bc786a43","929":"13914a15"}[chunkId] + ".chunk.js";
+/******/ 			return "static/js/" + ({"344":"GenerateColumns","929":"RandomType"}[chunkId] || chunkId) + "." + {"344":"2539390b","559":"d34f5412","698":"bc786a43","929":"1dcef7f0"}[chunkId] + ".chunk.js";
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -21680,7 +21680,7 @@ function _unsupportedIterableToArray(o, minLen) {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.miniCssF = function(chunkId) {
 /******/ 			// return url for filenames based on template
-/******/ 			return "static/css/" + {"344":"GenerateColumns","929":"RandomType"}[chunkId] + "." + {"344":"d60ed1fe","929":"eb4d6f4c"}[chunkId] + ".chunk.css";
+/******/ 			return "static/css/" + {"344":"GenerateColumns","929":"RandomType"}[chunkId] + "." + {"344":"d60ed1fe","929":"6f85476b"}[chunkId] + ".chunk.css";
 /******/ 		};
 /******/ 	}();
 /******/ 	
