@@ -1,3 +1,8 @@
+/* 适用于任何不确定类型的对象 */
+interface AnyObj {
+  [extra: string]: any;
+}
+
 /* 已导入配置的接口 */
 interface ConfigType {
   config: string;

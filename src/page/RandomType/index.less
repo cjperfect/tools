@@ -11,6 +11,10 @@
       }
     }
 
+    .ant-result {
+      padding: 10px 0;
+    }
+
     .random-type-list {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(490px, 1fr));
@@ -22,6 +26,7 @@
       position: relative;
 
       .ant-ribbon-wrapper {
+        height: 100%;
         .ant-card-head-title {
           display: flex;
           > div {
@@ -29,6 +34,7 @@
           }
         }
         .ant-card {
+          height: 100%;
           padding: 0 24px 10px 10px;
           box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.1), 0 10px 6px -6px rgba(0, 0, 0, 0.001);
 
@@ -49,6 +55,21 @@
 
         .delete-btn {
           cursor: pointer;
+        }
+      }
+
+      .num-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
+
+        .ant-input-number {
+          width: 150px;
+        }
+
+        .ant-form-item:first-child {
+          margin-right: 12px;
         }
       }
 
