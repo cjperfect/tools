@@ -1,4 +1,4 @@
-import React, { ReactElement, ReactNode, useEffect, useState } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import { Button, Form, message, Badge, Card, Input, Select, InputNumber, Result } from "antd";
 import { REQUIRED_RULES } from "config/constant";
 import { allRandomType, formHandler } from "./config";
@@ -23,11 +23,11 @@ const RandomType: React.FC<IProps> = (props: IProps) => {
     const typeMap = operateRandomType.get();
     const state = [];
     for (let k in typeMap) {
-      const { name, type, contentOrigin } = typeMap[k] || {};
+      const { name, type, params = {} } = typeMap[k] || {};
       state.push({
         name,
         type,
-        content: contentOrigin,
+        ...params,
       });
     }
     setRandomState(state);
@@ -47,11 +47,12 @@ const RandomType: React.FC<IProps> = (props: IProps) => {
   const onFinish = (values: any): void => {
     const { randomList } = values;
     const newTypes = randomList.reduce((prev: any, { name, type, ...args }: RandomType) => {
-      console.log(args);
       const obj = {
         name,
         type,
-        ...formHandler(type, ...Object.values(args)),
+        params: {
+          ...formHandler(type, args),
+        },
       };
 
       prev[name] = obj;
@@ -59,7 +60,6 @@ const RandomType: React.FC<IProps> = (props: IProps) => {
       return prev;
     }, {});
 
-    return;
     operateRandomType.set(JSON.stringify(newTypes));
     message.success("保存成功");
   };
@@ -84,10 +84,7 @@ const RandomType: React.FC<IProps> = (props: IProps) => {
       case "content":
         return (
           <Form.Item label={"随机内容："} rules={REQUIRED_RULES} name={[field.name, "content"]}>
-            <Input.TextArea
-              placeholder="输入格式如下：&#13;张三&#13;李四&#13;王五"
-              autoSize={{ minRows: 5, maxRows: 5 }}
-            />
+            <Input.TextArea placeholder="输入格式如下：&#13;张三&#13;李四&#13;王五" autoSize={{ minRows: 5, maxRows: 5 }} />
           </Form.Item>
         );
 
@@ -95,10 +92,11 @@ const RandomType: React.FC<IProps> = (props: IProps) => {
       case "rangeNum":
         return (
           <div className="num-container">
-            <Form.Item label={"最小值"} rules={REQUIRED_RULES} name={[field.name, "minNum"]}>
+            <Form.Item label={"在范围内随机"} rules={REQUIRED_RULES} name={[field.name, "minNum"]}>
               <InputNumber placeholder="请输入" />
             </Form.Item>
-            <Form.Item label={"最大值："} rules={REQUIRED_RULES} name={[field.name, "maxNum"]}>
+            ~
+            <Form.Item rules={REQUIRED_RULES} name={[field.name, "maxNum"]}>
               <InputNumber placeholder="请输入" />
             </Form.Item>
           </div>

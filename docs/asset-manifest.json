@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "./static/css/main.24e7a8d6.css",
-    "main.js": "./static/js/main.e0069f86.js",
+    "main.js": "./static/js/main.474304ff.js",
     "GenerateColumns.css": "./static/css/GenerateColumns.d60ed1fe.chunk.css",
-    "GenerateColumns.js": "./static/js/GenerateColumns.2539390b.chunk.js",
-    "RandomType.css": "./static/css/RandomType.6f85476b.chunk.css",
-    "RandomType.js": "./static/js/RandomType.652a8ef0.chunk.js",
-    "static/js/698.bc786a43.chunk.js": "./static/js/698.bc786a43.chunk.js",
-    "static/js/559.d34f5412.chunk.js": "./static/js/559.d34f5412.chunk.js",
+    "GenerateColumns.js": "./static/js/GenerateColumns.292323c8.chunk.js",
+    "RandomType.css": "./static/css/RandomType.af558743.chunk.css",
+    "RandomType.js": "./static/js/RandomType.ccb18d94.chunk.js",
+    "static/js/571.d7c32253.chunk.js": "./static/js/571.d7c32253.chunk.js",
+    "static/js/635.6e011c5c.chunk.js": "./static/js/635.6e011c5c.chunk.js",
     "index.html": "./index.html"
   },
   "entrypoints": [
     "static/css/main.24e7a8d6.css",
-    "static/js/main.e0069f86.js"
+    "static/js/main.474304ff.js"
   ]
 }

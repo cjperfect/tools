@@ -72,6 +72,7 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
         onFinishFailed={onFinishFailed}
         initialValues={{
           num: 10,
+          hasId: true,
           columns: [DEFAULT_ADD_FIELD],
         }}
       >
@@ -87,7 +88,9 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
         >
           <InputNumber min={0} max={1000} placeholder="请输入" />
         </Form.Item>
-
+        <Form.Item name="hasId" label="是否需要id" valuePropName="checked">
+          <Switch checkedChildren="需要" unCheckedChildren="不需要" defaultChecked />
+        </Form.Item>
         <Form.List name="columns">
           {(fields, { add, remove, move }) => {
             return (
@@ -132,9 +135,7 @@ const FormInput: React.FC<IProps> = forwardRef((props: IProps, ref) => {
                                   e.stopPropagation();
                                 }}
                                 showSearch
-                                filterOption={(input, option) =>
-                                  (option?.label ?? "").toLowerCase().includes(input.toLowerCase())
-                                }
+                                filterOption={(input, option) => (option?.label ?? "").toLowerCase().includes(input.toLowerCase())}
                               />
                             </Form.Item>
                             <Form.Item name={[field.name, "title"]} className="only-show-field">

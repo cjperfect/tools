@@ -18,5 +18,6 @@ interface Column {
  */
 interface ColumnInterface {
   num: number; // 生成多少条测试数据
+  hasId: boolean; // 是否需要id字段
   columns: Column[]; // 所有列
 }

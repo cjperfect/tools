@@ -4,23 +4,23 @@ import { operateRandomType } from "utils";
 /**
  * 处理用户自定义数据类型
  */
-const handleDiyData = (storage: { [extra: string]: RandomType }, type: string, random: any) => {
-  const { type: diyType, content } = storage[type];
+const handleDiyData = (storage: any, type: string, random: any) => {
+  const { type: diyType, params = {} } = storage[type];
 
   switch (diyType) {
     case "content":
       // 随机用户提供内容
-      return random.pick(content);
+      return random.pick(params.pickArr);
     case "rangeNum":
       // 在范围内随机数
-      return;
+      return random.integer(params.minNum, params.maxNum);
     default:
       break;
   }
 };
 
 export const generateColumns = (values: ColumnInterface) => {
-  const { num, columns = [] } = values;
+  const { num, hasId, columns = [] } = values;
 
   const newColumns = columns.map((curr: Column) => {
     const { align, className, dataIndex, ellipsis, fixed, title, width } = curr;
@@ -43,7 +43,11 @@ export const generateColumns = (values: ColumnInterface) => {
 
   const data = [];
   for (let i = 1; i <= num; i++) {
-    const temp: any = { id: random.id() };
+    const temp: any = {};
+    if (hasId) {
+      temp["id"] = random.id();
+    }
+
     columns.forEach((column: any) => {
       const { randomType, dataIndex } = column;
       // randomType 为用户选的随机类型， 分为自定义数据类型和自带数据类型

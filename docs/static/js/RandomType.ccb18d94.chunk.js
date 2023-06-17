@@ -15,7 +15,7 @@
 
 /***/ }),
 
-/***/ 9038:
+/***/ 1774:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // ESM COMPAT FLAG
@@ -26,8 +26,14 @@ __webpack_require__.d(__webpack_exports__, {
   "default": function() { return /* binding */ page_RandomType; }
 });
 
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
+var defineProperty = __webpack_require__(4942);
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js + 2 modules
 var toConsumableArray = __webpack_require__(3433);
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js
+var objectWithoutProperties = __webpack_require__(5987);
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js
+var objectSpread2 = __webpack_require__(1413);
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js + 1 modules
 var slicedToArray = __webpack_require__(9439);
 // EXTERNAL MODULE: ./node_modules/react/index.js
@@ -36,10 +42,14 @@ var react = __webpack_require__(7313);
 var es_form = __webpack_require__(2465);
 // EXTERNAL MODULE: ./node_modules/antd/es/message/index.js + 3 modules
 var message = __webpack_require__(7919);
+// EXTERNAL MODULE: ./node_modules/antd/es/input/index.js + 19 modules
+var input = __webpack_require__(8482);
+// EXTERNAL MODULE: ./node_modules/antd/es/input-number/index.js + 9 modules
+var input_number = __webpack_require__(8935);
+// EXTERNAL MODULE: ./node_modules/antd/es/result/index.js + 5 modules
+var result = __webpack_require__(2662);
 // EXTERNAL MODULE: ./node_modules/antd/es/button/index.js
 var es_button = __webpack_require__(9491);
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
-var defineProperty = __webpack_require__(4942);
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/typeof.js
 var esm_typeof = __webpack_require__(1002);
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
@@ -532,8 +542,6 @@ var SkeletonButton = function SkeletonButton(props) {
   }, otherProps)));
 };
 /* harmony default export */ var Button = (SkeletonButton);
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js
-var objectSpread2 = __webpack_require__(1413);
 ;// CONCATENATED MODULE: ./node_modules/@ant-design/icons-svg/es/asn/DotChartOutlined.js
 // This icon file is generated automatically.
 var DotChartOutlined = {
@@ -1062,27 +1070,80 @@ var es_card_Card = card_Card;
 es_card_Card.Grid = card_Grid;
 es_card_Card.Meta = card_Meta;
 /* harmony default export */ var card = (es_card_Card);
-// EXTERNAL MODULE: ./node_modules/antd/es/input/index.js + 19 modules
-var input = __webpack_require__(8482);
 // EXTERNAL MODULE: ./node_modules/antd/es/select/index.js + 48 modules
 var es_select = __webpack_require__(9740);
 // EXTERNAL MODULE: ./src/config/constant.ts
 var constant = __webpack_require__(4246);
 ;// CONCATENATED MODULE: ./src/page/RandomType/config.ts
-var allRandomType=[{key:"content",value:"content",label:"随机用户提供内容"}//   { key: "rangeNum", value: "rangeNum", label: "随机范围数" },
-];
+var allRandomType=[{key:"content",value:"content",label:"随机用户提供内容"},{key:"rangeNum",value:"rangeNum",label:"随机范围数"}];/**
+ * 表单数据处理器
+ */var formHandler=function formHandler(type,args){var _args$content;switch(type){case"content":// 随机用户提供内容
+return{content:args.content,pickArr:args.content?(_args$content=args.content)===null||_args$content===void 0?void 0:_args$content.split("\n").filter(Boolean):[]//
+};// 随机范围数
+case"rangeNum":var minNum=args.minNum||0;var maxNum=args.maxNum||0;return{minNum:Math.min(minNum,maxNum),maxNum:Math.max(minNum,maxNum)};}};
 // EXTERNAL MODULE: ./src/utils/index.ts
 var utils = __webpack_require__(2425);
 ;// CONCATENATED MODULE: ./src/page/RandomType/index.less
 // extracted by mini-css-extract-plugin
 
+;// CONCATENATED MODULE: ./node_modules/@ant-design/icons-svg/es/asn/SmileOutlined.js
+// This icon file is generated automatically.
+var SmileOutlined = {
+  "icon": {
+    "tag": "svg",
+    "attrs": {
+      "viewBox": "64 64 896 896",
+      "focusable": "false"
+    },
+    "children": [{
+      "tag": "path",
+      "attrs": {
+        "d": "M288 421a48 48 0 1096 0 48 48 0 10-96 0zm352 0a48 48 0 1096 0 48 48 0 10-96 0zM512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm263 711c-34.2 34.2-74 61-118.3 79.8C611 874.2 562.3 884 512 884c-50.3 0-99-9.8-144.8-29.2A370.4 370.4 0 01248.9 775c-34.2-34.2-61-74-79.8-118.3C149.8 611 140 562.3 140 512s9.8-99 29.2-144.8A370.4 370.4 0 01249 248.9c34.2-34.2 74-61 118.3-79.8C413 149.8 461.7 140 512 140c50.3 0 99 9.8 144.8 29.2A370.4 370.4 0 01775.1 249c34.2 34.2 61 74 79.8 118.3C874.2 413 884 461.7 884 512s-9.8 99-29.2 144.8A368.89 368.89 0 01775 775zM664 533h-48.1c-4.2 0-7.8 3.2-8.1 7.4C604 589.9 562.5 629 512 629s-92.1-39.1-95.8-88.6c-.3-4.2-3.9-7.4-8.1-7.4H360a8 8 0 00-8 8.4c4.4 84.3 74.5 151.6 160 151.6s155.6-67.3 160-151.6a8 8 0 00-8-8.4z"
+      }
+    }]
+  },
+  "name": "smile",
+  "theme": "outlined"
+};
+/* harmony default export */ var asn_SmileOutlined = (SmileOutlined);
+// EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/components/AntdIcon.js + 6 modules
+var components_AntdIcon = __webpack_require__(6821);
+;// CONCATENATED MODULE: ./node_modules/@ant-design/icons/es/icons/SmileOutlined.js
+
+// GENERATE BY ./scripts/generate.ts
+// DON NOT EDIT IT MANUALLY
+
+
+
+var SmileOutlined_SmileOutlined = function SmileOutlined(props, ref) {
+  return /*#__PURE__*/react.createElement(components_AntdIcon/* default */.Z, (0,objectSpread2/* default */.Z)((0,objectSpread2/* default */.Z)({}, props), {}, {
+    ref: ref,
+    icon: asn_SmileOutlined
+  }));
+};
+SmileOutlined_SmileOutlined.displayName = 'SmileOutlined';
+/* harmony default export */ var icons_SmileOutlined = (/*#__PURE__*/react.forwardRef(SmileOutlined_SmileOutlined));
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(6417);
 ;// CONCATENATED MODULE: ./src/page/RandomType/index.tsx
-var RandomType=function RandomType(props){var _Form$useForm=es_form/* default.useForm */.Z.useForm(),_Form$useForm2=(0,slicedToArray/* default */.Z)(_Form$useForm,1),form=_Form$useForm2[0];var _useState=(0,react.useState)([{}]),_useState2=(0,slicedToArray/* default */.Z)(_useState,2),randomState=_useState2[0],setRadomState=_useState2[1];/**
+var _excluded=["name","type"];var RandomType=function RandomType(props){var _Form$useForm=es_form/* default.useForm */.Z.useForm(),_Form$useForm2=(0,slicedToArray/* default */.Z)(_Form$useForm,1),form=_Form$useForm2[0];var _useState=(0,react.useState)([{}]),_useState2=(0,slicedToArray/* default */.Z)(_useState,2),randomState=_useState2[0],setRandomState=_useState2[1];// 当前所有随机类型
+var _useState3=(0,react.useState)({}),_useState4=(0,slicedToArray/* default */.Z)(_useState3,2),randomType=_useState4[0],setRandomType=_useState4[1];// 当前的类型
+/**
    * 初始化表单
-   */var init=function init(){var typeMap=utils/* operateRandomType.get */.t.get();var state=[];for(var k in typeMap){var _ref=typeMap[k]||{},name=_ref.name,type=_ref.type,contentOrigin=_ref.contentOrigin;state.push({name:name,type:type,content:contentOrigin});}setRadomState(state);form.setFieldValue("randomList",state.length?state:[{}]);};(0,react.useEffect)(function(){message/* default.warn */.ZP.warn("填写完记得保存哦");init();// eslint-disable-next-line
-},[]);/* 保存 */var onFinish=function onFinish(values){var randomList=values.randomList;var newTypes=randomList.reduce(function(prev,_ref2){var name=_ref2.name,content=_ref2.content,type=_ref2.type;var obj={name:name,type:type,content:content===null||content===void 0?void 0:content.split("\n").filter(Boolean),contentOrigin:content};prev[name]=obj;return prev;},{});utils/* operateRandomType.set */.t.set(JSON.stringify(newTypes));message/* default.success */.ZP.success("保存成功");};var onFinishFailed=function onFinishFailed(){return message/* default.error */.ZP.error("有必填项没填");};return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"random-type-container",children:/*#__PURE__*/(0,jsx_runtime.jsxs)(es_form/* default */.Z,{form:form,onFinish:onFinish,layout:"horizontal",onFinishFailed:onFinishFailed,children:[/*#__PURE__*/(0,jsx_runtime.jsx)(es_form/* default.Item */.Z.Item,{className:"submit-btn",children:/*#__PURE__*/(0,jsx_runtime.jsx)(es_button/* default */.Z,{type:"primary",htmlType:"submit",children:"\u4FDD\u5B58"})}),/*#__PURE__*/(0,jsx_runtime.jsx)(es_form/* default.List */.Z.List,{name:"randomList",children:function children(fields,_ref3){var add=_ref3.add,remove=_ref3.remove;return/*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(es_button/* default */.Z,{type:"primary",onClick:function onClick(){add({type:"content"});},children:"\u65B0\u589E\u968F\u673A\u7C7B\u578B"}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"random-type-list",children:fields.map(function(field){return/*#__PURE__*/(0,jsx_runtime.jsx)(badge.Ribbon,{color:"red",text:/*#__PURE__*/(0,jsx_runtime.jsx)("span",{className:"delete-btn",onClick:function onClick(e){e.stopPropagation();var newState=(0,toConsumableArray/* default */.Z)(randomState);newState.splice(field.name,1);remove(field.name);},children:"\u5220\u9664"}),children:/*#__PURE__*/(0,jsx_runtime.jsx)(card,{title:/*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(es_form/* default.Item */.Z.Item,{label:"\u540D\u79F0",rules:constant/* REQUIRED_RULES */.f4,name:[field.name,"name"],children:/*#__PURE__*/(0,jsx_runtime.jsx)(input/* default */.Z,{placeholder:"\u59D3\u540D",onClick:function onClick(e){e.stopPropagation();}})}),/*#__PURE__*/(0,jsx_runtime.jsx)(es_form/* default.Item */.Z.Item,{label:"\u7C7B\u578B",rules:constant/* REQUIRED_RULES */.f4,name:[field.name,"type"],initialValue:"content",children:/*#__PURE__*/(0,jsx_runtime.jsx)(es_select/* default */.Z,{options:allRandomType})})]}),size:"small",children:/*#__PURE__*/(0,jsx_runtime.jsx)(es_form/* default.Item */.Z.Item,{label:"随机值：",rules:constant/* REQUIRED_RULES */.f4,name:[field.name,"content"],children:/*#__PURE__*/(0,jsx_runtime.jsx)(input/* default.TextArea */.Z.TextArea,{placeholder:"\u8F93\u5165\u683C\u5F0F\u5982\u4E0B\uFF1A\r\u5F20\u4E09\r\u674E\u56DB\r\u738B\u4E94",autoSize:{minRows:5,maxRows:5}})})})},field.key);})})]});}})]})});};/* harmony default export */ var page_RandomType = (RandomType);
+   */var init=function init(){// 获取本地localstorage已经存储的随机类型
+var typeMap=utils/* operateRandomType.get */.t.get();var state=[];for(var k in typeMap){var _ref=typeMap[k]||{},name=_ref.name,type=_ref.type,_ref$params=_ref.params,params=_ref$params===void 0?{}:_ref$params;state.push((0,objectSpread2/* default */.Z)({name:name,type:type},params));}setRandomState(state);form.setFieldValue("randomList",state.length?state:[{}]);};(0,react.useEffect)(function(){message/* default.warn */.ZP.warn("填写完记得保存哦");init();// eslint-disable-next-line
+},[]);/**
+   * 表单提交事件
+   * @param values 表单所有值
+   */var onFinish=function onFinish(values){var randomList=values.randomList;var newTypes=randomList.reduce(function(prev,_ref2){var name=_ref2.name,type=_ref2.type,args=(0,objectWithoutProperties/* default */.Z)(_ref2,_excluded);var obj={name:name,type:type,params:(0,objectSpread2/* default */.Z)({},formHandler(type,args))};prev[name]=obj;return prev;},{});utils/* operateRandomType.set */.t.set(JSON.stringify(newTypes));message/* default.success */.ZP.success("保存成功");};/**
+   * 表单提交后有错误
+   * @returns
+   */var onFinishFailed=function onFinishFailed(){return message/* default.error */.ZP.error("有必填项没填");};/**
+   * 根据类型来渲染不同的随机值组件
+   */var renderContent=function renderContent(field){var formValues=form.getFieldsValue()["randomList"];var type=formValues[field.name].type;switch(type){// 随机用户提供内容
+case"content":return/*#__PURE__*/(0,jsx_runtime.jsx)(es_form/* default.Item */.Z.Item,{label:"随机内容：",rules:constant/* REQUIRED_RULES */.f4,name:[field.name,"content"],children:/*#__PURE__*/(0,jsx_runtime.jsx)(input/* default.TextArea */.Z.TextArea,{placeholder:"\u8F93\u5165\u683C\u5F0F\u5982\u4E0B\uFF1A\r\u5F20\u4E09\r\u674E\u56DB\r\u738B\u4E94",autoSize:{minRows:5,maxRows:5}})});// 随机范围数
+case"rangeNum":return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"num-container",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(es_form/* default.Item */.Z.Item,{label:"在范围内随机",rules:constant/* REQUIRED_RULES */.f4,name:[field.name,"minNum"],children:/*#__PURE__*/(0,jsx_runtime.jsx)(input_number/* default */.Z,{placeholder:"\u8BF7\u8F93\u5165"})}),"~",/*#__PURE__*/(0,jsx_runtime.jsx)(es_form/* default.Item */.Z.Item,{rules:constant/* REQUIRED_RULES */.f4,name:[field.name,"maxNum"],children:/*#__PURE__*/(0,jsx_runtime.jsx)(input_number/* default */.Z,{placeholder:"\u8BF7\u8F93\u5165"})})]});// 默认占位
+default:return/*#__PURE__*/(0,jsx_runtime.jsx)(result/* default */.ZP,{icon:/*#__PURE__*/(0,jsx_runtime.jsx)(icons_SmileOutlined,{}),subTitle:"\u8BF7\u9009\u62E9\u968F\u673A\u7C7B\u578B"});}};return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"random-type-container",children:/*#__PURE__*/(0,jsx_runtime.jsxs)(es_form/* default */.Z,{form:form,onFinish:onFinish,layout:"horizontal",onFinishFailed:onFinishFailed,children:[/*#__PURE__*/(0,jsx_runtime.jsx)(es_form/* default.Item */.Z.Item,{className:"submit-btn",children:/*#__PURE__*/(0,jsx_runtime.jsx)(es_button/* default */.Z,{type:"primary",htmlType:"submit",children:"\u4FDD\u5B58"})}),/*#__PURE__*/(0,jsx_runtime.jsx)(es_form/* default.List */.Z.List,{name:"randomList",children:function children(fields,_ref3){var add=_ref3.add,remove=_ref3.remove;return/*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(es_button/* default */.Z,{type:"primary",onClick:function onClick(){add({});},children:"\u65B0\u589E\u968F\u673A\u7C7B\u578B"}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"random-type-list",children:fields.map(function(field){return/*#__PURE__*/(0,jsx_runtime.jsx)(badge.Ribbon,{color:"red",text:/*#__PURE__*/(0,jsx_runtime.jsx)("span",{className:"delete-btn",onClick:function onClick(e){e.stopPropagation();var newState=(0,toConsumableArray/* default */.Z)(randomState);newState.splice(field.name,1);remove(field.name);},children:"\u5220\u9664"}),children:/*#__PURE__*/(0,jsx_runtime.jsx)(card,{title:/*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(es_form/* default.Item */.Z.Item,{label:"\u540D\u79F0",rules:constant/* REQUIRED_RULES */.f4,name:[field.name,"name"],children:/*#__PURE__*/(0,jsx_runtime.jsx)(input/* default */.Z,{placeholder:"\u8BF7\u8F93\u5165\u968F\u673A\u540D\u79F0",onClick:function onClick(e){e.stopPropagation();}})}),/*#__PURE__*/(0,jsx_runtime.jsx)(es_form/* default.Item */.Z.Item,{label:"\u7C7B\u578B",rules:constant/* REQUIRED_RULES */.f4,name:[field.name,"type"],children:/*#__PURE__*/(0,jsx_runtime.jsx)(es_select/* default */.Z,{placeholder:"\u8BF7\u9009\u62E9\u968F\u673A\u7C7B\u578B",options:allRandomType,onChange:function onChange(val){setRandomType((0,objectSpread2/* default */.Z)((0,objectSpread2/* default */.Z)({},randomType),{},(0,defineProperty/* default */.Z)({},field.name,val)));}})})]}),size:"small",children:renderContent(field)})},field.key);})})]});}})]})});};/* harmony default export */ var page_RandomType = (RandomType);
 
 /***/ }),
 
