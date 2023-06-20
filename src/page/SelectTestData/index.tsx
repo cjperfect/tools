@@ -5,17 +5,18 @@ import copy from "copy-to-clipboard";
 import { CopyOutlined } from "@ant-design/icons";
 import CodeEditor from "components/CodeEditor";
 import DraggableTree from "./components/DraggableTree";
-import ImportConfigModal from "./components/ImportConfigModal";
+import ImportConfig from "./components/ImportConfig";
 
 const INITIAL_DATA = [
   {
-    key: "chen",
-    value: "chen",
-    label: "陈",
-    title: "陈",
-    children: [{ key: "jiang", value: "jiang", title: "江", label: "江" }],
+    name: "陈江",
+    email: "123465@qq.com",
+    children: [{ name: "张三", email: "66666@qq.com" }],
   },
-  { key: "25", value: "25", title: "年龄", label: "年龄" },
+  {
+    name: "李四",
+    email: "999999@qq.com",
+  },
 ];
 
 interface IProps {}
@@ -38,7 +39,7 @@ const SelectTestData: React.FC<IProps> = (props: IProps) => {
     根据导入的导入配置生成折叠面板(也就是表格的columns)
   */
   const importSubmit = (value: any) => {
-    setTreeData([...value]);
+    setTreeData([]);
     setVisible(false);
   };
 
@@ -47,14 +48,14 @@ const SelectTestData: React.FC<IProps> = (props: IProps) => {
       <div className="select-test-data">
         <div className="condition">
           {/* 左边条件区域 */}
-          <h2 className="title">构建配置</h2>
+          <h2 className="title">配置</h2>
           <div className="control">
             <Button
               onClick={() => {
                 setVisible(true);
               }}
             >
-              导入配置
+              配置字段
             </Button>
             <Button
               type="primary"
@@ -77,8 +78,9 @@ const SelectTestData: React.FC<IProps> = (props: IProps) => {
             </Button>
           </div>
           <div className="container">
-            {/* 导入配置 */}
-            <ImportConfigModal visible={visible} onCancel={onCancel} onSubmit={importSubmit} />
+            {/* 导入字段 */}
+            <ImportConfig visible={visible} onCancel={onCancel} onSubmit={importSubmit} />
+
             <DraggableTree
               data={treeData}
               onChange={data => {
@@ -89,7 +91,7 @@ const SelectTestData: React.FC<IProps> = (props: IProps) => {
         </div>
         <div className="code">
           {/* 右边预览区域 */}
-          <h2 className="title">测试数据</h2>
+          <h2 className="title">生成数据</h2>
           {code ? (
             <div className="code-content">
               <Button

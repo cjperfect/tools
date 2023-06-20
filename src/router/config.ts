@@ -14,7 +14,7 @@ webpack在打包的时候，对异步引入的库代码（lodash）进行代码�
 const GenerateColumns = lazy(() => import(/* webpackChunkName: "GenerateColumns" */ "../page/GenerateColumns"));
 
 // 生成下拉框测试数据
-// const SelectTestData = lazy(() => import(/* webpackChunkName: "SelectTestData" */ "../page/SelectTestData"));
+const SelectTestData = lazy(() => import(/* webpackChunkName: "SelectTestData" */ "../page/SelectTestData"));
 
 // 自定义随机类型
 const RandomType = lazy(() => import(/* webpackChunkName: "RandomType" */ "../page/RandomType"));
@@ -30,9 +30,9 @@ export const routeConfig = [
     component: RandomType,
     exact: true,
   },
-  // {
-  //   path: "/select-data",
-  //   component: SelectTestData,
-  //   exact: true,
-  // },
+  {
+    path: "/selectData",
+    component: SelectTestData,
+    exact: true,
+  },
 ];

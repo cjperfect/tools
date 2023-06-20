@@ -1,21 +1,23 @@
 "use strict";
 (self["webpackChunkgenerate_columns"] = self["webpackChunkgenerate_columns"] || []).push([[929],{
 
-/***/ 4246:
+/***/ 54246:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "$y": function() { return /* binding */ CONFIG_EXAMPLE3; },
 /* harmony export */   "D4": function() { return /* binding */ CONFIG_EXAMPLE1; },
+/* harmony export */   "Kt": function() { return /* binding */ RANDOM_TYPE_ARR; },
 /* harmony export */   "RK": function() { return /* binding */ CONFIG_EXAMPLE2; },
 /* harmony export */   "f4": function() { return /* binding */ REQUIRED_RULES; }
 /* harmony export */ });
 /* unused harmony exports DEFAULT_SELECT_TEST_DATA, SELECT_DATA_TEMPLATE */
 /* 存放一些常量 */var REQUIRED_RULES=[{required:true,message:"请输入"}];var CONFIG_EXAMPLE1="name\nage\nsex";var CONFIG_EXAMPLE2="name-姓名\nage-年龄\nsex-性别";var CONFIG_EXAMPLE3="姓名\n年龄\n性别";var DEFAULT_SELECT_TEST_DATA="0-女&1-男&2-保密";var SELECT_DATA_TEMPLATE="[\n  {\n    \"key\": \"js\",\n    \"value\": \"js\",\n    \"label\": \"\u524D\u7AEFjs\",\n    \"title\": \"\u524D\u7AEFjs\",\n    \"children\": [\n      {\n        \"key\": \"react\",\n        \"value\": \"react\",\n        \"title\": \"\u524D\u7AEFreact\",\n        \"label\": \"\u524D\u7AEFreact\"\n      }\n    ]\n  },\n  {\n    \"key\": \"css\",\n    \"value\": \"css\",\n    \"title\": \"\u524D\u7AEFcss\",\n    \"label\": \"\u524D\u7AEFcss\"\n  },\n  {\n    \"key\": \"html\",\n    \"value\": \"html\",\n    \"title\": \"\u524D\u7AEFhtml\",\n    \"label\": \"\u524D\u7AEFhtml\"\n  }\n]";// 下拉数据导入配置模板
+/* 随机类型 */var RANDOM_TYPE_ARR=[{label:"内置随机类型",options:[{key:"ctitle",value:"ctitle",label:"标题"},{key:"cname",value:"cname",label:"名字"},{key:"date",value:"date",label:"日期"},{key:"time",value:"time",label:"时间"},{key:"datetime",value:"datetime",label:"日期时间"},{key:"cparagraph",value:"cparagraph",label:"长文本"},{key:"city",value:"city",label:"城市"},{key:"province",value:"province",label:"省份"},{key:"zip",value:"zip",label:"邮政编码"},{key:"email",value:"email",label:"邮箱"},{key:"string",value:"string",label:"字符串"},{key:"url",value:"url",label:"URL"},{key:"ip",value:"ip",label:"IP"}]}];
 
 /***/ }),
 
-/***/ 1774:
+/***/ 21774:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 // ESM COMPAT FLAG
@@ -29,42 +31,42 @@ __webpack_require__.d(__webpack_exports__, {
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/defineProperty.js
 var defineProperty = __webpack_require__(4942);
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js + 2 modules
-var toConsumableArray = __webpack_require__(3433);
+var toConsumableArray = __webpack_require__(93433);
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js
-var objectWithoutProperties = __webpack_require__(5987);
+var objectWithoutProperties = __webpack_require__(45987);
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js
 var objectSpread2 = __webpack_require__(1413);
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js + 1 modules
-var slicedToArray = __webpack_require__(9439);
+var slicedToArray = __webpack_require__(29439);
 // EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(7313);
+var react = __webpack_require__(47313);
 // EXTERNAL MODULE: ./node_modules/antd/es/form/index.js + 22 modules
-var es_form = __webpack_require__(2465);
+var es_form = __webpack_require__(82465);
 // EXTERNAL MODULE: ./node_modules/antd/es/message/index.js + 3 modules
 var message = __webpack_require__(7919);
 // EXTERNAL MODULE: ./node_modules/antd/es/input/index.js + 19 modules
-var input = __webpack_require__(8482);
+var input = __webpack_require__(58482);
 // EXTERNAL MODULE: ./node_modules/antd/es/input-number/index.js + 9 modules
-var input_number = __webpack_require__(8935);
+var input_number = __webpack_require__(78935);
 // EXTERNAL MODULE: ./node_modules/antd/es/result/index.js + 5 modules
-var result = __webpack_require__(2662);
+var result = __webpack_require__(82662);
 // EXTERNAL MODULE: ./node_modules/antd/es/button/index.js
-var es_button = __webpack_require__(9491);
+var es_button = __webpack_require__(59491);
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/typeof.js
-var esm_typeof = __webpack_require__(1002);
+var esm_typeof = __webpack_require__(71002);
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
-var esm_extends = __webpack_require__(7462);
+var esm_extends = __webpack_require__(87462);
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
-var classnames = __webpack_require__(6123);
+var classnames = __webpack_require__(46123);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 // EXTERNAL MODULE: ./node_modules/rc-motion/es/index.js + 11 modules
 var es = __webpack_require__(1293);
 // EXTERNAL MODULE: ./node_modules/antd/es/config-provider/context.js
-var context = __webpack_require__(4714);
+var context = __webpack_require__(74714);
 // EXTERNAL MODULE: ./node_modules/antd/es/_util/reactNode.js
-var reactNode = __webpack_require__(8138);
+var reactNode = __webpack_require__(48138);
 // EXTERNAL MODULE: ./node_modules/antd/es/_util/colors.js
-var colors = __webpack_require__(238);
+var colors = __webpack_require__(20238);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/badge/utils.js
 
 // eslint-disable-next-line import/prefer-default-export
@@ -454,7 +456,7 @@ Badge.Ribbon = badge_Ribbon;
 // EXTERNAL MODULE: ./node_modules/rc-util/es/omit.js
 var omit = __webpack_require__(205);
 // EXTERNAL MODULE: ./node_modules/antd/es/config-provider/SizeContext.js
-var SizeContext = __webpack_require__(1631);
+var SizeContext = __webpack_require__(21631);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/skeleton/Element.js
 
 
@@ -855,7 +857,7 @@ Skeleton.Node = Node;
 
 /* harmony default export */ var skeleton = (skeleton_Skeleton);
 // EXTERNAL MODULE: ./node_modules/antd/es/tabs/index.js + 27 modules
-var es_tabs = __webpack_require__(4393);
+var es_tabs = __webpack_require__(64393);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/card/Grid.js
 
 
@@ -1071,9 +1073,9 @@ es_card_Card.Grid = card_Grid;
 es_card_Card.Meta = card_Meta;
 /* harmony default export */ var card = (es_card_Card);
 // EXTERNAL MODULE: ./node_modules/antd/es/select/index.js + 48 modules
-var es_select = __webpack_require__(9740);
+var es_select = __webpack_require__(29740);
 // EXTERNAL MODULE: ./src/config/constant.ts
-var constant = __webpack_require__(4246);
+var constant = __webpack_require__(54246);
 ;// CONCATENATED MODULE: ./src/page/RandomType/config.ts
 var allRandomType=[{key:"content",value:"content",label:"随机用户提供内容"},{key:"rangeNum",value:"rangeNum",label:"随机范围数"}];/**
  * 表单数据处理器
@@ -1082,7 +1084,7 @@ return{content:args.content,pickArr:args.content?(_args$content=args.content)===
 };// 随机范围数
 case"rangeNum":var minNum=args.minNum||0;var maxNum=args.maxNum||0;return{minNum:Math.min(minNum,maxNum),maxNum:Math.max(minNum,maxNum)};}};
 // EXTERNAL MODULE: ./src/utils/index.ts
-var utils = __webpack_require__(2425);
+var utils = __webpack_require__(21114);
 ;// CONCATENATED MODULE: ./src/page/RandomType/index.less
 // extracted by mini-css-extract-plugin
 
@@ -1107,7 +1109,7 @@ var SmileOutlined = {
 };
 /* harmony default export */ var asn_SmileOutlined = (SmileOutlined);
 // EXTERNAL MODULE: ./node_modules/@ant-design/icons/es/components/AntdIcon.js + 6 modules
-var components_AntdIcon = __webpack_require__(6821);
+var components_AntdIcon = __webpack_require__(66821);
 ;// CONCATENATED MODULE: ./node_modules/@ant-design/icons/es/icons/SmileOutlined.js
 
 // GENERATE BY ./scripts/generate.ts
@@ -1124,7 +1126,7 @@ var SmileOutlined_SmileOutlined = function SmileOutlined(props, ref) {
 SmileOutlined_SmileOutlined.displayName = 'SmileOutlined';
 /* harmony default export */ var icons_SmileOutlined = (/*#__PURE__*/react.forwardRef(SmileOutlined_SmileOutlined));
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(6417);
+var jsx_runtime = __webpack_require__(46417);
 ;// CONCATENATED MODULE: ./src/page/RandomType/index.tsx
 var _excluded=["name","type"];var RandomType=function RandomType(props){var _Form$useForm=es_form/* default.useForm */.Z.useForm(),_Form$useForm2=(0,slicedToArray/* default */.Z)(_Form$useForm,1),form=_Form$useForm2[0];var _useState=(0,react.useState)([{}]),_useState2=(0,slicedToArray/* default */.Z)(_useState,2),randomState=_useState2[0],setRandomState=_useState2[1];// 当前所有随机类型
 var _useState3=(0,react.useState)({}),_useState4=(0,slicedToArray/* default */.Z)(_useState3,2),randomType=_useState4[0],setRandomType=_useState4[1];// 当前的类型
@@ -1147,7 +1149,7 @@ default:return/*#__PURE__*/(0,jsx_runtime.jsx)(result/* default */.ZP,{icon:/*#_
 
 /***/ }),
 
-/***/ 2425:
+/***/ 21114:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {

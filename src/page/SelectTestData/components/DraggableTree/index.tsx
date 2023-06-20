@@ -1,7 +1,8 @@
-import { MinusCircleOutlined, PlusCircleOutlined } from "@ant-design/icons";
-import { Button, Input } from "antd";
+import { Button, Empty } from "antd";
+import { EditOutlined, MinusCircleOutlined, PlusCircleOutlined } from "@ant-design/icons";
 import React, { useEffect, useState } from "react";
 import DraggableTreeCom, { addNodeUnderParent, removeNodeAtPath } from "react-sortable-tree";
+import { createNode } from "../../config";
 import "react-sortable-tree/style.css";
 import "./index.less";
 
@@ -23,7 +24,7 @@ const DraggableTree: React.FC<IProps> = (props: IProps) => {
    * @param rowInfo 当前节点信息
    */
   const addNode = (rowInfo: any) => {
-    const NEW_NODE = { key: "test", value: "test", title: "test的中文", label: "test的中文" };
+    const NEW_NODE = createNode();
 
     /**
      * addNodeUnderParent 组件里面带的工具方法
@@ -61,7 +62,7 @@ const DraggableTree: React.FC<IProps> = (props: IProps) => {
    * 添加顶层节点
    */
   const addTopNode = () => {
-    const data = [...treeData, { key: "test", value: "test", title: "test的中文", label: "test的中文" }];
+    const data = [...treeData, createNode()];
     onChange(data);
     setTreeData(data);
   };
@@ -69,20 +70,22 @@ const DraggableTree: React.FC<IProps> = (props: IProps) => {
   return (
     <div className="draggable-tree-com">
       <Button onClick={addTopNode}>添加节点</Button>
-      <DraggableTreeCom
-        isVirtualized={false}
-        treeData={treeData}
-        onChange={(data: any) => {
-          setTreeData(data);
-          onChange(data);
-        }}
-        generateNodeProps={(rowInfo: any) => {
-          const { node } = rowInfo;
-          return {
-            title: (
-              <div className="field-wrap" key={node.value + node.title}>
-                <div className="field-line">
-                  <span>值：</span>
+      {treeData.length ? (
+        <DraggableTreeCom
+          isVirtualized={false}
+          treeData={treeData}
+          onChange={(data: any) => {
+            setTreeData(data);
+            onChange(data);
+          }}
+          generateNodeProps={(rowInfo: any) => {
+            const { node } = rowInfo;
+            return {
+              title: (
+                <div className="field-wrap" key={node.value + node.title}>
+                  节点
+                  {/* <div className="field-line">
+                  <span>字段：</span>
                   <Input
                     placeholder="请输入值"
                     defaultValue={node.value}
@@ -102,24 +105,27 @@ const DraggableTree: React.FC<IProps> = (props: IProps) => {
                       node.title = node.label = val;
                     }}
                   />
+                </div> */}
                 </div>
-              </div>
-            ),
-            buttons: [
-              <PlusCircleOutlined
-                onClick={() => {
-                  addNode(rowInfo);
-                }}
-              />,
-              <MinusCircleOutlined
-                onClick={() => {
-                  removeNode(rowInfo);
-                }}
-              />,
-            ],
-          };
-        }}
-      />
+              ),
+              buttons: [
+                <PlusCircleOutlined
+                  onClick={() => {
+                    addNode(rowInfo);
+                  }}
+                />,
+                <MinusCircleOutlined
+                  onClick={() => {
+                    removeNode(rowInfo);
+                  }}
+                />,
+              ],
+            };
+          }}
+        />
+      ) : (
+        <Empty description="配置已更新, 请重新生成节点" />
+      )}
     </div>
   );
 };

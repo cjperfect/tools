@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./style/index.less";
 import { useHistory } from "react-router-dom";
 import { Layout, Menu } from "antd";
-import { FieldStringOutlined, ChromeOutlined, RedditOutlined, TableOutlined } from "@ant-design/icons";
+import { FieldStringOutlined, ChromeOutlined, RedditOutlined, TableOutlined, BarsOutlined } from "@ant-design/icons";
 const { Header, Content } = Layout;
 
 interface IProps {
@@ -24,15 +24,15 @@ const linkConfig: LinkType[] = [
     icon: <TableOutlined />,
   },
   {
+    key: "/selectData",
+    label: "树形测试数据",
+    icon: <BarsOutlined />,
+  },
+  {
     key: "/randomType",
     label: "自定义随机类型",
     icon: <FieldStringOutlined />,
   },
-  // {
-  //   key: "/select-data",
-  //   label: "树形测试数据",
-  //   icon: <BarsOutlined />,
-  // },
   {
     key: "/blog",
     label: "个人博客",
