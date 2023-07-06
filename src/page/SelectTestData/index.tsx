@@ -7,24 +7,12 @@ import CodeEditor from "components/CodeEditor";
 import DraggableTree from "./components/DraggableTree";
 import ImportConfig from "./components/ImportConfig";
 
-const INITIAL_DATA = [
-  {
-    name: "陈江",
-    email: "123465@qq.com",
-    children: [{ name: "张三", email: "66666@qq.com" }],
-  },
-  {
-    name: "李四",
-    email: "999999@qq.com",
-  },
-];
-
 interface IProps {}
 
 const SelectTestData: React.FC<IProps> = (props: IProps) => {
   const [code, setCode] = useState<string>(""); // 生成的代码
 
-  const [treeData, setTreeData] = useState(INITIAL_DATA);
+  const [treeData, setTreeData] = useState<any>([]);
 
   const [visible, setVisible] = useState(false); // 导入配置
 

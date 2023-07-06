@@ -1,6 +1,6 @@
 /* 新增字段，模态框 */
 import React, { useEffect, useState } from "react";
-import { Input, Button, Modal, Form, Space, message, Select, Drawer } from "antd";
+import { Input, Button, Form, Space, message, Select, Drawer } from "antd";
 import { REQUIRED_RULES, RANDOM_TYPE_ARR } from "config/constant";
 import { operateRandomType } from "utils";
 import { MinusCircleOutlined } from "@ant-design/icons";

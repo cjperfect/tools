@@ -1,5 +1,5 @@
 import { Button, Empty } from "antd";
-import { EditOutlined, MinusCircleOutlined, PlusCircleOutlined } from "@ant-design/icons";
+import { MinusCircleOutlined, PlusCircleOutlined } from "@ant-design/icons";
 import React, { useEffect, useState } from "react";
 import DraggableTreeCom, { addNodeUnderParent, removeNodeAtPath } from "react-sortable-tree";
 import { createNode } from "../../config";
@@ -124,7 +124,7 @@ const DraggableTree: React.FC<IProps> = (props: IProps) => {
           }}
         />
       ) : (
-        <Empty description="配置已更新, 请重新生成节点" />
+        <Empty description="请先配置字段, 再添加节点" />
       )}
     </div>
   );
