@@ -88,22 +88,21 @@ const RandomType: React.FC<IProps> = (props: IProps) => {
           </Form.Item>
         );
 
-      // 随机范围数
+      // 随机范围整数
       case "rangeNum":
         return (
           <div className="num-container">
             <Form.Item label={"在范围内随机"} rules={REQUIRED_RULES} name={[field.name, "minNum"]}>
-              <InputNumber placeholder="请输入" />
+              <InputNumber placeholder="请输入" precision={0} />
             </Form.Item>
             ~
             <Form.Item rules={REQUIRED_RULES} name={[field.name, "maxNum"]}>
-              <InputNumber placeholder="请输入" />
+              <InputNumber placeholder="请输入" precision={0} />
             </Form.Item>
           </div>
         );
 
       // 默认占位
-
       default:
         return <Result icon={<SmileOutlined />} subTitle="请选择随机类型" />;
     }

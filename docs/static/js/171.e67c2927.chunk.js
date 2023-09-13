@@ -754,7 +754,7 @@ var motion = __webpack_require__(53553);
 // EXTERNAL MODULE: ./node_modules/antd/es/_util/type.js
 var type = __webpack_require__(56927);
 // EXTERNAL MODULE: ./node_modules/antd/es/space/Compact.js
-var Compact = __webpack_require__(45531);
+var Compact = __webpack_require__(905);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/drawer/index.js
 
 
@@ -993,7 +993,7 @@ function Item(_ref) {
   }, split));
 }
 // EXTERNAL MODULE: ./node_modules/antd/es/space/Compact.js
-var Compact = __webpack_require__(45531);
+var Compact = __webpack_require__(905);
 ;// CONCATENATED MODULE: ./node_modules/antd/es/space/index.js
 
 

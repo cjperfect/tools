@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Tabs, Button, message, Space, Empty } from "antd";
+import { Tabs, Button, message, Space, Empty, Tooltip } from "antd";
 import FormInput from "./components/formInput";
 import CodeEditor from "components/CodeEditor";
 import copy from "copy-to-clipboard";
@@ -90,7 +90,7 @@ const GenerateColumns: React.FC<IProps> = (props: IProps) => {
                   setConfigVisible(true);
                 }}
               >
-                查看历史字段
+                <Tooltip title="缓存批量添加的字段">查看历史字段</Tooltip>
               </Button>
             </Space>
             <FormInput ref={formInputRef} onSubmit={createColumns} />

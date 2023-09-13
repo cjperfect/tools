@@ -1274,7 +1274,7 @@ var form_context = __webpack_require__(4431);
 // EXTERNAL MODULE: ./node_modules/antd/es/locale-provider/LocaleReceiver.js + 1 modules
 var LocaleReceiver = __webpack_require__(3267);
 // EXTERNAL MODULE: ./node_modules/antd/es/space/Compact.js
-var Compact = __webpack_require__(45531);
+var Compact = __webpack_require__(905);
 // EXTERNAL MODULE: ./node_modules/antd/es/_util/styleChecker.js
 var styleChecker = __webpack_require__(65401);
 // EXTERNAL MODULE: ./node_modules/antd/es/modal/locale.js

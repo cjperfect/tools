@@ -96,7 +96,7 @@ const ImportConfigModal: React.FC<IProps> = props => {
           rules={REQUIRED_RULES}
         >
           <TextArea
-            placeholder="第一种(仅关心测试数据): &#13;name&#13;age&#13;sex&#13;&#13;第二种(同时关心table组件的columns):&#13;name-姓名&#13;age-年龄&#13;sex-性别 &#13;&#13;第三种(提供中文, 不提供字段, 需要点击生成随机字段按钮): &#13;姓名&#13;年龄&#13;班级&#13;&#13;"
+            placeholder="第一种(仅关心测试数据): &#13;name&#13;age&#13;sex&#13;&#13;第二种(同时关心table组件的columns):&#13;name-姓名&#13;age-年龄&#13;sex-性别 &#13;&#13;第三种(仅关心columns, 提供中文, 需要点击生成随机字段按钮): &#13;姓名&#13;年龄&#13;班级&#13;&#13;"
             autoSize={{ minRows: 15, maxRows: 15 }}
           />
         </Form.Item>

@@ -1093,7 +1093,7 @@ var SizeContext = __webpack_require__(21631);
 // EXTERNAL MODULE: ./node_modules/antd/es/form/context.js
 var form_context = __webpack_require__(4431);
 // EXTERNAL MODULE: ./node_modules/antd/es/space/Compact.js
-var Compact = __webpack_require__(45531);
+var Compact = __webpack_require__(905);
 // EXTERNAL MODULE: ./node_modules/antd/es/_util/reactNode.js
 var reactNode = __webpack_require__(48138);
 // EXTERNAL MODULE: ./node_modules/antd/es/_util/statusUtils.js
